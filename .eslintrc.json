@@ -1,0 +1,25 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "react-app",
+    //wszystko co wchodzi w konfilikt eslint-prettier zostaje rezeznane na korzysc prettier, prettier musi byc jako ostatnie w liscie
+    "prettier"
+  ],
+  "plugins": [],
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "modules": true,
+      "jsx": true
+    },
+    "rules": {
+      "keyword-spacing": 2
+    },
+    //environment
+    "env": {
+      "es6": true,
+      "browser": true,
+      "node": true
+    }
+  }
+}
