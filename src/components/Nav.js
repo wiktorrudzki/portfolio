@@ -1,5 +1,7 @@
 import * as React from "react";
 import { Link } from "gatsby";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 import {
   navWrapper,
@@ -8,7 +10,8 @@ import {
   navHeaderH4,
   navUlLinkLi,
   navUlLink,
-	link
+	link,
+	navBars
 } from "../styles/nav.module.css";
 
 const Nav = () => {
@@ -20,6 +23,7 @@ const Nav = () => {
           <h4 className={navHeaderH4}>FRONTEND DEVELOPER</h4>
         </header>
       </Link>
+			<FontAwesomeIcon icon={faBars} size="1.5x" className={navBars} />
       <ul className={navUl}>
         <Link className={navUlLink}>
           <li className={navUlLinkLi}>About</li>

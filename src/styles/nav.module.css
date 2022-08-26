@@ -30,6 +30,10 @@
     text-decoration: none;
 }
 
+.nav-bars {
+    display: none;
+}
+
 .nav-ul {
     display: flex;
     justify-content: space-around;
@@ -51,4 +55,25 @@
 .nav-ul-link:hover {
     border-top: 3px var(--saddlebrown) solid;
     padding: calc(1em - 2px) 0;
+}
+
+@media (max-width: 768px) {
+    .nav-ul {
+        display: none;
+    }
+    .nav-header-h4 {
+        font-size: 12px;
+    }
+    .nav-bars {
+        display: block;
+    }
+}
+
+@media (max-width: 1024px) {
+    .nav-header-h4 {
+        font-size: 15px;
+    }
+    .nav-ul-link-li {
+        padding: 0 2.5em;
+    }
 }
