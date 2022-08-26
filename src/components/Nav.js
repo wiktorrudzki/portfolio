@@ -13,10 +13,13 @@ import {
   link,
   navBars,
   navBarsActivated,
+  navUlLinkActive,
 } from "../styles/nav.module.css";
 
 const Nav = () => {
   const [hideMenu, setHideMenu] = React.useState(true);
+
+  const url = window.location.href;
 
   return (
     <nav className={navWrapper}>
@@ -33,13 +36,34 @@ const Nav = () => {
         onClick={() => setHideMenu((prev) => !prev)}
       />
       <ul className={hideMenu ? navUl : `${navUl} ${navBarsActivated}`}>
-        <Link className={`${navUlLink} ${link}`} to="/about">
+        <Link
+          className={
+            url.includes("about")
+              ? `${navUlLink} ${link} ${navUlLinkActive}`
+              : `${navUlLink} ${link}`
+          }
+          to="/about"
+        >
           <li className={navUlLinkLi}>About</li>
         </Link>
-        <Link className={`${navUlLink} ${link}`}>
+        <Link
+          className={
+            url.includes("contact")
+              ? `${navUlLink} ${link} ${navUlLinkActive}`
+              : `${navUlLink} ${link}`
+          }
+					to="/contact"
+        >
           <li className={navUlLinkLi}>Contact</li>
         </Link>
-        <Link className={`${navUlLink} ${link}`}>
+        <Link
+          className={
+            url.includes("CV")
+              ? `${navUlLink} ${link} ${navUlLinkActive}`
+              : `${navUlLink} ${link}`
+          }
+					to="CV"
+        >
           <li className={navUlLinkLi}>CV</li>
         </Link>
       </ul>

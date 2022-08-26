@@ -2,12 +2,12 @@
     --black: #000;
     --saddlebrown: #8B4513;
     --bulrywood: #DEB887;
-    --cornslik: #FFF8DC;
+    --cornslik: #FCF0C3;
     --peru: #CD853F;
     --beige: #CC9767;
     --lessbeige: #C7AD8F;
     --morebeige: #A57A5A;
-    --white: #FFF;
+    --white: #ffffff;
 }
 
 * {
@@ -16,7 +16,7 @@
 
 html,
 body {
-    color: var(--saddlebrown);
+    color: var(--morebeige);
     font-family: Josefin Sans,Arial,Helvetica,sans-serif;
     font-size: 18px;
     line-height: 1.2;
