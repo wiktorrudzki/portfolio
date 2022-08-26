@@ -1,7 +1,14 @@
 import * as React from "react";
+import Nav from "../components/Nav";
+
+import "../styles/global.css";
 
 const IndexPage = () => {
-  return <main></main>;
+  return (
+    <>
+      <Nav></Nav>
+    </>
+  );
 };
 
 export default IndexPage;
