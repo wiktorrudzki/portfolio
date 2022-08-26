@@ -5,7 +5,7 @@ import "../styles/global.css";
 
 const IndexPage = () => {
   return (
-    <Layout></Layout>
+    <Layout>strona glowna</Layout>
   );
 };
 
