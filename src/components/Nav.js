@@ -33,13 +33,13 @@ const Nav = () => {
         onClick={() => setHideMenu((prev) => !prev)}
       />
       <ul className={hideMenu ? navUl : `${navUl} ${navBarsActivated}`}>
-        <Link className={navUlLink}>
+        <Link className={`${navUlLink} ${link}`} to="/about">
           <li className={navUlLinkLi}>About</li>
         </Link>
-        <Link className={navUlLink}>
+        <Link className={`${navUlLink} ${link}`}>
           <li className={navUlLinkLi}>Contact</li>
         </Link>
-        <Link className={navUlLink}>
+        <Link className={`${navUlLink} ${link}`}>
           <li className={navUlLinkLi}>CV</li>
         </Link>
       </ul>
