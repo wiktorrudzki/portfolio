@@ -1,6 +1,7 @@
 import * as React from "react";
 import Nav from "./Nav";
 import Seo from "./Seo";
+import Footer from "./Footer";
 
 const Layout = ({
   children,
@@ -14,6 +15,7 @@ const Layout = ({
       <Seo title={title} description={description} image={image} path={path} />
       <Nav />
       <main>{children}</main>
+      <Footer />
     </>
   );
 };

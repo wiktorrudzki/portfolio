@@ -6,7 +6,6 @@
   justify-content: space-between;
   align-items: center;
   margin: 0;
-  /* position: sticky; */
 }
 
 .link {
@@ -33,7 +32,7 @@
 
 .nav-bars {
   display: none;
-  z-index: 2;
+  z-index: 101;
 }
 
 .nav-ul {
@@ -81,6 +80,7 @@
     transform: translateX(100%);
     width: 44%;
     transition: transform 0.5s;
+    z-index: 100;
   }
   .nav-ul-link {
     border-top: none;
@@ -107,6 +107,9 @@
 @media (max-width: 1024px) {
   .nav-header-h4 {
     font-size: 15px;
+  }
+  .nav-ul-link {
+    font-size: 14px;
   }
   .nav-ul-link-li {
     padding: 0 2.5em;

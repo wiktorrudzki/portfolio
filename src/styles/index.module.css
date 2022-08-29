@@ -1,0 +1,141 @@
+.img-slider {
+    background-image: url("../images/ja2.jpg");
+    animation: changeImage 10s linear infinite;
+}
+
+@keyframes changeImage {
+    0% {
+        background-image: url("../images/ja2.jpg");
+    }
+    40% {
+        background-image: url("../images/ja2.jpg");
+    }
+    50% {
+        background-image: url("../images/krajobraz10.jpg");
+    }
+    90% {
+        background-image: url("../images/krajobraz10.jpg");
+    }
+}
+
+.hp-wrapper {
+    display: grid;
+    gap: 0;
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+}
+
+.hp-section {
+    width: 100%;
+    height: 100vh;
+}
+
+.hp-section-left {
+    background-color: var(--white);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 10%;
+}
+
+.hp-section-left-h4 {
+    text-align: center;
+    width: 50%;
+}
+
+.hp-section-right {
+    background-color: var(--beige);
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+}
+
+.hp-section-left-image {
+    position: relative;
+}
+
+.hp-section-right-image {
+    width: 300px;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+@media (max-width: 768px) {
+    .hp-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+    .hp-section-left-image {
+        width: 70%;
+    }
+}
+
+/*                     SECTION 1                       */
+
+.section-top {
+    position: relative;
+    background-color: var(--white);
+    margin-bottom: 5%;
+}
+
+.image-wrapper {
+    background-color: var(--beige);
+    position: relative;
+    width: 52%;
+    padding: 3% 10%;
+    top: 0;
+    left: 0;
+}
+
+.image-container {
+    width: 80%;
+    display: flex;
+}
+
+.image {
+    z-index: 2;
+    max-width: 100%;
+}
+
+.section-top-p {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 75%;
+    text-align: right;
+    margin: 0;
+    transform: translate(40%, 100%);
+    padding: 1em;
+}
+
+@media (max-width: 1024px) {
+    .section-top-p {
+        font-size: 0.85em;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-top {
+        display: flex;
+        justify-content: center;
+    }
+    .image-wrapper {
+        padding: 5% 10%;
+        width: 70%;
+    }
+    .image-container {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+    .section-top-p {
+        transform: none;
+        position: relative;
+        bottom: 0;
+        text-align: center;
+        font-size: 1em;
+        width: 100%;
+    }
+}
