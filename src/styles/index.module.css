@@ -72,7 +72,7 @@
     }
 }
 
-/*                     SECTION 1                       */
+/*                     SECTION TOP                      */
 
 .section-top {
     position: relative;
@@ -138,4 +138,22 @@
         font-size: 1em;
         width: 100%;
     }
+}
+
+/*                     ABOUT PROGRAMMING                      */
+
+.about-programming {
+    position: relative;
+    margin-bottom: 5%;
+    background-color: var(--cornslik);
+    padding: 2% 0;
+}
+
+.image-wrapper-about-programming {
+    background-color: transparent;
+    position: relative;
+    width: 52%;
+    padding: 0;
+    top: 0;
+    left: 0;
 }

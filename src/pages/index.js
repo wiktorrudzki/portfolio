@@ -14,11 +14,13 @@ import {
 import "../styles/global.css";
 
 import SectionTop from "../components/index-page/SectionTop";
+import AboutProgramming from "../components/index-page/AboutProgramming";
 
 const IndexPage = () => {
   return (
     <Layout>
       <SectionTop />
+      <AboutProgramming />
 
       {/* section about programming */}
 
