@@ -1,4 +1,6 @@
-.demo {
+/* SECTION TOP */
+
+.demo-section-top {
     background-color: var(--cornslik);
     height: 50%;
     position: absolute;
@@ -12,14 +14,14 @@
     justify-content: space-around;
 }
 
-.demo-container {
+.demo-container-section-top {
     display: flex;
     flex-direction: column;
     gap: 0.5em;
     position: relative;
 }
 
-.demo-container-header {
+.demo-container-header-section-top {
     font-size: 2.2em;
     letter-spacing: 2px;
     font-weight: 500;
@@ -27,34 +29,36 @@
     margin: 0;
 }
 
-.demo-container-p {
+.demo-container-p-section-top {
     padding: 0;
     margin: 0;
 }
 
 @media (max-width: 1024px) {
-    .demo {
+    .demo-section-top {
         padding: 4% 5%;
     }
-    .demo-container-header {
+    .demo-container-header-section-top {
         font-size: 1.6em;
         letter-spacing: 1.6px;
     }
-    .demo-container-p {
+    .demo-container-p-section-top {
         font-size: 0.9em;
     }
 }
 
 @media (max-width: 768px) {
-    .demo-container-header {
+    .demo-container-header-section-top {
         font-size: 2em;
         letter-spacing: 1.4px;
     }
-    .demo-container-p {
+    .demo-container-p-section-top {
         font-size: 1em;
     }
-    .demo {
+    .demo-section-top {
         position: relative;
         transform: none;
     }
 }
+
+/* SECTION ABOUT PROGRAMMING */

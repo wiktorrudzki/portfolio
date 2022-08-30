@@ -1,6 +1,5 @@
 import * as React from "react";
 import Layout from "../components/Layout";
-import Demo from "../components/Demo";
 import {
   hpWrapper,
   hpSection,
@@ -10,34 +9,19 @@ import {
   hpSectionLeftImage,
   hpSectionRightImage,
   hpSectionLeftH4,
-  sectionTop,
-  imageWrapper,
-  imageContainer,
-  image,
-  sectionTopP,
 } from "../styles/index.module.css";
 
 import "../styles/global.css";
-import { StaticImage } from "gatsby-plugin-image";
+
+import SectionTop from "../components/index-page/SectionTop";
 
 const IndexPage = () => {
   return (
     <Layout>
-      <section className={sectionTop}>
-        <div className={imageWrapper}>
-          <div className={imageContainer}>
-            <StaticImage class={image} src="../images/ja7.jpg" />
-            <Demo>
-              <p className={sectionTopP}>
-                Aktualnie jestem studentem 2 roku Politechniki Krakowskiej. Od
-                dłuższego czasu interesuje się szeroko pojętym programowaniem, a
-                od kilku miesięcy stricte "frontedem" przy użyciu technologii
-                jaką jest React
-              </p>
-            </Demo>
-          </div>
-        </div>
-      </section>
+      <SectionTop />
+
+      {/* section about programming */}
+
       {/* <main className={hpWrapper}>
         <section className={`${hpSection} ${hpSectionLeft}`}>
           <StaticImage

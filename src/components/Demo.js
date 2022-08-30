@@ -1,12 +1,12 @@
 import * as React from "react";
-import {
+
+const Demo = ({
+  children,
   demo,
   demoContainer,
   demoContainerHeader,
   demoContainerP,
-} from "../styles/demo.module.css";
-
-const Demo = ({ children }) => {
+}) => {
   return (
     <div className={demo}>
       <container className={demoContainer}>
