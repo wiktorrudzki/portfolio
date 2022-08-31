@@ -1,17 +1,28 @@
 import * as React from "react";
 
+import {
+  demoSectionTop,
+  demoContainerSectionTop,
+  demoContainerHeaderSectionTop,
+  demoContainerPSectionTop,
+} from "../styles/demo.module.css";
+
 const Demo = ({
   children,
-  demo,
-  demoContainer,
-  demoContainerHeader,
-  demoContainerP,
+  title,
+  subtitle,
+  ...props
 }) => {
+  let demo = props.demo || demoSectionTop;
+  let demoContainer = props.demoContainer || demoContainerSectionTop;
+  let demoContainerHeader = props.demoContainerHeader || demoContainerHeaderSectionTop;
+  let demoContainerP = props.demoContainerP || demoContainerPSectionTop;
+
   return (
     <div className={demo}>
       <container className={demoContainer}>
-        <h3 className={demoContainerHeader}>Wiktor Rudzki</h3>
-        <p className={demoContainerP}>Kilka słów o mnie</p>
+        <h3 className={demoContainerHeader}>{title}</h3>
+        <p className={demoContainerP}>{subtitle}</p>
       </container>
       {children}
     </div>

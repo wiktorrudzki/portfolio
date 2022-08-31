@@ -28,6 +28,8 @@ const SectionTop = () => {
             demoContainer={demoContainerSectionTop}
             demoContainerHeader={demoContainerHeaderSectionTop}
             demoContainerP={demoContainerPSectionTop}
+            title="Wiktor Rudzki"
+            subtitle="Kilka słów o mnie"
           >
             <p className={sectionTopP}>
               Aktualnie jestem studentem 2 roku Politechniki Krakowskiej. Od

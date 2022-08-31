@@ -1,64 +1,104 @@
 /* SECTION TOP */
 
 .demo-section-top {
-    background-color: var(--cornslik);
-    height: 50%;
-    position: absolute;
-    right: 0;
-    transform: translateX(50%);
-    padding: 6% 5%;
-    width: 100%;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+  background-color: var(--cornslik);
+  height: 50%;
+  color: var(--beige);
+  position: absolute;
+  right: 0;
+  transform: translateX(50%);
+  padding: 6% 5%;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 .demo-container-section-top {
+  color: var(--morebeige);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  position: relative;
+}
+
+.demo-container-header-section-top {
+  font-size: 2.2em;
+  letter-spacing: 2px;
+  font-weight: 500;
+  padding: 0;
+  margin: 0;
+}
+
+.demo-container-p-section-top {
+  padding: 0;
+  margin: 0;
+}
+
+@media (max-width: 1024px) {
+  .demo-section-top {
+    padding: 4% 5%;
+  }
+  .demo-container-header-section-top {
+    font-size: 1.6em;
+    letter-spacing: 1.6px;
+  }
+  .demo-container-p-section-top {
+    font-size: 0.9em;
+  }
+}
+
+@media (max-width: 768px) {
+  .demo-container-header-section-top {
+    font-size: 1.8em;
+    letter-spacing: 1.4px;
+  }
+  .demo-container-p-section-top {
+    font-size: 1em;
+  }
+  .demo-section-top {
+    position: relative;
+    transform: none;
+  }
+}
+
+/* SECTION ABOUT PROGRAMMING */
+
+.demo-about-programming {
+  background-color: var(--beige);
+  height: 50%;
+  position: absolute;
+  left: 0;
+  top: 10%;
+  z-index: 102;
+  transform: translateX(-100%);
+  padding: 6% 5%;
+  width: 65%;
+  text-align: center;
+  color: var(--black);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.demo-container-about-programming {
+    color: var(--black);
     display: flex;
     flex-direction: column;
     gap: 0.5em;
     position: relative;
-}
-
-.demo-container-header-section-top {
-    font-size: 2.2em;
-    letter-spacing: 2px;
-    font-weight: 500;
-    padding: 0;
-    margin: 0;
-}
-
-.demo-container-p-section-top {
-    padding: 0;
-    margin: 0;
-}
+  }
 
 @media (max-width: 1024px) {
-    .demo-section-top {
-        padding: 4% 5%;
-    }
-    .demo-container-header-section-top {
-        font-size: 1.6em;
-        letter-spacing: 1.6px;
-    }
-    .demo-container-p-section-top {
-        font-size: 0.9em;
-    }
+  .demo-about-programming {
+    padding: 4% 5%;
+  }
 }
 
 @media (max-width: 768px) {
-    .demo-container-header-section-top {
-        font-size: 2em;
-        letter-spacing: 1.4px;
-    }
-    .demo-container-p-section-top {
-        font-size: 1em;
-    }
-    .demo-section-top {
-        position: relative;
-        transform: none;
-    }
+  .demo-about-programming {
+    position: relative;
+    transform: none;
+  }
 }
-
-/* SECTION ABOUT PROGRAMMING */
