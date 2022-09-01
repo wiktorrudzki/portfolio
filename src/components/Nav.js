@@ -15,57 +15,105 @@ import {
   navBarsActivated,
   navUlLinkActive,
 } from "../styles/nav.module.css";
+import "../styles/dark-mode-styles/switch-mode.css";
+
+import {
+  darkestbeigeBackground,
+  whitebeigeColor,
+  whitebeigeBorder,
+  whitebeigeBorderActive,
+} from "../styles/dark-mode-styles/dark-mode.module.css";
+import { ThemeContext } from "./Layout.js";
 
 const Nav = () => {
   const [hideMenu, setHideMenu] = React.useState(true);
+  const [darkMode, setDarkMode] = React.useContext(ThemeContext);
+
+  React.useEffect(() => {
+    document.body.style.backgroundColor = darkMode ? "black" : "white";
+    localStorage.setItem('dark-mode', darkMode)
+  }, [darkMode]);
 
   const url = window.location.href;
 
+  //NAVIGATION STYLES
+
+  const styles = darkMode
+    ? {
+        nav: `${navWrapper} ${darkestbeigeBackground}`,
+        header: `${navHeader} ${whitebeigeColor}`,
+        h4: `${navHeaderH4} ${whitebeigeColor}`,
+        bars: `${navBars} ${whitebeigeColor}`,
+        ul: hideMenu
+          ? `${navUl} ${darkestbeigeBackground}`
+          : `${navUl} ${navBarsActivated} ${darkestbeigeBackground}`,
+        ulLink: hideMenu ? `${navUlLink} ${whitebeigeBorder}` : navUlLink,
+        li: `${navUlLinkLi} ${whitebeigeColor}`,
+        linkActive: whitebeigeBorderActive,
+      }
+    : {
+        nav: navWrapper,
+        header: navHeader,
+        h4: navHeaderH4,
+        bars: navBars,
+        ul: hideMenu ? navUl : `${navUl} ${navBarsActivated}`,
+        ulLink: navUlLink,
+        li: navUlLinkLi,
+        linkActive: navUlLinkActive,
+      };
+
   return (
-    <nav className={navWrapper}>
+    <nav className={styles.nav}>
       <Link to="/" className={link}>
-        <header className={navHeader}>
-          <h4 className={navHeaderH4}>WIKTOR RUDZKI</h4>
-          <h4 className={navHeaderH4}>FRONTEND DEVELOPER</h4>
+        <header className={styles.header}>
+          <h4 className={styles.h4}>WIKTOR RUDZKI</h4>
+          <h4 className={styles.h4}>FRONTEND DEVELOPER</h4>
         </header>
       </Link>
       <FontAwesomeIcon
         icon={hideMenu ? faBars : faX}
         size="1.5x"
-        className={navBars}
+        className={styles.bars}
         onClick={() => setHideMenu((prev) => !prev)}
       />
-      <ul className={hideMenu ? navUl : `${navUl} ${navBarsActivated}`}>
+      <ul className={styles.ul}>
         <Link
           className={
             url.includes("about")
-              ? `${navUlLink} ${link} ${navUlLinkActive}`
-              : `${navUlLink} ${link}`
+              ? `${styles.ulLink} ${link} ${styles.linkActive}`
+              : `${styles.ulLink} ${link}`
           }
           to="/about"
         >
-          <li className={navUlLinkLi}>About</li>
+          <li className={styles.li}>About</li>
         </Link>
         <Link
           className={
             url.includes("contact")
-              ? `${navUlLink} ${link} ${navUlLinkActive}`
-              : `${navUlLink} ${link}`
+              ? `${styles.ulLink} ${link} ${styles.linkActive}`
+              : `${styles.ulLink} ${link}`
           }
-					to="/contact"
+          to="/contact"
         >
-          <li className={navUlLinkLi}>Contact</li>
+          <li className={styles.li}>Contact</li>
         </Link>
         <Link
           className={
             url.includes("CV")
-              ? `${navUlLink} ${link} ${navUlLinkActive}`
-              : `${navUlLink} ${link}`
+              ? `${styles.ulLink} ${link} ${styles.linkActive}`
+              : `${styles.ulLink} ${link}`
           }
-					to="CV"
+          to="CV"
         >
-          <li className={navUlLinkLi}>CV</li>
+          <li className={styles.li}>CV</li>
         </Link>
+        <label class="switch">
+          <input type="checkbox" checked={darkMode ? true : false} />
+          <span
+            className="slider round"
+            onClick={() => setDarkMode((prev) => !prev)}
+          ></span>
+        </label>
       </ul>
     </nav>
   );

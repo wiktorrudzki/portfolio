@@ -1,0 +1,40 @@
+.black-background {
+    background-color: var(--black)!important;
+}
+
+.white-color {
+    color: var(--white)!important;
+}
+
+.darkbeige-color {
+    color: var(--darkbeige)!important;
+}
+
+.moredarkbeige-background {
+    background-color: var(--darkerbeige)!important;
+}
+
+.darkestbeige-background {
+    background-color: var(--darkestbeige)!important;
+}
+
+.beige-color {
+    color: var(--beige)!important;
+}
+
+.whitebeige-color {
+    color: var(--whitebeige)!important;
+}
+
+.whitebeige-border {
+    border-top: var(--whitebeige) 1px solid!important;
+}
+
+.whitebeige-border:hover {
+    border-top: 3px var(--whitebeige) solid!important;
+}
+
+.whitebeige-border-active {
+    border-top: 3px var(--whitebeige) solid!important;
+    padding: calc(1em - 2px) 0!important;
+}

@@ -180,11 +180,10 @@
     margin: 0;
     transform: translate(-10%, 100%);
     padding: 1em;
+    color: var(--saddlebrown);
     list-style: none;
     font-size: 18px;
     line-height: 1.6em;
-    margin-top: 1.5em;
-    border-top: 2px solid var(--cornslik);
 }
 
 @media (max-width: 1024px) {
@@ -210,6 +209,8 @@
         align-items: center;
     }
     .about-programming-p {
+        border-top: 2px solid var(--cornslik);
+        margin-top: 1.5em;
         transform: none;
         position: relative;
         bottom: 0;

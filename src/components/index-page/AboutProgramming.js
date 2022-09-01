@@ -1,6 +1,7 @@
 import * as React from "react";
 import Demo from "../Demo";
 import { StaticImage } from "gatsby-plugin-image";
+import { ThemeContext } from "../Layout";
 
 import {
   demoAboutProgramming,
@@ -15,22 +16,51 @@ import {
   aboutProgrammingP,
 } from "../../styles/index.module.css";
 
+import {
+  whiteColor,
+  moredarkbeigeBackground,
+  darkestbeigeBackground,
+  whitebeigeColor,
+} from "../../styles/dark-mode-styles/dark-mode.module.css";
+
 const AboutProgramming = () => {
+  const [darkMode] = React.useContext(ThemeContext);
+
+  //ABOUT-PROGRAMMING STYLES
+
+  const styles = darkMode ? {
+    section: `${aboutProgramming} ${darkestbeigeBackground}`,
+    divWrapper: imageWrapperAboutProgramming,
+    divContainer: imageContainerAboutProgramming,
+    image: imageAboutProgramming,
+    demo: `${demoAboutProgramming} ${moredarkbeigeBackground}`,
+    demoContainer: `${demoContainerAboutProgramming} ${whiteColor}`,
+    ul: `${aboutProgrammingP} ${whitebeigeColor}`
+  } : {
+    section: aboutProgramming,
+    divWrapper: imageWrapperAboutProgramming,
+    divContainer: imageContainerAboutProgramming,
+    image: imageAboutProgramming,
+    demo: demoAboutProgramming,
+    demoContainer: demoContainerAboutProgramming,
+    ul: aboutProgrammingP
+  }
+
   return (
-    <section className={aboutProgramming}>
-      <div className={imageWrapperAboutProgramming}>
-        <div className={imageContainerAboutProgramming}>
+    <section className={styles.section}>
+      <div className={styles.divWrapper}>
+        <div className={styles.divContainer}>
           <StaticImage
-            class={imageAboutProgramming}
+            class={styles.image}
             src="../../images/ja3.jpg"
           />
           <Demo
-            demo={demoAboutProgramming}
-            demoContainer={demoContainerAboutProgramming}
+            demo={styles.demo}
+            demoContainer={styles.demoContainer}
             title="Moje Technologie"
             subtitle="Technologie oraz języki, z którymi miałem styczność"
           >
-            <ul className={aboutProgrammingP}>
+            <ul className={styles.ul}>
               <li>React</li>
               <li>Gatsby</li>
               <li>JavaScript ES6</li>
