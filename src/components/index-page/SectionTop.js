@@ -1,6 +1,7 @@
 import * as React from "react";
 import Demo from "../Demo";
 import { StaticImage } from "gatsby-plugin-image";
+import { ThemeContext } from "../Layout";
 
 import {
   demoSectionTop,
@@ -17,21 +18,61 @@ import {
   sectionTopP,
 } from "../../styles/index.module.css";
 
+import {
+  blackBackground,
+  whiteColor,
+  darkbeigeColor,
+  moredarkbeigeBackground,
+  darkestbeigeBackground,
+  beigeColor,
+  whitebeigeColor,
+  whitebeigeBorder,
+  whitebeigeBorderActive,
+} from "../../styles/dark-mode-styles/dark-mode.module.css";
+
 const SectionTop = () => {
+  const [darkMode] = React.useContext(ThemeContext);
+
+  //SECTION-TOP STYLES
+
+  const styles = darkMode
+    ? {
+        section: `${sectionTop} ${blackBackground}`,
+        divWrapper: `${imageWrapper} ${moredarkbeigeBackground}`,
+        divContainer: imageContainer,
+        image: image,
+        demo: `${demoSectionTop} ${darkestbeigeBackground}`,
+        demoContainer: demoContainerSectionTop,
+        demoContainerHeader: `${demoContainerHeaderSectionTop} ${whiteColor}`,
+        demoContainerP: `${demoContainerPSectionTop} ${whiteColor}`,
+        p: `${sectionTopP} ${whitebeigeColor}`,
+      }
+    : {
+        section: sectionTop,
+        divWrapper: imageWrapper,
+        divContainer: imageContainer,
+        image: image,
+        demo: demoSectionTop,
+        demoContainer: demoContainerSectionTop,
+        demoContainerHeader: demoContainerHeaderSectionTop,
+        demoContainerP: demoContainerPSectionTop,
+        p: sectionTopP,
+      };
+
   return (
-    <section className={sectionTop}>
-      <div className={imageWrapper}>
-        <div className={imageContainer}>
-          <StaticImage class={image} src="../images/ja7.jpg" />
+    <section className={styles.section}>
+      <div className={styles.divWrapper}>
+        <div className={styles.divContainer}>
+          <StaticImage className={styles.image} src="../images/ja7.jpg" />
           <Demo
-            demo={demoSectionTop}
-            demoContainer={demoContainerSectionTop}
-            demoContainerHeader={demoContainerHeaderSectionTop}
-            demoContainerP={demoContainerPSectionTop}
+            demo={styles.demo}
+            demoContainer={styles.demoContainer}
+            demoContainerHeader={styles.demoContainerHeader}
+            demoContainerP={styles.demoContainerP}
             title="Wiktor Rudzki"
             subtitle="Kilka słów o mnie"
           >
-            <p className={sectionTopP}>
+            <p className={styles.p}>
               Aktualnie jestem studentem 2 roku Politechniki Krakowskiej. Od
               dłuższego czasu interesuje się szeroko pojętym programowaniem, a
               od kilku miesięcy stricte "frontedem" przy użyciu technologii jaką

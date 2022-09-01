@@ -1,4 +1,5 @@
 :root {
+    /* LIGHT MODE */
     --black: #000;
     --saddlebrown: #8B4513;
     --bulrywood: #DEB887;
@@ -8,6 +9,12 @@
     --lessbeige: #C7AD8F;
     --morebeige: #A57A5A;
     --white: #ffffff;
+
+    /* DARK MODE */
+    --darkerbeige: #6D6052;
+    --darkestbeige: #645240;
+    --darkbeige: #9F8C76;
+    --whitebeige: #F8F2DE;
 }
 
 * {

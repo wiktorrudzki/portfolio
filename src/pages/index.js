@@ -1,15 +1,15 @@
 import * as React from "react";
 import Layout from "../components/Layout";
-import {
-  hpWrapper,
-  hpSection,
-  hpSectionLeft,
-  hpSectionRight,
-  imgSlider,
-  hpSectionLeftImage,
-  hpSectionRightImage,
-  hpSectionLeftH4,
-} from "../styles/index.module.css";
+// import {
+//   hpWrapper,
+//   hpSection,
+//   hpSectionLeft,
+//   hpSectionRight,
+//   imgSlider,
+//   hpSectionLeftImage,
+//   hpSectionRightImage,
+//   hpSectionLeftH4,
+// } from "../styles/index.module.css";
 
 import "../styles/global.css";
 
