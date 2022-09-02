@@ -12,8 +12,7 @@ const Layout = ({
   image = false,
   path = false,
 }) => {
-
-  const darkMode = React.useState(localStorage.getItem('dark-mode') === "true");
+  const darkMode = React.useState(localStorage.getItem("dark-mode") === "true");
 
   return (
     <ThemeContext.Provider value={darkMode}>
@@ -21,7 +20,7 @@ const Layout = ({
       <Nav />
       <main>{children}</main>
       <Footer />
-      </ThemeContext.Provider>
+    </ThemeContext.Provider>
   );
 };
 

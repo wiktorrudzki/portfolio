@@ -19,15 +19,11 @@ import {
 } from "../../styles/index.module.css";
 
 import {
-  blackBackground,
   whiteColor,
-  darkbeigeColor,
   moredarkbeigeBackground,
   darkestbeigeBackground,
-  beigeColor,
   whitebeigeColor,
-  whitebeigeBorder,
-  whitebeigeBorderActive,
+  lessblackBackground
 } from "../../styles/dark-mode-styles/dark-mode.module.css";
 
 const SectionTop = () => {
@@ -37,7 +33,7 @@ const SectionTop = () => {
 
   const styles = darkMode
     ? {
-        section: `${sectionTop} ${blackBackground}`,
+        section: `${sectionTop} ${lessblackBackground}`,
         divWrapper: `${imageWrapper} ${moredarkbeigeBackground}`,
         divContainer: imageContainer,
         image: image,
@@ -63,7 +59,7 @@ const SectionTop = () => {
     <section className={styles.section}>
       <div className={styles.divWrapper}>
         <div className={styles.divContainer}>
-          <StaticImage className={styles.image} src="../images/ja7.jpg" />
+          <StaticImage className={styles.image} src="../../images/ja7.jpg" />
           <Demo
             demo={styles.demo}
             demoContainer={styles.demoContainer}

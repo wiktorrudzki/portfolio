@@ -6,6 +6,28 @@ module.exports = {
     image: "https://prnt.sc/_tN9zMWNobS-",
   },
   plugins: [
+    "gatsby-plugin-sharp",
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "programming",
+        path: `${__dirname}/src/images/my-projects/programming`,
+      },
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "logo",
+        path: `${__dirname}/src/images/logo`,
+      },
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "graphical",
+        path: `${__dirname}/src/images/my-projects/graphical`,
+      },
+    },
     "gatsby-plugin-react-helmet",
     {
       resolve: "gatsby-plugin-google-fonts",
@@ -23,6 +45,6 @@ module.exports = {
       }
     },
     "gatsby-plugin-image",
-    "gatsby-plugin-sharp",
+    `gatsby-transformer-sharp`
   ],
 };

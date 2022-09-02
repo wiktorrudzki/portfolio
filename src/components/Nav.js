@@ -30,7 +30,7 @@ const Nav = () => {
   const [darkMode, setDarkMode] = React.useContext(ThemeContext);
 
   React.useEffect(() => {
-    document.body.style.backgroundColor = darkMode ? "black" : "white";
+    document.body.style.backgroundColor = darkMode ? "var(--lessblack)" : "white";
     localStorage.setItem('dark-mode', darkMode)
   }, [darkMode]);
 

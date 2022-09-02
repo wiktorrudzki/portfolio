@@ -2,6 +2,10 @@
     background-color: var(--black)!important;
 }
 
+.lessblack-background {
+    background-color: var(--lessblack)!important;
+}
+
 .white-color {
     color: var(--white)!important;
 }
@@ -37,4 +41,16 @@
 .whitebeige-border-active {
     border-top: 3px var(--whitebeige) solid!important;
     padding: calc(1em - 2px) 0!important;
+}
+
+.saddlebrown-color {
+    color: var(--saddlebrown);
+}
+
+.black-border {
+    border: 2px var(--black) solid!important;
+}
+
+.darkbeige-background {
+    background-color: var(--darkbeige)!important;
 }
