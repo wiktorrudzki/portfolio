@@ -174,7 +174,7 @@
     align-items: center;
     width: 90%;
     margin: auto;
-    font-size: 28px;
+    font-size: 24px;
     height: 10%;
   }
   .demo1-projects {
@@ -184,7 +184,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 28px;
+    font-size: 24px;
     height: 10%;
   }
   .demo-container-header-projects {

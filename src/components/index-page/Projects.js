@@ -21,15 +21,9 @@ import {
 } from "../../styles/index.module.css";
 
 import {
-  blackBackground,
   whiteColor,
-  darkbeigeColor,
   moredarkbeigeBackground,
   darkestbeigeBackground,
-  beigeColor,
-  whitebeigeColor,
-  whitebeigeBorder,
-  whitebeigeBorderActive,
   lessblackBackground,
   saddlebrownColor,
   blackBorder,

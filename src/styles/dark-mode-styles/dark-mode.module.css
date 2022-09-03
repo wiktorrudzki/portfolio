@@ -54,3 +54,12 @@
 .darkbeige-background {
     background-color: var(--darkbeige)!important;
 }
+
+.black-border-top-bottom {
+    border-top: 2px var(--black) solid!important;
+    border-bottom: 2px var(--black) solid!important;
+}
+
+.darken-background {
+    background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35));
+}

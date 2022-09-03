@@ -2,6 +2,7 @@ import * as React from "react";
 import Nav from "./Nav";
 import Seo from "./Seo";
 import Footer from "./Footer";
+import UpButton from "./UpButton";
 
 export const ThemeContext = React.createContext();
 
@@ -20,6 +21,7 @@ const Layout = ({
       <Nav />
       <main>{children}</main>
       <Footer />
+      <UpButton />
     </ThemeContext.Provider>
   );
 };

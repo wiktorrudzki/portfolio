@@ -7,13 +7,25 @@ import {
   sectionProjectsTitle,
   h1ProjectsTitle,
   pProjectsTitle,
-  logoProjectsTitle,
-  logo0,
-  logo1,
-  logo2,
-  logo3,
-  logo4,
+  divProjectsTitle,
 } from "../../styles/index.module.css";
+
+import {
+  blackBackground,
+  whiteColor,
+  darkbeigeColor,
+  moredarkbeigeBackground,
+  darkestbeigeBackground,
+  beigeColor,
+  whitebeigeColor,
+  whitebeigeBorder,
+  whitebeigeBorderActive,
+  lessblackBackground,
+  saddlebrownColor,
+  blackBorder,
+  blackBorderTopBottom,
+  darkenBackground
+} from "../../styles/dark-mode-styles/dark-mode.module.css";
 
 const ProjectsTitle = () => {
   const [darkMode] = React.useContext(ThemeContext);
@@ -40,37 +52,62 @@ const ProjectsTitle = () => {
 
   const styles = darkMode
     ? {
-        section: sectionProjectsTitle,
-        h1: h1ProjectsTitle,
-        p: pProjectsTitle,
-        logo0: `${logoProjectsTitle} ${logo0}`,
-        logo1: `${logoProjectsTitle} ${logo1}`,
-        logo2: `${logoProjectsTitle} ${logo2}`,
-        logo3: `${logoProjectsTitle} ${logo3}`,
-        logo4: `${logoProjectsTitle} ${logo4}`,
+        section: `${sectionProjectsTitle} ${lessblackBackground} ${blackBorderTopBottom} ${darkenBackground}`,
+        h1: `${h1ProjectsTitle} ${whitebeigeColor}`,
+        div: `${divProjectsTitle} ${lessblackBackground} ${darkenBackground}`,
+        p: `${pProjectsTitle} ${beigeColor}`,
       }
     : {
         section: sectionProjectsTitle,
         h1: h1ProjectsTitle,
+        div: divProjectsTitle,
         p: pProjectsTitle,
-        logo0: `${logoProjectsTitle} ${logo0}`,
-        logo1: `${logoProjectsTitle} ${logo1}`,
-        logo2: `${logoProjectsTitle} ${logo2}`,
-        logo3: `${logoProjectsTitle} ${logo3}`,
-        logo4: `${logoProjectsTitle} ${logo4}`,
       };
+
+  function getRandomDegree() {
+    return Math.floor(Math.random() * 360);
+  }
+
+  function getRandomPercentLeft() {
+    const first = Math.floor(Math.random() * 25);
+    const second = Math.floor(Math.random() * 20) + 72;
+    return Math.random() > 0.5 ? first : second;
+  }
+
+  function getRandomPercentTop() {
+    return Math.floor(Math.random() * 75) + 5;
+  }
+
+  function logoClass() {
+    return {
+      width: "3%",
+      maxWidth: "100%",
+      position: "absolute",
+      overflow: "hidden",
+      left: `${getRandomPercentLeft()}%`,
+      top: `${getRandomPercentTop()}%`,
+      transform: `rotate(${getRandomDegree()}deg)`,
+    };
+  }
 
   return (
     <section className={styles.section}>
-      <h1 className={styles.h1}>Projekty</h1>
-      <p className={styles.p}>
-        Moje projekty dotychczas głównie polegały na szkoleniu umiejętności z
-        różnych zakresów JavaScripta oraz Reacta poznając coraz to nowe ich
-        możliwości podczas pisania prostych gier webowych, aplikacji oraz algorytmów.
-      </p>
-      {logos.map((logo, index) => {
+      <div className={styles.div}>
+        <h1 className={styles.h1}>Projekty</h1>
+        <p className={styles.p}>
+          Moje projekty dotychczas głównie polegały na szkoleniu umiejętności z
+          różnych zakresów JavaScripta oraz Reacta poznając coraz to nowe ich
+          możliwości podczas pisania prostych gier webowych, aplikacji oraz
+          algorytmów.
+        </p>
+      </div>
+      {logos.map((logo) => {
         return (
-          <GatsbyImage className={index === 0 ? styles.logo0 : index === 1 ? styles.logo1 : index === 2 ? styles.logo2 : index === 3 ? styles.logo3 : styles.logo4} image={getImage(logo.node)} />
+          <GatsbyImage
+            key={logo.node.base}
+            style={logoClass()}
+            image={getImage(logo.node)}
+          />
         );
       })}
     </section>
