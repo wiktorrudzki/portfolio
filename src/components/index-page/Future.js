@@ -19,20 +19,10 @@ import {
 } from "../../styles/index.module.css";
 
 import {
-  blackBackground,
   whiteColor,
-  darkbeigeColor,
   moredarkbeigeBackground,
   darkestbeigeBackground,
   beigeColor,
-  whitebeigeColor,
-  whitebeigeBorder,
-  whitebeigeBorderActive,
-  lessblackBackground,
-  saddlebrownColor,
-  blackBorder,
-  blackBorderTopBottom,
-  darkenBackground,
 } from "../../styles/dark-mode-styles/dark-mode.module.css";
 
 const Future = () => {
