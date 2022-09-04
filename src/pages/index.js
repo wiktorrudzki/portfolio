@@ -7,6 +7,7 @@ import SectionTop from "../components/index-page/SectionTop";
 import AboutProgramming from "../components/index-page/AboutProgramming";
 import Projects from "../components/index-page/Projects";
 import ProjectsTitle from "../components/index-page/ProjectsTitle";
+import Future from "../components/index-page/Future";
 
 const IndexPage = () => {
   return (
@@ -15,6 +16,7 @@ const IndexPage = () => {
       <AboutProgramming />
       <ProjectsTitle />
       <Projects />
+      <Future />
     </Layout>
   );
 };

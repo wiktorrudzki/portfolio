@@ -5,7 +5,7 @@ import githubIcon from "../images/icons/github.svg";
 import instagramIcon from "../images/icons/instagram.svg";
 import { ThemeContext } from "./Layout";
 
-import { darkbeigeBackground } from "../styles/dark-mode-styles/dark-mode.module.css"
+import { moredarkbeigeBackground } from "../styles/dark-mode-styles/dark-mode.module.css"
 
 import {
   footer,
@@ -19,7 +19,7 @@ const Footer = () => {
 
   //FOOTER STYLES
   const styles = darkMode ? {
-    footer: `${footer} ${darkbeigeBackground}`
+    footer: `${footer} ${moredarkbeigeBackground}`
   } : {
     footer: `${footer}`
   }

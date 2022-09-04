@@ -24,6 +24,13 @@ module.exports = {
     {
       resolve: "gatsby-source-filesystem",
       options: {
+        name: "logoFuture",
+        path: `${__dirname}/src/images/logoFuture`,
+      },
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
         name: "graphical",
         path: `${__dirname}/src/images/my-projects/graphical`,
       },
