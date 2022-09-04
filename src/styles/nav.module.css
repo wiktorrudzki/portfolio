@@ -6,6 +6,10 @@
   justify-content: space-between;
   align-items: center;
   margin: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
 .link {
@@ -72,7 +76,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     height: 100vh;
