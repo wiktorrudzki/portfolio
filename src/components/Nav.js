@@ -2,31 +2,27 @@ import * as React from "react";
 import { Link } from "gatsby";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faX } from "@fortawesome/free-solid-svg-icons";
-import { polski, english } from "../content/NavContent";
+import "../styles/dark-mode-styles/switch-mode.css";
+import { SetLanguage, ThemeContext } from "./Layout.js";
 
 import {
-  navWrapper,
-  navHeader,
   navUl,
-  navHeaderH4,
-  navUlLinkLi,
   navUlLink,
   link,
-  navBars,
   navBarsActivated,
-  navUlLinkActive,
-  language,
-  languages,
 } from "../styles/nav.module.css";
-import "../styles/dark-mode-styles/switch-mode.css";
 
 import {
   darkestbeigeBackground,
-  whitebeigeColor,
   whitebeigeBorder,
-  whitebeigeBorderActive,
 } from "../styles/dark-mode-styles/dark-mode.module.css";
-import { SetLanguage, ThemeContext } from "./Layout.js";
+
+import {
+  polski,
+  english,
+  lightStyles,
+  darkStyles,
+} from "../content&styles/NavC&S";
 
 const Nav = () => {
   const [hideMenu, setHideMenu] = React.useState(true);
@@ -46,35 +42,20 @@ const Nav = () => {
 
   const styles = darkMode
     ? {
-        nav: `${navWrapper} ${darkestbeigeBackground}`,
-        header: `${navHeader} ${whitebeigeColor}`,
-        h4: `${navHeaderH4} ${whitebeigeColor}`,
-        bars: `${navBars} ${whitebeigeColor}`,
         ul: hideMenu
           ? `${navUl} ${darkestbeigeBackground}`
           : `${navUl} ${navBarsActivated} ${darkestbeigeBackground}`,
         ulLink: hideMenu ? `${navUlLink} ${whitebeigeBorder}` : navUlLink,
-        li: `${navUlLinkLi} ${whitebeigeColor}`,
-        linkActive: whitebeigeBorderActive,
-        language: language,
-        languages: languages,
+        ...darkStyles
       }
     : {
-        nav: navWrapper,
-        header: navHeader,
-        h4: navHeaderH4,
-        bars: navBars,
-        ul: hideMenu ? navUl : `${navUl} ${navBarsActivated}`,
-        ulLink: navUlLink,
-        li: navUlLinkLi,
-        linkActive: navUlLinkActive,
-        language: language,
-        languages: languages,
-      };
+      ul: hideMenu ? navUl : `${navUl} ${navBarsActivated}`,
+      ...lightStyles
+    };
 
-      //LANGUAGE
+  //LANGUAGE
 
-      const content = polish ? polski : english
+  const content = polish ? polski : english;
 
   return (
     <nav className={styles.nav}>
@@ -129,8 +110,8 @@ const Nav = () => {
           ></span>
         </label>
         <select
-          className={languages}
-          onChange={() => setPolish(prev => !prev)}
+          className={styles.languages}
+          onChange={() => setPolish((prev) => !prev)}
         >
           <option value="polski" className={styles.language}>
             Polski
