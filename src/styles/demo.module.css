@@ -34,6 +34,7 @@
 .demo-container-p-section-top {
   padding: 0;
   margin: 0;
+  animation: 1 ease-out 0s 1s slideFromRight;
 }
 
 @media (max-width: 1024px) {
@@ -83,12 +84,12 @@
 }
 
 .demo-container-about-programming {
-    color: var(--black);
-    display: flex;
-    flex-direction: column;
-    gap: 0.5em;
-    position: relative;
-  }
+  color: var(--black);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  position: relative;
+}
 
 @media (max-width: 1024px) {
   .demo-about-programming {

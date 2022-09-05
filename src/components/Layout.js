@@ -2,6 +2,7 @@ import * as React from "react";
 import Nav from "./Nav";
 import Seo from "./Seo";
 import Footer from "./Footer";
+import LoadingSpinner from "./LoadingSpinner";
 
 export const ThemeContext = React.createContext();
 
