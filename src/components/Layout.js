@@ -5,6 +5,7 @@ import Footer from "./Footer";
 import LoadingSpinner from "./LoadingSpinner";
 
 export const ThemeContext = React.createContext();
+export const SetLanguage = React.createContext();
 
 const Layout = ({
   children,
@@ -14,13 +15,21 @@ const Layout = ({
   path = false,
 }) => {
   const darkMode = React.useState(localStorage.getItem("dark-mode") === "true");
+  const polish = React.useState(true);
 
   return (
     <ThemeContext.Provider value={darkMode}>
-      <Seo title={title} description={description} image={image} path={path} />
-      <Nav />
-      <main>{children}</main>
-      <Footer />
+      <SetLanguage.Provider value={polish}>
+        <Seo
+          title={title}
+          description={description}
+          image={image}
+          path={path}
+        />
+        <Nav />
+        <main>{children}</main>
+        <Footer />
+      </SetLanguage.Provider>
     </ThemeContext.Provider>
   );
 };

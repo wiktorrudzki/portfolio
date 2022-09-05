@@ -90,7 +90,6 @@ const Future = () => {
         </p>
         <div className={styles.logosWrapper}>
           {logos.map((logo) => {
-            console.log(logo.node);
             return (
               <GatsbyImage
                 title={logo.node.base}

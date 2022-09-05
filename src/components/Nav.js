@@ -2,6 +2,7 @@ import * as React from "react";
 import { Link } from "gatsby";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faX } from "@fortawesome/free-solid-svg-icons";
+import { polski, english } from "../content/NavContent";
 
 import {
   navWrapper,
@@ -14,6 +15,8 @@ import {
   navBars,
   navBarsActivated,
   navUlLinkActive,
+  language,
+  languages,
 } from "../styles/nav.module.css";
 import "../styles/dark-mode-styles/switch-mode.css";
 
@@ -23,15 +26,18 @@ import {
   whitebeigeBorder,
   whitebeigeBorderActive,
 } from "../styles/dark-mode-styles/dark-mode.module.css";
-import { ThemeContext } from "./Layout.js";
+import { SetLanguage, ThemeContext } from "./Layout.js";
 
 const Nav = () => {
   const [hideMenu, setHideMenu] = React.useState(true);
+  const [polish, setPolish] = React.useContext(SetLanguage);
   const [darkMode, setDarkMode] = React.useContext(ThemeContext);
 
   React.useEffect(() => {
-    document.body.style.backgroundColor = darkMode ? "var(--lessblack)" : "white";
-    localStorage.setItem('dark-mode', darkMode)
+    document.body.style.backgroundColor = darkMode
+      ? "var(--lessblack)"
+      : "white";
+    localStorage.setItem("dark-mode", darkMode);
   }, [darkMode]);
 
   const url = window.location.href;
@@ -50,6 +56,8 @@ const Nav = () => {
         ulLink: hideMenu ? `${navUlLink} ${whitebeigeBorder}` : navUlLink,
         li: `${navUlLinkLi} ${whitebeigeColor}`,
         linkActive: whitebeigeBorderActive,
+        language: language,
+        languages: languages,
       }
     : {
         nav: navWrapper,
@@ -60,14 +68,20 @@ const Nav = () => {
         ulLink: navUlLink,
         li: navUlLinkLi,
         linkActive: navUlLinkActive,
+        language: language,
+        languages: languages,
       };
+
+      //LANGUAGE
+
+      const content = polish ? polski : english
 
   return (
     <nav className={styles.nav}>
       <Link to="/" className={link}>
         <header className={styles.header}>
-          <h4 className={styles.h4}>WIKTOR RUDZKI</h4>
-          <h4 className={styles.h4}>FRONTEND DEVELOPER</h4>
+          <h4 className={styles.h4}>{content.header1}</h4>
+          <h4 className={styles.h4}>{content.header2}</h4>
         </header>
       </Link>
       <FontAwesomeIcon
@@ -85,7 +99,7 @@ const Nav = () => {
           }
           to="/about"
         >
-          <li className={styles.li}>About</li>
+          <li className={styles.li}>{content.li1}</li>
         </Link>
         <Link
           className={
@@ -95,7 +109,7 @@ const Nav = () => {
           }
           to="/contact"
         >
-          <li className={styles.li}>Contact</li>
+          <li className={styles.li}>{content.li2}</li>
         </Link>
         <Link
           className={
@@ -105,7 +119,7 @@ const Nav = () => {
           }
           to="CV"
         >
-          <li className={styles.li}>CV</li>
+          <li className={styles.li}>{content.li3}</li>
         </Link>
         <label class="switch">
           <input type="checkbox" checked={darkMode ? true : false} />
@@ -114,6 +128,17 @@ const Nav = () => {
             onClick={() => setDarkMode((prev) => !prev)}
           ></span>
         </label>
+        <select
+          className={languages}
+          onChange={() => setPolish(prev => !prev)}
+        >
+          <option value="polski" className={styles.language}>
+            Polski
+          </option>
+          <option value="english" className={styles.language}>
+            English
+          </option>
+        </select>
       </ul>
     </nav>
   );

@@ -1,5 +1,7 @@
 .switch {
     position: relative;
+    top: 50%;
+    transform: translateY(50%);
     display: inline-block;
     width: 40px;
     height: 24px;
