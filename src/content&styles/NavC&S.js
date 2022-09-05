@@ -16,7 +16,7 @@ import {
   whitebeigeBorderActive,
 } from "../styles/dark-mode-styles/dark-mode.module.css";
 
-export const darkStyles = {
+export const darkStylesNav = {
     nav: `${navWrapper} ${darkestbeigeBackground}`,
     header: `${navHeader} ${whitebeigeColor}`,
     h4: `${navHeaderH4} ${whitebeigeColor}`,
@@ -27,7 +27,7 @@ export const darkStyles = {
     languages: languages,
 }
 
-export const lightStyles = {
+export const lightStylesNav = {
   nav: navWrapper,
         header: navHeader,
         h4: navHeaderH4,
@@ -39,7 +39,7 @@ export const lightStyles = {
         languages: languages,
 }
 
-export const polski = {
+export const polskiNav = {
   header1: "WIKTOR RUDZKI",
   header2: "FRONTEND DEVELOPER",
   li1: "O Mnie",
@@ -47,7 +47,7 @@ export const polski = {
   li3: "CV",
 };
 
-export const english = {
+export const englishNav = {
   header1: "WIKTOR RUDZKI",
   header2: "FRONTEND DEVELOPER",
   li1: "About",

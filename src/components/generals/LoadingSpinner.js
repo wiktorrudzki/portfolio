@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import "../styles/loading-screen.css"
+import "../../styles/loading-screen.css"
 
 const LoadingSpinner = () => {
     return (

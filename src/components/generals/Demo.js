@@ -5,7 +5,7 @@ import {
   demoContainerSectionTop,
   demoContainerHeaderSectionTop,
   demoContainerPSectionTop,
-} from "../styles/demo.module.css";
+} from "../../styles/demo.module.css";
 
 const Demo = ({
   children,

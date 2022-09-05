@@ -2,32 +2,34 @@ import * as React from "react";
 import { Link } from "gatsby";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faX } from "@fortawesome/free-solid-svg-icons";
-import "../styles/dark-mode-styles/switch-mode.css";
 import { SetLanguage, ThemeContext } from "./Layout.js";
+import "../../styles/dark-mode-styles/switch-mode.css";
 
 import {
   navUl,
   navUlLink,
   link,
   navBarsActivated,
-} from "../styles/nav.module.css";
+} from "../../styles/nav.module.css";
 
 import {
   darkestbeigeBackground,
   whitebeigeBorder,
-} from "../styles/dark-mode-styles/dark-mode.module.css";
+} from "../../styles/dark-mode-styles/dark-mode.module.css";
 
 import {
-  polski,
-  english,
-  lightStyles,
-  darkStyles,
-} from "../content&styles/NavC&S";
+  polskiNav,
+  englishNav,
+  lightStylesNav,
+  darkStylesNav,
+} from "../../content&styles/NavC&S";
 
 const Nav = () => {
   const [hideMenu, setHideMenu] = React.useState(true);
   const [polish, setPolish] = React.useContext(SetLanguage);
   const [darkMode, setDarkMode] = React.useContext(ThemeContext);
+
+  //BODY DARK AND LIGHT MODE
 
   React.useEffect(() => {
     document.body.style.backgroundColor = darkMode
@@ -46,16 +48,16 @@ const Nav = () => {
           ? `${navUl} ${darkestbeigeBackground}`
           : `${navUl} ${navBarsActivated} ${darkestbeigeBackground}`,
         ulLink: hideMenu ? `${navUlLink} ${whitebeigeBorder}` : navUlLink,
-        ...darkStyles
+        ...darkStylesNav,
       }
     : {
-      ul: hideMenu ? navUl : `${navUl} ${navBarsActivated}`,
-      ...lightStyles
-    };
+        ul: hideMenu ? navUl : `${navUl} ${navBarsActivated}`,
+        ...lightStylesNav,
+      };
 
   //LANGUAGE
 
-  const content = polish ? polski : english;
+  const content = polish ? polskiNav : englishNav;
 
   return (
     <nav className={styles.nav}>
