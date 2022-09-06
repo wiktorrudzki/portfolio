@@ -3,7 +3,7 @@ import {
   demoContainerSectionTop,
   demoContainerHeaderSectionTop,
   demoContainerPSectionTop,
-} from "../styles/demo.module.css";
+} from "../../styles/demo.module.css";
 
 import {
   sectionTop,
@@ -11,7 +11,7 @@ import {
   imageContainer,
   image,
   sectionTopP,
-} from "../styles/index.module.css";
+} from "../../styles/index.module.css";
 
 import {
   whiteColor,
@@ -19,7 +19,7 @@ import {
   darkestbeigeBackground,
   whitebeigeColor,
   lessblackBackground,
-} from "../styles/dark-mode-styles/dark-mode.module.css";
+} from "../../styles/dark-mode-styles/dark-mode.module.css";
 
 export const darkStylesSectionTop = {
   section: `${sectionTop} ${lessblackBackground}`,

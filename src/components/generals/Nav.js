@@ -22,7 +22,7 @@ import {
   englishNav,
   lightStylesNav,
   darkStylesNav,
-} from "../../content&styles/NavC&S";
+} from "../../content&styles/generals/NavC&S";
 
 const Nav = () => {
   const [hideMenu, setHideMenu] = React.useState(true);

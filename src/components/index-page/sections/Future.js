@@ -8,7 +8,7 @@ import {
   englishFuture,
   lightStylesFuture,
   polskiFuture,
-} from "../../../content&styles/FutureC&S";
+} from "../../../content&styles/index-page/FutureC&S";
 
 const Future = () => {
   const [darkMode] = React.useContext(ThemeContext);

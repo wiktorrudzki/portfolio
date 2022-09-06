@@ -7,7 +7,7 @@ import {
   englishAboutProgramming,
   lightStylesAboutProgramming,
   polskiAboutProgramming,
-} from "../../../content&styles/AboutProgrammingC&S";
+} from "../../../content&styles/index-page/AboutProgrammingC&S";
 
 const AboutProgramming = () => {
   const [darkMode] = React.useContext(ThemeContext);

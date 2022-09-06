@@ -3,14 +3,14 @@ import {
   h1ProjectsTitle,
   pProjectsTitle,
   divProjectsTitle,
-} from "../styles/index.module.css";
+} from "../../styles/index.module.css";
 
 import {
   beigeColor,
   whitebeigeColor,
   lessblackBackground,
   darkenBackground,
-} from "../styles/dark-mode-styles/dark-mode.module.css";
+} from "../../styles/dark-mode-styles/dark-mode.module.css";
 
 export const lightStylesProjectsTitle = {
   section: sectionProjectsTitle,

@@ -3,9 +3,9 @@ import {
   icon,
   icons,
   paddingMarginZero,
-} from "../styles/footer.module.css";
+} from "../../styles/footer.module.css";
 
-import { moredarkbeigeBackground } from "../styles/dark-mode-styles/dark-mode.module.css";
+import { moredarkbeigeBackground } from "../../styles/dark-mode-styles/dark-mode.module.css";
 
 export const lightStylesFooter = {
   footer: footer,

@@ -8,7 +8,7 @@ import {
   englishSectionTop,
   lightStylesSectionTop,
   polskiSectionTop,
-} from "../../../content&styles/SectionTopC&S";
+} from "../../../content&styles/index-page/SectionTopC&S";
 
 const SectionTop = () => {
   const [darkMode] = React.useContext(ThemeContext);

@@ -8,13 +8,13 @@ import {
   navUlLinkActive,
   language,
   languages,
-} from "../styles/nav.module.css";
+} from "../../styles/nav.module.css";
 
 import {
   darkestbeigeBackground,
   whitebeigeColor,
   whitebeigeBorderActive,
-} from "../styles/dark-mode-styles/dark-mode.module.css";
+} from "../../styles/dark-mode-styles/dark-mode.module.css";
 
 export const darkStylesNav = {
     nav: `${navWrapper} ${darkestbeigeBackground}`,

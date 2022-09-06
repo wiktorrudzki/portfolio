@@ -8,7 +8,7 @@ import {
   englishProjectsTitle,
   lightStylesProjectsTitle,
   polskiProjectsTitle,
-} from "../../../content&styles/ProjectsTitleC&S";
+} from "../../../content&styles/index-page/ProjectsTitleC&S";
 
 const ProjectsTitle = () => {
   const [darkMode] = React.useContext(ThemeContext);

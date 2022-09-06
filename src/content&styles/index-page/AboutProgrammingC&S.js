@@ -1,7 +1,7 @@
 import {
   demoAboutProgramming,
   demoContainerAboutProgramming,
-} from "../styles/demo.module.css";
+} from "../../styles/demo.module.css";
 
 import {
   aboutProgramming,
@@ -9,14 +9,14 @@ import {
   imageContainerAboutProgramming,
   imageAboutProgramming,
   aboutProgrammingP,
-} from "../styles/index.module.css";
+} from "../../styles/index.module.css";
 
 import {
   whiteColor,
   moredarkbeigeBackground,
   darkestbeigeBackground,
   whitebeigeColor,
-} from "../styles/dark-mode-styles/dark-mode.module.css";
+} from "../../styles/dark-mode-styles/dark-mode.module.css";
 
 export const darkStylesAboutProgramming = {
   section: `${aboutProgramming} ${darkestbeigeBackground}`,

@@ -4,7 +4,7 @@ import {
   englishProjects,
   lightStylesProjects,
   polskiProjects,
-} from "../../../content&styles/ProjectsC&S";
+} from "../../../content&styles/index-page/ProjectsC&S";
 import Demo from "../../generals/Demo";
 import { SetLanguage, ThemeContext } from "../../generals/Layout";
 import ImageSliderGraphical from "../image-slider/ImageSliderGraphical";

@@ -4,7 +4,7 @@ import {
   demo1ContainerProjects,
   demo2ContainerProjects,
   demoContainerHeaderProjects,
-} from "../styles/demo.module.css";
+} from "../../styles/demo.module.css";
 
 import {
   projects,
@@ -12,7 +12,7 @@ import {
   projectsContainer,
   projectsFirstImage,
   projectsSecondImage,
-} from "../styles/index.module.css";
+} from "../../styles/index.module.css";
 
 import {
   whiteColor,
@@ -21,7 +21,7 @@ import {
   lessblackBackground,
   saddlebrownColor,
   blackBorder,
-} from "../styles/dark-mode-styles/dark-mode.module.css";
+} from "../../styles/dark-mode-styles/dark-mode.module.css";
 
 export const lightStylesProjects = {
   section: projects,

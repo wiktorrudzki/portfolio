@@ -10,14 +10,14 @@ import {
   div2UlFuture,
   div2LiFuture,
   div2LiImageFuture,
-} from "../styles/index.module.css";
+} from "../../styles/index.module.css";
 
 import {
   whiteColor,
   moredarkbeigeBackground,
   darkestbeigeBackground,
   beigeColor,
-} from "../styles/dark-mode-styles/dark-mode.module.css";
+} from "../../styles/dark-mode-styles/dark-mode.module.css";
 
 export const darkStylesFuture = {
   section: `${sectionFuture} ${darkestbeigeBackground}`,

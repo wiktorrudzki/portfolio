@@ -4,7 +4,7 @@ import facebookIcon from "../../images/icons/facebook.svg";
 import githubIcon from "../../images/icons/github.svg";
 import linkedInIcon from "../../images/icons/linkedin.svg";
 import { ThemeContext } from "./Layout";
-import { darkStylesFooter, lightStylesFooter } from "../../content&styles/FooterC&S";
+import { darkStylesFooter, lightStylesFooter } from "../../content&styles/generals/FooterC&S";
 
 const Footer = () => {
   const [darkMode] = React.useContext(ThemeContext);
