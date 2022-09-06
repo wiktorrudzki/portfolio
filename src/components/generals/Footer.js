@@ -2,7 +2,7 @@ import * as React from "react";
 import { Link } from "gatsby";
 import facebookIcon from "../../images/icons/facebook.svg";
 import githubIcon from "../../images/icons/github.svg";
-import instagramIcon from "../../images/icons/instagram.svg";
+import linkedInIcon from "../../images/icons/linkedin.svg";
 import { ThemeContext } from "./Layout";
 import { darkStylesFooter, lightStylesFooter } from "../../content&styles/FooterC&S";
 
@@ -35,12 +35,12 @@ const Footer = () => {
             />
           </li>
         </Link>
-        <Link to="https://www.instagram.com/wiktor.rudzki/" target="_blank">
+        <Link to="https://www.linkedin.com/in/wiktor-rudzki-3b64b424b/" target="_blank">
           <li>
             <img
               className={`${styles.icon} ${styles.paddingMarginZero}`}
-              src={instagramIcon}
-              alt="Find me on Instagram!"
+              src={linkedInIcon}
+              alt="Find me on LinkedIn!"
             />
           </li>
         </Link>
