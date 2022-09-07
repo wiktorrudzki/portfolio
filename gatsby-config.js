@@ -8,37 +8,37 @@ module.exports = {
   plugins: [
     "gatsby-plugin-sharp",
     {
-      resolve: 'gatsby-plugin-manifest',
+      resolve: "gatsby-plugin-manifest",
       options: {
-        icon: 'src/images/favicon.png',
+        icon: "src/assets/images/favicon.png",
       },
     },
     {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "programming",
-        path: `${__dirname}/src/images/my-projects/programming`,
+        path: `${__dirname}/src/assets/images/my-projects/programming`,
       },
     },
     {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "logo",
-        path: `${__dirname}/src/images/logo`,
+        path: `${__dirname}/src/assets/images/logo`,
       },
     },
     {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "logoFuture",
-        path: `${__dirname}/src/images/logoFuture`,
+        path: `${__dirname}/src/assets/images/logoFuture`,
       },
     },
     {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "graphical",
-        path: `${__dirname}/src/images/my-projects/graphical`,
+        path: `${__dirname}/src/assets/images/my-projects/graphical`,
       },
     },
     "gatsby-plugin-react-helmet",
@@ -54,7 +54,22 @@ module.exports = {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "images",
-        path: `${__dirname}/src/images`,
+        path: `${__dirname}/src/assets/images`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-alias-imports`,
+      options: {
+        alias: {
+          "@styles": "src/styles",
+          "@components": "src/components",
+          "@images": "src/assets/images",
+          "@contexts": "src/contexts",
+          "@hooks": "src/hooks",
+          "@dark-mode": "src/styles/dark-mode-styles",
+          "@featurs": "src/features"
+        },
+        extensions: ["js", "css"],
       },
     },
     "gatsby-plugin-image",

@@ -1,16 +1,11 @@
 import * as React from "react";
-import ContactDetails from "../components/contact-page/ContactDetails";
-import ContactForm from "../components/contact-page/ContactForm";
-import Layout from "../components/generals/Layout";
-import { layoutContact } from "../styles/contact.module.css";
+import Layout from "@components/Layout";
+import ContactPage from "@featurs/contact-page";
 
 const Contact = () => {
   return (
     <Layout>
-      <section className={layoutContact}>
-        <ContactDetails />
-        <ContactForm />
-      </section>
+      <ContactPage />
     </Layout>
   );
 };

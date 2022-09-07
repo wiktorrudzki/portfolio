@@ -67,7 +67,7 @@
 /* SECTION ABOUT PROGRAMMING */
 
 .demo-about-programming {
-  background-color: var(--beige);
+  background-color: var(--creamybeige);
   height: 50%;
   position: absolute;
   left: 0;
@@ -147,8 +147,9 @@
 }
 
 .demo-container-header-projects {
-  font-weight: 300;
-  letter-spacing: 0.12em;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  font-size: 1.5em;
   text-align: center;
 }
 
@@ -163,7 +164,7 @@
     height: 100%;
   }
   .demo-container-header-projects {
-    letter-spacing: 0.1em;
+    letter-spacing: 0.07em;
   }
 }
 
@@ -189,6 +190,7 @@
     height: 10%;
   }
   .demo-container-header-projects {
-    letter-spacing: 0.08em;
+    font-size: 0.9em;
+    letter-spacing: 0.065em;
   }
 }
