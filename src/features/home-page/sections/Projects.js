@@ -1,4 +1,5 @@
 import * as React from "react";
+import { useTranslation } from "react-i18next";
 import Demo from "@components/Demo";
 import { SetLanguage, ThemeContext } from "@components/Layout";
 
@@ -14,6 +15,8 @@ import {
 const Projects = () => {
   const [darkMode] = React.useContext(ThemeContext);
   const [polish] = React.useContext(SetLanguage);
+
+  const {t} = useTranslation();
 
   //PROJECTS STYLES
 
@@ -32,7 +35,7 @@ const Projects = () => {
             demoContainer={styles.demo1Container}
             demoContainerHeader={styles.demoContainerHeader}
             demoContainerP={styles.demoContainerP}
-            title={content.demoTitle1}
+            title={t("projects-demo-title1")}
           />
           <ImageSliderGraphical styles={styles.secondImage} />
           <Demo
@@ -40,7 +43,7 @@ const Projects = () => {
             demoContainer={styles.demo2Container}
             demoContainerHeader={styles.demoContainerHeader}
             demoContainerP={styles.demoContainerP}
-            title={content.demoTitle2}
+            title={t("projects-demo-title2")}
           />
           <ImageSliderProgramming styles={styles.firstImage} />
         </div>

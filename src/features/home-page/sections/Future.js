@@ -1,4 +1,5 @@
 import * as React from "react";
+import { useTranslation } from "react-i18next";
 import { SetLanguage, ThemeContext } from "@components/Layout";
 import Title from "@components/typography/Title";
 import { graphql, useStaticQuery } from "gatsby";
@@ -15,6 +16,8 @@ import {
 const Future = () => {
   const [darkMode] = React.useContext(ThemeContext);
   const [polish] = React.useContext(SetLanguage);
+
+  const { t } = useTranslation();
 
   const pageQuery = useStaticQuery(graphql`
     query {
@@ -51,8 +54,8 @@ const Future = () => {
         />
       </div>
       <div className={styles.div2}>
-        <Title styling={styles.div2H2}>{content.header}</Title>
-        <p className={styles.div2P1}>{content.headerP1}</p>
+        <Title styling={styles.div2H2}>{t("future-title")}</Title>
+        <p className={styles.div2P1}>{t("future-text1")}</p>
         <div className={styles.logosWrapper}>
           {logos.map((logo) => {
             return (
@@ -65,28 +68,28 @@ const Future = () => {
             );
           })}
         </div>
-        <p className={styles.div2P2}>{content.headerP2}</p>
+        <p className={styles.div2P2}>{t("future-text2")}</p>
         <ul className={styles.div2Ul}>
           <li className={styles.div2Li}>
             <StaticImage
               className={styles.div2LiImage}
               src="../../../assets/images/icons/globe-icon.svg"
             />
-            {content.li1}
+            {t("future-li1")}
           </li>
           <li className={styles.div2Li}>
             <StaticImage
               className={styles.div2LiImage}
               src="../../../assets/images/icons/mobile-icon.svg"
             />
-            {content.li2}
+            {t("future-li2")}
           </li>
           <li className={styles.div2Li}>
             <StaticImage
               className={styles.div2LiImage}
               src="../../../assets/images/icons/desktop-icon.svg"
             />
-            <p>{content.li3}</p>
+            {t("future-li3")}
           </li>
         </ul>
       </div>

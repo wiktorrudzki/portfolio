@@ -4,8 +4,6 @@ import {
   whitebeigeColor,
 } from "./dark-mode-styles/dark-mode.module.css";
 import {
-  language,
-  languages,
   navBars,
   navHeader,
   navHeaderH4,
@@ -22,8 +20,6 @@ export const darkStylesNav = {
     bars: `${navBars} ${whitebeigeColor}`,
     li: `${navUlLinkLi} ${whitebeigeColor}`,
     linkActive: whitebeigeBorderActive,
-    language: language,
-    languages: languages,
 }
 
 export const lightStylesNav = {
@@ -34,8 +30,6 @@ export const lightStylesNav = {
         ulLink: navUlLink,
         li: navUlLinkLi,
         linkActive: navUlLinkActive,
-        language: language,
-        languages: languages,
 }
 
 export const polskiNav = {

@@ -1,4 +1,5 @@
 import * as React from "react";
+import { useTranslation } from "react-i18next";
 import Demo from "@components/Demo";
 import { SetLanguage, ThemeContext } from "@components/Layout";
 import { StaticImage } from "gatsby-plugin-image";
@@ -13,6 +14,8 @@ import {
 const AboutProgramming = () => {
   const [darkMode] = React.useContext(ThemeContext);
   const [polish] = React.useContext(SetLanguage);
+
+  const {t} = useTranslation();
 
   //ABOUT-PROGRAMMING STYLES
 
@@ -32,16 +35,16 @@ const AboutProgramming = () => {
           <Demo
             demo={styles.demo}
             demoContainer={styles.demoContainer}
-            title={content.demoTitle}
-            subtitle={content.demoSubtitle}
+            title={t("about-programming-title")}
+            subtitle={t("about-programming-subtitle")}
           >
             <ul className={styles.ul}>
-              <li>{content.li1}</li>
-              <li>{content.li2}</li>
-              <li>{content.li3}</li>
-              <li>{content.li4}</li>
-              <li>{content.li5}</li>
-              <li>{content.li6}</li>
+              <li>{t("about-programming-li1")}</li>
+              <li>{t("about-programming-li2")}</li>
+              <li>{t("about-programming-li3")}</li>
+              <li>{t("about-programming-li4")}</li>
+              <li>{t("about-programming-li5")}</li>
+              <li>{t("about-programming-li6")}</li>
             </ul>
           </Demo>
         </div>

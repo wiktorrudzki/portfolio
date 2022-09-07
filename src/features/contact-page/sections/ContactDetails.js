@@ -1,4 +1,5 @@
 import * as React from "react";
+import { useTranslation } from "react-i18next";
 import { SetLanguage, ThemeContext } from "@components/Layout";
 import Title from "@components/typography/Title";
 import emailIcon from "@images/icons/email.svg";
@@ -18,6 +19,8 @@ const ContactDetails = () => {
   const [darkMode] = React.useContext(ThemeContext);
   const [polish] = React.useContext(SetLanguage);
 
+  const {t} = useTranslation();
+
   //CONTACT-DETAILS STYLES
 
   const styles = darkMode
@@ -30,34 +33,34 @@ const ContactDetails = () => {
 
   return (
     <section className={styles.section}>
-      <Title>{content.h2}</Title>
+      <Title>{t("contact-details-title")}</Title>
       <ul className={styles.ul}>
         <DetailsItem
           styles={styles}
           url="https://www.facebook.com/wiktor.rudzki.73"
           alt="Find me on Facebook!"
           icon={facebookIcon}
-          content={content.facebook}
+          content={t("contact-details-facebook")}
         />
         <DetailsItem
           styles={styles}
           alt="Send me an email!"
           icon={emailIcon}
-          content={content.email}
+          content={t("contact-details-email")}
         />
         <DetailsItem
           styles={styles}
           url="https://github.com/wiktorrudzki"
           alt="Find me on GitHub!"
           icon={githubIcon}
-          content={content.github}
+          content={t("contact-details-github")}
         />
         <DetailsItem
           styles={styles}
           url="https://www.linkedin.com/in/wiktor-rudzki-3b64b424b/"
           alt="Find me on LinkedIn!"
           icon={linkedInIcon}
-          content={content.linkedin}
+          content={t("contact-details-linkedin")}
         />
       </ul>
     </section>

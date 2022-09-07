@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 
 import favicon from "./assets/images/favicon.png";
 
+
 export default function HTML(props) {
   return (
     <html {...props.htmlAttributes}>

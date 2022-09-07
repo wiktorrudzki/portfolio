@@ -1,4 +1,5 @@
 import * as React from "react";
+import { useTranslation } from "react-i18next";
 import { SetLanguage, ThemeContext } from "@components/Layout";
 import { graphql, useStaticQuery } from "gatsby";
 import { GatsbyImage,getImage } from "gatsby-plugin-image";
@@ -15,6 +16,8 @@ import {
 const ProjectsTitle = () => {
   const [darkMode] = React.useContext(ThemeContext);
   const [polish] = React.useContext(SetLanguage);
+
+  const {t} = useTranslation();
 
   const pageQuery = useStaticQuery(graphql`
     query {
@@ -45,9 +48,9 @@ const ProjectsTitle = () => {
   return (
     <section className={styles.section}>
       <div className={styles.div}>
-        <Title styling={styles.h1}>{content.h1}</Title>
+        <Title styling={styles.h1}>{t("projects-title-title")}</Title>
         <p className={styles.p}>
-          {content.p}
+        {t("projects-title-text")}
         </p>
       </div>
       {logos.map((logo) => {

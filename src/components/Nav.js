@@ -1,4 +1,5 @@
 import * as React from "react";
+import { useTranslation } from "react-i18next";
 import { SetLanguage, ThemeContext } from "@components/Layout.js";
 import { faBars, faX } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -26,6 +27,8 @@ const Nav = () => {
   const [hideMenu, setHideMenu] = React.useState(true);
   const [polish, setPolish] = React.useContext(SetLanguage);
   const [darkMode, setDarkMode] = React.useContext(ThemeContext);
+
+  const {t} = useTranslation();
 
   //BODY DARK AND LIGHT MODE
 
@@ -61,8 +64,8 @@ const Nav = () => {
     <nav className={styles.nav}>
       <Link to="/" className={link}>
         <header className={styles.header}>
-          <h4 className={styles.h4}>{content.header1}</h4>
-          <h4 className={styles.h4}>{content.header2}</h4>
+          <h4 className={styles.h4}>{t("nav-title1")}</h4>
+          <h4 className={styles.h4}>{t("nav-title2")}</h4>
         </header>
       </Link>
       <FontAwesomeIcon
@@ -80,7 +83,7 @@ const Nav = () => {
           }
           to="/about"
         >
-          <li className={styles.li}>{content.li1}</li>
+          <li className={styles.li}>{t("nav-li1")}</li>
         </Link>
         <Link
           className={
@@ -90,7 +93,7 @@ const Nav = () => {
           }
           to="/contact"
         >
-          <li className={styles.li}>{content.li2}</li>
+          <li className={styles.li}>{t("nav-li2")}</li>
         </Link>
         <Link
           className={
@@ -100,7 +103,7 @@ const Nav = () => {
           }
           to="CV"
         >
-          <li className={styles.li}>{content.li3}</li>
+          <li className={styles.li}>{t("nav-li3")}</li>
         </Link>
         <label class="switch">
           <input type="checkbox" checked={darkMode ? true : false} />

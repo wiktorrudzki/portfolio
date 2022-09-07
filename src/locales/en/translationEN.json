@@ -1,0 +1,41 @@
+{
+  "nav-title1": "WIKTOR RUDZKI",
+  "nav-title2": "FRONTEND DEVELOPER",
+  "nav-li1": "About",
+  "nav-li2": "Contact",
+  "nav-li3": "CV",
+
+  "section-top-title": "Wiktor Rudzki",
+  "section-top-subtitle": "A few words about me",
+  "section-top-text": "Currently, I am second year Student of computer science on Politechnika Krakowska. I have been interested in programming in the broadest sense for a long time and for the last few months I've been strictly passionated about \"frontend\" using React technology",
+
+  "about-programming-title": "My Technologies",
+  "about-programming-subtitle": "Technologies and languages that I had a contact with",
+  "about-programming-li1": "React",
+  "about-programming-li2": "Gatsby",
+  "about-programming-li3": "JavaScript ES6",
+  "about-programming-li4": "Node JS",
+  "about-programming-li5": "Podstawy c++, c#",
+  "about-programming-li6": "Podstawy python",
+
+  "projects-title-title": "Projects",
+  "projects-title-text": "My projects so far, were mostly about acquiring some new skills from various scopes of JavaScript and React learning more and more about their potential while writing simple web games, applications and alorithms",
+
+  "projects-demo-title1": "Graphical Projects",
+  "projects-demo-title2": "Coded Projects",
+
+  "future-title": "My Future Goals",
+  "future-text1":
+    "I am open to new technologies and I am experiencing them with a lot of pleasure in order to broaden my mind. Over time, I am defenitely discover many of the following",
+  "future-text2":
+    "Those technologies and libraries are definitely going to be really helpful while developing:",
+  "future-li1": "Websites",
+  "future-li2": "Mobile applications",
+  "future-li3": "Desktop applications",
+
+  "contact-details-title": "Dane kontaktowe",
+  "contact-details-facebook": "Wiktor Rudzki",
+  "contact-details-email": "wiktor1rudzki@gmail.com",
+  "contact-details-github": "wiktorrudzki",
+  "contact-details-linkedin": "Wiktor Rudzki"
+}

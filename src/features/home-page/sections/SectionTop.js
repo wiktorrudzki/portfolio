@@ -1,4 +1,5 @@
 import * as React from "react";
+import { useTranslation } from "react-i18next";
 import Demo from "@components/Demo";
 import { SetLanguage, ThemeContext } from "@components/Layout";
 import { StaticImage } from "gatsby-plugin-image";
@@ -13,6 +14,8 @@ import {
 const SectionTop = () => {
   const [darkMode] = React.useContext(ThemeContext);
   const [polish] = React.useContext(SetLanguage);
+
+  const {t} = useTranslation();
 
   //SECTION-TOP STYLES
 
@@ -32,11 +35,11 @@ const SectionTop = () => {
             demoContainer={styles.demoContainer}
             demoContainerHeader={styles.demoContainerHeader}
             demoContainerP={styles.demoContainerP}
-            title={content.demoTitle}
-            subtitle={content.demoSubtitle}
+            title={t("section-top-title")}
+            subtitle={t("section-top-subtitle")}
           >
             <p className={styles.p}>
-              {content.p}
+            {t("section-top-text")}
             </p>
           </Demo>
         </div>
