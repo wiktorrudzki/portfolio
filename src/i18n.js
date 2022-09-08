@@ -1,5 +1,5 @@
 import { initReactI18next } from "react-i18next";
-import i18n from "i18next";
+import i18next from "i18next";
 
 import translationEN from "./locales/en/translationEN.json";
 import translationPL from "./locales/pl/translationPL.json";
@@ -13,13 +13,13 @@ const resources = {
   },
 };
 
-i18n.use(initReactI18next).init({
+i18next.use(initReactI18next).init({
   resources,
-  lng: "en",
+  lng: "pl",
   keySeparator: false,
   interpolation: {
     escapeValue: false,
   },
 });
 
-export default i18n;
+export default i18next;

@@ -13,24 +13,44 @@ import {
   navWrapper,
 } from "@styles/nav.module.css";
 
-export const darkStylesNav = {
+export const navStyles = {
+  dark: {
     nav: `${navWrapper} ${darkestbeigeBackground}`,
     header: `${navHeader} ${whitebeigeColor}`,
     h4: `${navHeaderH4} ${whitebeigeColor}`,
     bars: `${navBars} ${whitebeigeColor}`,
     li: `${navUlLinkLi} ${whitebeigeColor}`,
     linkActive: whitebeigeBorderActive,
-}
+  },
+  light: {
+    nav: navWrapper,
+    header: navHeader,
+    h4: navHeaderH4,
+    bars: navBars,
+    ulLink: navUlLink,
+    li: navUlLinkLi,
+    linkActive: navUlLinkActive,
+  },
+};
+
+export const darkStylesNav = {
+  nav: `${navWrapper} ${darkestbeigeBackground}`,
+  header: `${navHeader} ${whitebeigeColor}`,
+  h4: `${navHeaderH4} ${whitebeigeColor}`,
+  bars: `${navBars} ${whitebeigeColor}`,
+  li: `${navUlLinkLi} ${whitebeigeColor}`,
+  linkActive: whitebeigeBorderActive,
+};
 
 export const lightStylesNav = {
   nav: navWrapper,
-        header: navHeader,
-        h4: navHeaderH4,
-        bars: navBars,
-        ulLink: navUlLink,
-        li: navUlLinkLi,
-        linkActive: navUlLinkActive,
-}
+  header: navHeader,
+  h4: navHeaderH4,
+  bars: navBars,
+  ulLink: navUlLink,
+  li: navUlLinkLi,
+  linkActive: navUlLinkActive,
+};
 
 export const polskiNav = {
   header1: "WIKTOR RUDZKI",

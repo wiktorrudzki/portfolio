@@ -12,6 +12,21 @@ export const lightStylesContactDetails = {
   img: imgContactDetails,
 };
 
+export const contactDetailsStyles = {
+  dark: {
+    section: sectionContactDetails,
+    ul: ulContactDetails,
+    li: liContactDetails,
+    img: imgContactDetails,
+  },
+  light: {
+    section: sectionContactDetails,
+    ul: ulContactDetails,
+    li: liContactDetails,
+    img: imgContactDetails,
+  },
+};
+
 export const darkStylesContactDetails = {};
 
 export const polskiContactDetails = {

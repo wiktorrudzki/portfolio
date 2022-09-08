@@ -1,23 +1,20 @@
 import * as React from "react";
 import { useTranslation } from "react-i18next";
-import { SetLanguage, ThemeContext } from "@components/Layout";
+import { ThemeContext } from "@contexts/theme/ThemeContext";
+import { useTheme } from "@hooks/useTheme";
 import { graphql, useStaticQuery } from "gatsby";
-import { GatsbyImage,getImage } from "gatsby-plugin-image";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 import Title from "../../../components/typography/Title";
 import getRandomIconCSS from "../components/GetRandomIconsCSS";
 import {
-  darkStylesProjectsTitle,
-  englishProjectsTitle,
-  lightStylesProjectsTitle,
-  polskiProjectsTitle,
+  projectsTitleStyles
 } from "../styles/ProjectsTitleC&S";
 
 const ProjectsTitle = () => {
-  const [darkMode] = React.useContext(ThemeContext);
-  const [polish] = React.useContext(SetLanguage);
+  const { t } = useTranslation();
 
-  const {t} = useTranslation();
+  const { themeState } = useTheme(ThemeContext);
 
   const pageQuery = useStaticQuery(graphql`
     query {
@@ -37,21 +34,11 @@ const ProjectsTitle = () => {
 
   const logos = pageQuery.allFile.edges;
 
-  //PROJECTS-TITLE STYLES
-
-  const styles = darkMode ? darkStylesProjectsTitle : lightStylesProjectsTitle;
-
-  //PROJECTS-TITLE LANGUAGES
-
-  const content = polish ? polskiProjectsTitle : englishProjectsTitle;
-
   return (
-    <section className={styles.section}>
-      <div className={styles.div}>
-        <Title styling={styles.h1}>{t("projects-title-title")}</Title>
-        <p className={styles.p}>
-        {t("projects-title-text")}
-        </p>
+    <section className={projectsTitleStyles[`${themeState.theme}`].section}>
+      <div className={projectsTitleStyles[`${themeState.theme}`].div}>
+        <Title styling={projectsTitleStyles[`${themeState.theme}`].h1}>{t("projects-title-title")}</Title>
+        <p className={projectsTitleStyles[`${themeState.theme}`].p}>{t("projects-title-text")}</p>
       </div>
       {logos.map((logo) => {
         return (

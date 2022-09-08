@@ -1,44 +1,35 @@
 import * as React from "react";
 import { useTranslation } from "react-i18next";
 import Demo from "@components/Demo";
-import { SetLanguage, ThemeContext } from "@components/Layout";
+import { ThemeContext } from "@contexts/theme/ThemeContext";
+import { useTheme } from "@hooks/useTheme";
 import { StaticImage } from "gatsby-plugin-image";
 
 import {
-  darkStylesAboutProgramming,
-  englishAboutProgramming,
-  lightStylesAboutProgramming,
-  polskiAboutProgramming,
+  aboutProgrammingStyles,
 } from "../styles/AboutProgrammingC&S";
 
 const AboutProgramming = () => {
-  const [darkMode] = React.useContext(ThemeContext);
-  const [polish] = React.useContext(SetLanguage);
 
-  const {t} = useTranslation();
+  const { t } = useTranslation();
 
-  //ABOUT-PROGRAMMING STYLES
-
-  const styles = darkMode
-    ? darkStylesAboutProgramming
-    : lightStylesAboutProgramming;
-
-    //ABOUT-PROGRAMING LANGUAGE
-
-    const content = polish ? polskiAboutProgramming : englishAboutProgramming;
+  const { themeState } = useTheme(ThemeContext);
 
   return (
-    <section className={styles.section}>
-      <div className={styles.divWrapper}>
-        <div className={styles.divContainer}>
-          <StaticImage class={styles.image} src="../../../assets/images/ja3.jpg" />
+    <section className={aboutProgrammingStyles[`${themeState.theme}`].section}>
+      <div className={aboutProgrammingStyles[`${themeState.theme}`].divWrapper}>
+        <div className={aboutProgrammingStyles[`${themeState.theme}`].divContainer}>
+          <StaticImage
+            class={aboutProgrammingStyles[`${themeState.theme}`].image}
+            src="../../../assets/images/ja3.jpg"
+          />
           <Demo
-            demo={styles.demo}
-            demoContainer={styles.demoContainer}
+            demo={aboutProgrammingStyles[`${themeState.theme}`].demo}
+            demoContainer={aboutProgrammingStyles[`${themeState.theme}`].demoContainer}
             title={t("about-programming-title")}
             subtitle={t("about-programming-subtitle")}
           >
-            <ul className={styles.ul}>
+            <ul className={aboutProgrammingStyles[`${themeState.theme}`].ul}>
               <li>{t("about-programming-li1")}</li>
               <li>{t("about-programming-li2")}</li>
               <li>{t("about-programming-li3")}</li>

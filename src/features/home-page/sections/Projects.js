@@ -1,51 +1,40 @@
 import * as React from "react";
 import { useTranslation } from "react-i18next";
 import Demo from "@components/Demo";
-import { SetLanguage, ThemeContext } from "@components/Layout";
+import { ThemeContext } from "@contexts/theme/ThemeContext";
+import { useTheme } from "@hooks/useTheme";
 
 import ImageSliderGraphical from "../components/ImageSliderGraphical";
 import ImageSliderProgramming from "../components/ImageSliderProgramming";
 import {
-  darkStylesProjects,
-  englishProjects,
-  lightStylesProjects,
-  polskiProjects,
+  projectsStyles,
 } from "../styles/ProjectsC&S";
 
 const Projects = () => {
-  const [darkMode] = React.useContext(ThemeContext);
-  const [polish] = React.useContext(SetLanguage);
+  const { t } = useTranslation();
 
-  const {t} = useTranslation();
-
-  //PROJECTS STYLES
-
-  const styles = darkMode ? darkStylesProjects : lightStylesProjects;
-
-  //PROJECTS LANGUAGES
-
-  const content = polish ? polskiProjects : englishProjects;
+  const { themeState } = useTheme(ThemeContext);
 
   return (
-    <section className={styles.section}>
-      <div className={styles.divWrapper}>
-        <div className={styles.divContainer}>
+    <section className={projectsStyles[`${themeState.theme}`].section}>
+      <div className={projectsStyles[`${themeState.theme}`].divWrapper}>
+        <div className={projectsStyles[`${themeState.theme}`].divContainer}>
           <Demo
-            demo={styles.demo1}
-            demoContainer={styles.demo1Container}
-            demoContainerHeader={styles.demoContainerHeader}
-            demoContainerP={styles.demoContainerP}
+            demo={projectsStyles[`${themeState.theme}`].demo1}
+            demoContainer={projectsStyles[`${themeState.theme}`].demo1Container}
+            demoContainerHeader={projectsStyles[`${themeState.theme}`].demoContainerHeader}
+            demoContainerP={projectsStyles[`${themeState.theme}`].demoContainerP}
             title={t("projects-demo-title1")}
           />
-          <ImageSliderGraphical styles={styles.secondImage} />
+          <ImageSliderGraphical styles={projectsStyles[`${themeState.theme}`].secondImage} />
           <Demo
-            demo={styles.demo2}
-            demoContainer={styles.demo2Container}
-            demoContainerHeader={styles.demoContainerHeader}
-            demoContainerP={styles.demoContainerP}
+            demo={projectsStyles[`${themeState.theme}`].demo2}
+            demoContainer={projectsStyles[`${themeState.theme}`].demo2Container}
+            demoContainerHeader={projectsStyles[`${themeState.theme}`].demoContainerHeader}
+            demoContainerP={projectsStyles[`${themeState.theme}`].demoContainerP}
             title={t("projects-demo-title2")}
           />
-          <ImageSliderProgramming styles={styles.firstImage} />
+          <ImageSliderProgramming styles={projectsStyles[`${themeState.theme}`].firstImage} />
         </div>
       </div>
     </section>

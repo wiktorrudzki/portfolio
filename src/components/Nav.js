@@ -1,15 +1,17 @@
 import * as React from "react";
 import { useTranslation } from "react-i18next";
-import { SetLanguage, ThemeContext } from "@components/Layout.js";
+import { LanguageContext } from "@contexts/language/LanguageContext";
+import { ThemeContext } from "@contexts/theme/ThemeContext";
 import { faBars, faX } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useLanguage } from "@hooks/useLanguage";
+import { useTheme } from "@hooks/useTheme";
 import {
-  darkStylesNav,
-  englishNav,
-  lightStylesNav,
-  polskiNav,
+  navStyles,
 } from "@styles/NavC&S";
 import { Link } from "gatsby";
+
+import i18next from "../i18n";
 
 import "../styles/dark-mode-styles/switch-mode.css";
 import {
@@ -25,103 +27,101 @@ import {
 
 const Nav = () => {
   const [hideMenu, setHideMenu] = React.useState(true);
-  const [polish, setPolish] = React.useContext(SetLanguage);
-  const [darkMode, setDarkMode] = React.useContext(ThemeContext);
 
-  const {t} = useTranslation();
+  const { t } = useTranslation();
 
-  //BODY DARK AND LIGHT MODE
-
-  React.useEffect(() => {
-    document.body.style.backgroundColor = darkMode
-      ? "var(--lessblack)"
-      : "white";
-    localStorage.setItem("dark-mode", darkMode);
-  }, [darkMode]);
+  const { themeState, themeDispatch } = useTheme(ThemeContext);
+  const { languageState, languageDispatch } = useLanguage(LanguageContext);
 
   const url = window.location.href;
 
   //NAVIGATION STYLES
 
-  const styles = darkMode
-    ? {
-        ul: hideMenu
-          ? `${navUl} ${darkestbeigeBackground}`
-          : `${navUl} ${navBarsActivated} ${darkestbeigeBackground}`,
-        ulLink: hideMenu ? `${navUlLink} ${whitebeigeBorder}` : navUlLink,
-        ...darkStylesNav,
-      }
-    : {
-        ul: hideMenu ? navUl : `${navUl} ${navBarsActivated}`,
-        ...lightStylesNav,
-      };
+  navStyles.dark.ul = hideMenu
+    ? `${navUl} ${darkestbeigeBackground}`
+    : `${navUl} ${navBarsActivated} ${darkestbeigeBackground}`;
 
-  //LANGUAGE
+  navStyles.dark.ulLink = hideMenu
+    ? `${navUlLink} ${whitebeigeBorder}`
+    : navUlLink;
 
-  const content = polish ? polskiNav : englishNav;
+  navStyles.light.ul = hideMenu ? navUl : `${navUl} ${navBarsActivated}`;
 
   return (
-    <nav className={styles.nav}>
+    <nav className={navStyles[`${themeState.theme}`].nav}>
       <Link to="/" className={link}>
-        <header className={styles.header}>
-          <h4 className={styles.h4}>{t("nav-title1")}</h4>
-          <h4 className={styles.h4}>{t("nav-title2")}</h4>
+        <header className={navStyles[`${themeState.theme}`].header}>
+          <h4 className={navStyles[`${themeState.theme}`].h4}>
+            {t("nav-title1")}
+          </h4>
+          <h4 className={navStyles[`${themeState.theme}`].h4}>
+            {t("nav-title2")}
+          </h4>
         </header>
       </Link>
       <FontAwesomeIcon
         icon={hideMenu ? faBars : faX}
         size="1.5x"
-        className={styles.bars}
+        className={navStyles[`${themeState.theme}`].bars}
         onClick={() => setHideMenu((prev) => !prev)}
       />
-      <ul className={styles.ul}>
+      <ul className={navStyles[`${themeState.theme}`].ul}>
         <Link
           className={
             url.includes("about")
-              ? `${styles.ulLink} ${link} ${styles.linkActive}`
-              : `${styles.ulLink} ${link}`
+              ? `${navStyles[`${themeState.theme}`].ulLink} ${link} ${navStyles[`${themeState.theme}`].linkActive}`
+              : `${navStyles[`${themeState.theme}`].ulLink} ${link}`
           }
           to="/about"
         >
-          <li className={styles.li}>{t("nav-li1")}</li>
+          <li className={navStyles[`${themeState.theme}`].li}>
+            {t("nav-li1")}
+          </li>
         </Link>
         <Link
           className={
             url.includes("contact")
-              ? `${styles.ulLink} ${link} ${styles.linkActive}`
-              : `${styles.ulLink} ${link}`
+            ? `${navStyles[`${themeState.theme}`].ulLink} ${link} ${navStyles[`${themeState.theme}`].linkActive}`
+            : `${navStyles[`${themeState.theme}`].ulLink} ${link}`
           }
           to="/contact"
         >
-          <li className={styles.li}>{t("nav-li2")}</li>
+          <li className={navStyles[`${themeState.theme}`].li}>
+            {t("nav-li2")}
+          </li>
         </Link>
         <Link
           className={
             url.includes("CV")
-              ? `${styles.ulLink} ${link} ${styles.linkActive}`
-              : `${styles.ulLink} ${link}`
+            ? `${navStyles[`${themeState.theme}`].ulLink} ${link} ${navStyles[`${themeState.theme}`].linkActive}`
+            : `${navStyles[`${themeState.theme}`].ulLink} ${link}`
           }
           to="CV"
         >
-          <li className={styles.li}>{t("nav-li3")}</li>
+          <li className={navStyles[`${themeState.theme}`].li}>
+            {t("nav-li3")}
+          </li>
         </Link>
         <label class="switch">
-          <input type="checkbox" checked={darkMode ? true : false} />
+          <input
+            type="checkbox"
+            checked={themeState.theme === "light" ? false : true}
+          />
           <span
             className="slider round"
-            onClick={() => setDarkMode((prev) => !prev)}
+            onClick={() => {
+              themeDispatch({
+                type: "CHANGE_THEME",
+                theme: themeState.theme === "light" ? "dark" : "light",
+              });
+            }}
           ></span>
         </label>
-        <select
-          className={styles.languages}
-          onChange={() => setPolish((prev) => !prev)}
-        >
-          <option value="polski" className={styles.language}>
-            Polski
-          </option>
-          <option value="english" className={styles.language}>
-            English
-          </option>
+        <select onChange={(e) => {
+          languageDispatch({ type: "CHANGE_LANG", lang: e.target[e.target.selectedIndex].value })
+        }}>
+          <option value="pl">Polski</option>
+          <option value="en">English</option>
         </select>
       </ul>
     </nav>

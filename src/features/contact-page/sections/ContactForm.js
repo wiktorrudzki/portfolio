@@ -1,26 +1,10 @@
 import * as React from "react";
-import { SetLanguage, ThemeContext } from "@components/Layout";
-
-import {
-  darkStylesContactDetails,
-  lightStylesContactDetails,
-} from "../styles/ContactDetailsC&S";
 
 const ContactForm = () => {
-  const [darkMode] = React.useContext(ThemeContext);
-  const [polish] = React.useContext(SetLanguage);
-
-  //CONTACT-DETAILS STYLES
-
-  const styles = darkMode ? {} : {};
-
-  //CONTACT-DETAILS LANGUAGES
-
-  const content = polish ? {} : {};
 
   return (
     <section>
-      <h2>{content.h2}</h2>
+      <h2>Dane kontaktowe</h2>
       <form>
         <label>
           Imię
