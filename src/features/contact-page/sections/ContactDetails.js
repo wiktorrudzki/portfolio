@@ -9,12 +9,10 @@ import githubIcon from "@images/icons/github.svg";
 import linkedInIcon from "@images/icons/linkedin.svg";
 
 import DetailsItem from "../components/DetailsItem";
-import {
-  contactDetailsStyles,
-} from "../styles/ContactDetailsC&S";
+import { contactDetailsStyles } from "../styles/ContactDetailsStyles";
 
 const ContactDetails = () => {
-  const {t} = useTranslation();
+  const { t } = useTranslation();
 
   const { themeState } = useTheme(ThemeContext);
 

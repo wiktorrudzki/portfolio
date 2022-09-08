@@ -6,9 +6,7 @@ import { useTheme } from "@hooks/useTheme";
 
 import ImageSliderGraphical from "../components/ImageSliderGraphical";
 import ImageSliderProgramming from "../components/ImageSliderProgramming";
-import {
-  projectsStyles,
-} from "../styles/ProjectsC&S";
+import { projectsStyles } from "../styles/ProjectsStyles";
 
 const Projects = () => {
   const { t } = useTranslation();
@@ -22,19 +20,31 @@ const Projects = () => {
           <Demo
             demo={projectsStyles[`${themeState.theme}`].demo1}
             demoContainer={projectsStyles[`${themeState.theme}`].demo1Container}
-            demoContainerHeader={projectsStyles[`${themeState.theme}`].demoContainerHeader}
-            demoContainerP={projectsStyles[`${themeState.theme}`].demoContainerP}
+            demoContainerHeader={
+              projectsStyles[`${themeState.theme}`].demoContainerHeader
+            }
+            demoContainerP={
+              projectsStyles[`${themeState.theme}`].demoContainerP
+            }
             title={t("projects-demo-title1")}
           />
-          <ImageSliderGraphical styles={projectsStyles[`${themeState.theme}`].secondImage} />
+          <ImageSliderGraphical
+            styles={projectsStyles[`${themeState.theme}`].secondImage}
+          />
           <Demo
             demo={projectsStyles[`${themeState.theme}`].demo2}
             demoContainer={projectsStyles[`${themeState.theme}`].demo2Container}
-            demoContainerHeader={projectsStyles[`${themeState.theme}`].demoContainerHeader}
-            demoContainerP={projectsStyles[`${themeState.theme}`].demoContainerP}
+            demoContainerHeader={
+              projectsStyles[`${themeState.theme}`].demoContainerHeader
+            }
+            demoContainerP={
+              projectsStyles[`${themeState.theme}`].demoContainerP
+            }
             title={t("projects-demo-title2")}
           />
-          <ImageSliderProgramming styles={projectsStyles[`${themeState.theme}`].firstImage} />
+          <ImageSliderProgramming
+            styles={projectsStyles[`${themeState.theme}`].firstImage}
+          />
         </div>
       </div>
     </section>

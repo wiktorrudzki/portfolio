@@ -7,9 +7,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 import Title from "../../../components/typography/Title";
 import getRandomIconCSS from "../components/GetRandomIconsCSS";
-import {
-  projectsTitleStyles
-} from "../styles/ProjectsTitleC&S";
+import { projectsTitleStyles } from "../styles/ProjectsTitleStyles";
 
 const ProjectsTitle = () => {
   const { t } = useTranslation();
@@ -37,8 +35,12 @@ const ProjectsTitle = () => {
   return (
     <section className={projectsTitleStyles[`${themeState.theme}`].section}>
       <div className={projectsTitleStyles[`${themeState.theme}`].div}>
-        <Title styling={projectsTitleStyles[`${themeState.theme}`].h1}>{t("projects-title-title")}</Title>
-        <p className={projectsTitleStyles[`${themeState.theme}`].p}>{t("projects-title-text")}</p>
+        <Title styling={projectsTitleStyles[`${themeState.theme}`].h1}>
+          {t("projects-title-title")}
+        </Title>
+        <p className={projectsTitleStyles[`${themeState.theme}`].p}>
+          {t("projects-title-text")}
+        </p>
       </div>
       {logos.map((logo) => {
         return (

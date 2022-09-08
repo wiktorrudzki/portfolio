@@ -5,12 +5,9 @@ import { ThemeContext } from "@contexts/theme/ThemeContext";
 import { useTheme } from "@hooks/useTheme";
 import { StaticImage } from "gatsby-plugin-image";
 
-import {
-  aboutProgrammingStyles,
-} from "../styles/AboutProgrammingC&S";
+import { aboutProgrammingStyles } from "../styles/AboutProgrammingStyles";
 
 const AboutProgramming = () => {
-
   const { t } = useTranslation();
 
   const { themeState } = useTheme(ThemeContext);
@@ -18,14 +15,18 @@ const AboutProgramming = () => {
   return (
     <section className={aboutProgrammingStyles[`${themeState.theme}`].section}>
       <div className={aboutProgrammingStyles[`${themeState.theme}`].divWrapper}>
-        <div className={aboutProgrammingStyles[`${themeState.theme}`].divContainer}>
+        <div
+          className={aboutProgrammingStyles[`${themeState.theme}`].divContainer}
+        >
           <StaticImage
             class={aboutProgrammingStyles[`${themeState.theme}`].image}
             src="../../../assets/images/ja3.jpg"
           />
           <Demo
             demo={aboutProgrammingStyles[`${themeState.theme}`].demo}
-            demoContainer={aboutProgrammingStyles[`${themeState.theme}`].demoContainer}
+            demoContainer={
+              aboutProgrammingStyles[`${themeState.theme}`].demoContainer
+            }
             title={t("about-programming-title")}
             subtitle={t("about-programming-subtitle")}
           >

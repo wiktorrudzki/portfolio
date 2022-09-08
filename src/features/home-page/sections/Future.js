@@ -7,14 +7,12 @@ import { graphql, useStaticQuery } from "gatsby";
 import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image";
 
 import getRandomIconCSS from "../components/GetRandomIconsCSS";
-import {
-  futureStyles,
-} from "../styles/FutureC&S";
+import { futureStyles } from "../styles/FutureStyles";
 
 const Future = () => {
   const { t } = useTranslation();
 
-  const { themeState } = useTheme(ThemeContext)
+  const { themeState } = useTheme(ThemeContext);
 
   const pageQuery = useStaticQuery(graphql`
     query {
@@ -34,7 +32,7 @@ const Future = () => {
 
   const logos = pageQuery.allFile.edges;
 
-  console.log(futureStyles[`${themeState.theme}`].divH2)
+  console.log(futureStyles[`${themeState.theme}`].divH2);
 
   return (
     <section className={futureStyles[`${themeState.theme}`].section}>
@@ -45,8 +43,12 @@ const Future = () => {
         />
       </div>
       <div className={futureStyles[`${themeState.theme}`].div2}>
-        <Title styling={futureStyles[`${themeState.theme}`].div2H2}>{t("future-title")}</Title>
-        <p className={futureStyles[`${themeState.theme}`].div2P1}>{t("future-text1")}</p>
+        <Title styling={futureStyles[`${themeState.theme}`].div2H2}>
+          {t("future-title")}
+        </Title>
+        <p className={futureStyles[`${themeState.theme}`].div2P1}>
+          {t("future-text1")}
+        </p>
         <div className={futureStyles[`${themeState.theme}`].logosWrapper}>
           {logos.map((logo) => {
             return (
@@ -59,7 +61,9 @@ const Future = () => {
             );
           })}
         </div>
-        <p className={futureStyles[`${themeState.theme}`].div2P2}>{t("future-text2")}</p>
+        <p className={futureStyles[`${themeState.theme}`].div2P2}>
+          {t("future-text2")}
+        </p>
         <ul className={futureStyles[`${themeState.theme}`].div2Ul}>
           <li className={futureStyles[`${themeState.theme}`].div2Li}>
             <StaticImage
