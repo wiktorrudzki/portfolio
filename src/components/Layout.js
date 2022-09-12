@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import { LanguageProvider } from "@hooks/useLanguage";
 import { ThemeProvider } from "@hooks/useTheme";
 
@@ -14,22 +14,15 @@ const Layout = ({
   description = false,
   image = false,
   path = false,
-}) => {
-  return (
-      <LanguageProvider>
-        <ThemeProvider>
-          <Seo
-            title={title}
-            description={description}
-            image={image}
-            path={path}
-          />
-          <Nav />
-          <main>{children}</main>
-          <Footer />
-        </ThemeProvider>
-      </LanguageProvider>
-  );
-};
+}) => (
+  <LanguageProvider>
+    <ThemeProvider>
+      <Seo title={title} description={description} image={image} path={path} />
+      <Nav />
+      <main>{children}</main>
+      <Footer />
+    </ThemeProvider>
+  </LanguageProvider>
+);
 
 export default Layout;

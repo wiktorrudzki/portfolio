@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import { useTranslation } from "react-i18next";
 import Demo from "@components/Demo";
 import { ThemeContext } from "@contexts/theme/ThemeContext";
@@ -6,7 +6,7 @@ import { useTheme } from "@hooks/useTheme";
 
 import ImageSliderGraphical from "../components/ImageSliderGraphical";
 import ImageSliderProgramming from "../components/ImageSliderProgramming";
-import { projectsStyles } from "../styles/ProjectsStyles";
+import { projectsStyles } from "../styles/projects";
 
 const Projects = () => {
   const { t } = useTranslation();
@@ -26,7 +26,7 @@ const Projects = () => {
             demoContainerP={
               projectsStyles[`${themeState.theme}`].demoContainerP
             }
-            title={t("projects-demo-title1")}
+            title={t("Graphical Projects")}
           />
           <ImageSliderGraphical
             styles={projectsStyles[`${themeState.theme}`].secondImage}
@@ -40,7 +40,7 @@ const Projects = () => {
             demoContainerP={
               projectsStyles[`${themeState.theme}`].demoContainerP
             }
-            title={t("projects-demo-title2")}
+            title={t("Coded Projects")}
           />
           <ImageSliderProgramming
             styles={projectsStyles[`${themeState.theme}`].firstImage}

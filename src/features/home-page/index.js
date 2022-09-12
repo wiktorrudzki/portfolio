@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import { LanguageContext } from "@contexts/language/LanguageContext";
 import { ThemeContext } from "@contexts/theme/ThemeContext";
 import { useLanguage } from "@hooks/useLanguage";

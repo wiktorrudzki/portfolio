@@ -1,11 +1,11 @@
-import * as React from "react";
+import React from "react";
 import { useTranslation } from "react-i18next";
 import Demo from "@components/Demo";
 import { ThemeContext } from "@contexts/theme/ThemeContext";
 import { useTheme } from "@hooks/useTheme";
 import { StaticImage } from "gatsby-plugin-image";
 
-import { sectionTopStyles } from "../styles/SectionTopStyles";
+import { sectionTopStyles } from "../styles/section-top";
 
 const SectionTop = () => {
   const { t } = useTranslation();
@@ -31,11 +31,11 @@ const SectionTop = () => {
             demoContainerP={
               sectionTopStyles[`${themeState.theme}`].demoContainerP
             }
-            title={t("section-top-title")}
-            subtitle={t("section-top-subtitle")}
+            title={t("Wiktor Rudzki")}
+            subtitle={t("A few words about me")}
           >
             <p className={sectionTopStyles[`${themeState.theme}`].p}>
-              {t("section-top-text")}
+              {t("Currently, I am second year Student of computer science on Cracow University of Technology. I have been interested in programming in the broadest sense for a long time and for the last few months I've been strictly passionated about \"frontend\" using React technology")}
             </p>
           </Demo>
         </div>

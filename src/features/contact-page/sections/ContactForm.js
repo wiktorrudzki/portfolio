@@ -1,9 +1,10 @@
-import * as React from "react";
+import React from "react";
 import { useTranslation } from "react-i18next";
 import Title from "@components/typography/Title";
 import { ThemeContext } from "@contexts/theme/ThemeContext";
 import { useTheme } from "@hooks/useTheme";
 
+import FormLabel from "../components/FormLabel";
 import { contactFormStyles } from "../styles/ContactFormStyles";
 
 const ContactForm = () => {
@@ -13,44 +14,26 @@ const ContactForm = () => {
 
   return (
     <section className={contactFormStyles[`${themeState.theme}`].section}>
-      <Title>{t("form-header")}</Title>
+      <Title>{t("Contact form")}</Title>
       <form className={contactFormStyles[`${themeState.theme}`].form}>
-        <label className={contactFormStyles[`${themeState.theme}`].label}>
-          <p className={contactFormStyles[`${themeState.theme}`].text}>
-            {t("form-name")}
-          </p>
+        <FormLabel text={t("Name")}>
           <input type="text" name="name" required />
-        </label>
-        <label className={contactFormStyles[`${themeState.theme}`].label}>
-          <p className={contactFormStyles[`${themeState.theme}`].text}>
-            {t("form-surrname")}
-          </p>
+        </FormLabel>
+        <FormLabel text={t("Surrname")}>
           <input type="text" name="surrname" required />
-        </label>
-        <label className={contactFormStyles[`${themeState.theme}`].label}>
-          <p className={contactFormStyles[`${themeState.theme}`].text}>
-            {t("form-email")}
-          </p>
+        </FormLabel>
+        <FormLabel text={t("Email adress")}>
           <input type="email" name="email" required />
-        </label>
-        <label className={contactFormStyles[`${themeState.theme}`].label}>
-          <p className={contactFormStyles[`${themeState.theme}`].text}>
-            {t("form-number")}
-          </p>
+        </FormLabel>
+        <FormLabel text={t("Phone number")}>
           <input type="number" name="phone-number" />
-        </label>
-        <label className={contactFormStyles[`${themeState.theme}`].label}>
-          <p className={contactFormStyles[`${themeState.theme}`].text}>
-            {t("form-title")}
-          </p>
+        </FormLabel>
+        <FormLabel text={t("Message title")}>
           <input type="text" name="title" required />
-        </label>
-        <label className={contactFormStyles[`${themeState.theme}`].label}>
-          <p className={contactFormStyles[`${themeState.theme}`].text}>
-            {t("form-message")}
-          </p>
+        </FormLabel>
+        <FormLabel text={t("Message")}>
           <textarea name="message" />
-        </label>
+        </FormLabel>
       </form>
     </section>
   );

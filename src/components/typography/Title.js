@@ -1,6 +1,6 @@
-import * as React from "react";
+import React from "react";
 
-import { h2 } from "@styles/generals.module.css";
+import { h2 } from "./styles.module.css";
 
 const Title = ({ styling, children }) => {
   const style = styling ? styling : h2;

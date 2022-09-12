@@ -1,10 +1,15 @@
 import {
+  demo1ContainerProjects,
+  demo1Projects,
+  demo2ContainerProjects,
+  demo2Projects,
+  demoContainerHeaderProjects,
   projects,
   projectsContainer,
   projectsFirstImage,
   projectsSecondImage,
   projectsWrapper,
-} from "./index.module.css";
+} from "./projects.module.css";
 import {
   blackBorder,
   darkestbeigeBackground,
@@ -13,13 +18,6 @@ import {
   saddlebrownColor,
   whiteColor,
 } from "@dark-mode/dark-mode.module.css";
-import {
-  demo1ContainerProjects,
-  demo1Projects,
-  demo2ContainerProjects,
-  demo2Projects,
-  demoContainerHeaderProjects,
-} from "@styles/demo.module.css";
 
 export const projectsStyles = {
   dark: {

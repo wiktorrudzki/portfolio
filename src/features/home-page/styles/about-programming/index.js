@@ -1,20 +1,18 @@
 import {
   aboutProgramming,
   aboutProgrammingP,
+  demoAboutProgramming,
+  demoContainerAboutProgramming,
   imageAboutProgramming,
   imageContainerAboutProgramming,
   imageWrapperAboutProgramming,
-} from "./index.module.css";
+} from "./about-programming.module.css";
 import {
   darkestbeigeBackground,
   moredarkbeigeBackground,
   whitebeigeColor,
   whiteColor,
 } from "@dark-mode/dark-mode.module.css";
-import {
-  demoAboutProgramming,
-  demoContainerAboutProgramming,
-} from "@styles/demo.module.css";
 
 export const aboutProgrammingStyles = {
   dark: {

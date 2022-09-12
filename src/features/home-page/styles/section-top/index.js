@@ -1,10 +1,14 @@
 import {
+  demoContainerHeaderSectionTop,
+  demoContainerPSectionTop,
+  demoContainerSectionTop,
+  demoSectionTop,
   image,
   imageContainer,
   imageWrapper,
   sectionTop,
   sectionTopP,
-} from "./index.module.css";
+} from "./section-top.module.css";
 import {
   darkestbeigeBackground,
   lessblackBackground,
@@ -12,12 +16,6 @@ import {
   whitebeigeColor,
   whiteColor,
 } from "@dark-mode/dark-mode.module.css";
-import {
-  demoContainerHeaderSectionTop,
-  demoContainerPSectionTop,
-  demoContainerSectionTop,
-  demoSectionTop,
-} from "@styles/demo.module.css";
 
 export const sectionTopStyles = {
   dark: {

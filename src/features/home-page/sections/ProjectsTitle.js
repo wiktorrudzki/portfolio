@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import { useTranslation } from "react-i18next";
 import { ThemeContext } from "@contexts/theme/ThemeContext";
 import { useTheme } from "@hooks/useTheme";
@@ -7,7 +7,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 import Title from "../../../components/typography/Title";
 import getRandomIconCSS from "../components/GetRandomIconsCSS";
-import { projectsTitleStyles } from "../styles/ProjectsTitleStyles";
+import { projectsTitleStyles } from "../styles/projects-title";
 
 const ProjectsTitle = () => {
   const { t } = useTranslation();
@@ -36,10 +36,10 @@ const ProjectsTitle = () => {
     <section className={projectsTitleStyles[`${themeState.theme}`].section}>
       <div className={projectsTitleStyles[`${themeState.theme}`].div}>
         <Title styling={projectsTitleStyles[`${themeState.theme}`].h1}>
-          {t("projects-title-title")}
+          {t("Projects")}
         </Title>
         <p className={projectsTitleStyles[`${themeState.theme}`].p}>
-          {t("projects-title-text")}
+          {t("My projects so far, were mostly about acquiring some new skills from various scopes of JavaScript and React learning more and more about their potential while writing simple web games, applications and alorithms")}
         </p>
       </div>
       {logos.map((logo) => {

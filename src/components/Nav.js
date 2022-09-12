@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import { useTranslation } from "react-i18next";
 import { LanguageContext } from "@contexts/language/LanguageContext";
 import { ThemeContext } from "@contexts/theme/ThemeContext";
@@ -6,22 +6,21 @@ import { faBars, faX } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useLanguage } from "@hooks/useLanguage";
 import { useTheme } from "@hooks/useTheme";
-import { navStyles } from "@styles/NavC&S";
 import { Link } from "gatsby";
 
-import i18next from "../i18n";
+import { navStyles } from "./styles/nav";
 
 import "../styles/dark-mode-styles/switch-mode.css";
-import {
-  darkestbeigeBackground,
-  whitebeigeBorder,
-} from "@dark-mode/dark-mode.module.css";
 import {
   link,
   navBarsActivated,
   navUl,
   navUlLink,
-} from "@styles/nav.module.css";
+} from "./styles/nav/nav.module.css";
+import {
+  darkestbeigeBackground,
+  whitebeigeBorder,
+} from "@dark-mode/dark-mode.module.css";
 
 const Nav = () => {
   const [hideMenu, setHideMenu] = React.useState(true);
@@ -50,10 +49,10 @@ const Nav = () => {
       <Link to="/" className={link}>
         <header className={navStyles[`${themeState.theme}`].header}>
           <h4 className={navStyles[`${themeState.theme}`].h4}>
-            {t("nav-title1")}
+            {t("WIKTOR RUDZKI")}
           </h4>
           <h4 className={navStyles[`${themeState.theme}`].h4}>
-            {t("nav-title2")}
+            {t("FRONTEND DEVELOPER")}
           </h4>
         </header>
       </Link>
@@ -75,7 +74,7 @@ const Nav = () => {
           to="/about"
         >
           <li className={navStyles[`${themeState.theme}`].li}>
-            {t("nav-li1")}
+            {t("About")}
           </li>
         </Link>
         <Link
@@ -89,7 +88,7 @@ const Nav = () => {
           to="/contact"
         >
           <li className={navStyles[`${themeState.theme}`].li}>
-            {t("nav-li2")}
+            {t("Contact")}
           </li>
         </Link>
         <Link
@@ -100,10 +99,10 @@ const Nav = () => {
                 }`
               : `${navStyles[`${themeState.theme}`].ulLink} ${link}`
           }
-          to="CV"
+          to="/CV"
         >
           <li className={navStyles[`${themeState.theme}`].li}>
-            {t("nav-li3")}
+            {t("CV")}
           </li>
         </Link>
         <label class="switch">

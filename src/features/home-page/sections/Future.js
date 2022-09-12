@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import { useTranslation } from "react-i18next";
 import Title from "@components/typography/Title";
 import { ThemeContext } from "@contexts/theme/ThemeContext";
@@ -7,7 +7,7 @@ import { graphql, useStaticQuery } from "gatsby";
 import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image";
 
 import getRandomIconCSS from "../components/GetRandomIconsCSS";
-import { futureStyles } from "../styles/FutureStyles";
+import { futureStyles } from "../styles/future";
 
 const Future = () => {
   const { t } = useTranslation();
@@ -42,10 +42,10 @@ const Future = () => {
       </div>
       <div className={futureStyles[`${themeState.theme}`].div2}>
         <Title styling={futureStyles[`${themeState.theme}`].div2H2}>
-          {t("future-title")}
+          {t("My Future Goals")}
         </Title>
         <p className={futureStyles[`${themeState.theme}`].div2P1}>
-          {t("future-text1")}
+          {t("I am open to new technologies and I am experiencing them with a lot of pleasure in order to broaden my mind. Over time, I am defenitely discover many of the following")}
         </p>
         <div className={futureStyles[`${themeState.theme}`].logosWrapper}>
           {logos.map((logo) => {
@@ -60,7 +60,7 @@ const Future = () => {
           })}
         </div>
         <p className={futureStyles[`${themeState.theme}`].div2P2}>
-          {t("future-text2")}
+          {t("Those technologies and libraries are definitely going to be really helpful while developing:")}
         </p>
         <ul className={futureStyles[`${themeState.theme}`].div2Ul}>
           <li className={futureStyles[`${themeState.theme}`].div2Li}>
@@ -68,21 +68,21 @@ const Future = () => {
               className={futureStyles[`${themeState.theme}`].div2LiImage}
               src="../../../assets/images/icons/globe-icon.svg"
             />
-            {t("future-li1")}
+            {t("Websites")}
           </li>
           <li className={futureStyles[`${themeState.theme}`].div2Li}>
             <StaticImage
               className={futureStyles[`${themeState.theme}`].div2LiImage}
               src="../../../assets/images/icons/mobile-icon.svg"
             />
-            {t("future-li2")}
+            {t("Mobile applications")}
           </li>
           <li className={futureStyles[`${themeState.theme}`].div2Li}>
             <StaticImage
               className={futureStyles[`${themeState.theme}`].div2LiImage}
               src="../../../assets/images/icons/desktop-icon.svg"
             />
-            {t("future-li3")}
+            {t("Desktop applications")}
           </li>
         </ul>
       </div>

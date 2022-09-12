@@ -3,7 +3,7 @@ import {
   h1ProjectsTitle,
   pProjectsTitle,
   sectionProjectsTitle,
-} from "./index.module.css";
+} from "./projects-title.module.css";
 import {
   beigeColor,
   darkenBackground,

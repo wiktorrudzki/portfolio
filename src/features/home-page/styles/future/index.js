@@ -10,7 +10,7 @@ import {
   div2UlFuture,
   logosWrapperFuture,
   sectionFuture,
-} from "./index.module.css";
+} from "./future.module.css";
 import {
   beigeColor,
   darkestbeigeBackground,
