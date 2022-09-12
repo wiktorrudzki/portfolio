@@ -6,9 +6,7 @@ import { faBars, faX } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useLanguage } from "@hooks/useLanguage";
 import { useTheme } from "@hooks/useTheme";
-import {
-  navStyles,
-} from "@styles/NavC&S";
+import { navStyles } from "@styles/NavC&S";
 import { Link } from "gatsby";
 
 import i18next from "../i18n";
@@ -69,7 +67,9 @@ const Nav = () => {
         <Link
           className={
             url.includes("about")
-              ? `${navStyles[`${themeState.theme}`].ulLink} ${link} ${navStyles[`${themeState.theme}`].linkActive}`
+              ? `${navStyles[`${themeState.theme}`].ulLink} ${link} ${
+                  navStyles[`${themeState.theme}`].linkActive
+                }`
               : `${navStyles[`${themeState.theme}`].ulLink} ${link}`
           }
           to="/about"
@@ -81,8 +81,10 @@ const Nav = () => {
         <Link
           className={
             url.includes("contact")
-            ? `${navStyles[`${themeState.theme}`].ulLink} ${link} ${navStyles[`${themeState.theme}`].linkActive}`
-            : `${navStyles[`${themeState.theme}`].ulLink} ${link}`
+              ? `${navStyles[`${themeState.theme}`].ulLink} ${link} ${
+                  navStyles[`${themeState.theme}`].linkActive
+                }`
+              : `${navStyles[`${themeState.theme}`].ulLink} ${link}`
           }
           to="/contact"
         >
@@ -93,8 +95,10 @@ const Nav = () => {
         <Link
           className={
             url.includes("CV")
-            ? `${navStyles[`${themeState.theme}`].ulLink} ${link} ${navStyles[`${themeState.theme}`].linkActive}`
-            : `${navStyles[`${themeState.theme}`].ulLink} ${link}`
+              ? `${navStyles[`${themeState.theme}`].ulLink} ${link} ${
+                  navStyles[`${themeState.theme}`].linkActive
+                }`
+              : `${navStyles[`${themeState.theme}`].ulLink} ${link}`
           }
           to="CV"
         >
@@ -117,11 +121,26 @@ const Nav = () => {
             }}
           ></span>
         </label>
-        <select onChange={(e) => {
-          languageDispatch({ type: "CHANGE_LANG", lang: e.target[e.target.selectedIndex].value })
-        }}>
-          <option value="pl">Polski</option>
-          <option value="en">English</option>
+        <select
+          onChange={(e) => {
+            languageDispatch({
+              type: "CHANGE_LANG",
+              lang: e.target[e.target.selectedIndex].value,
+            });
+          }}
+        >
+          <option
+            value="pl"
+            selected={localStorage.getItem("lang") === "pl" ? true : false}
+          >
+            Polski
+          </option>
+          <option
+            value="en"
+            selected={localStorage.getItem("lang") === "en" ? true : false}
+          >
+            English
+          </option>
         </select>
       </ul>
     </nav>

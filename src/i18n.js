@@ -14,7 +14,7 @@ const resources = {
 
 i18next.use(initReactI18next).init({
   resources,
-  lng: "pl",
+  lng: `${localStorage.getItem("lang") ? localStorage.getItem("lang") : "pl"}`,
   keySeparator: false,
   interpolation: {
     escapeValue: false,

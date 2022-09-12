@@ -22,8 +22,9 @@ const Contact = () => {
   }, [themeState]);
 
   React.useEffect(() => {
-    i18next.changeLanguage(languageState.lang)
-  }, [languageState])
+    i18next.changeLanguage(languageState.lang);
+    localStorage.setItem("lang", languageState.lang);
+  }, [languageState]);
 
   return (
     <section className={layoutContact}>

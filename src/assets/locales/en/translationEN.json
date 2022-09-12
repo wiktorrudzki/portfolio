@@ -33,9 +33,17 @@
   "future-li2": "Mobile applications",
   "future-li3": "Desktop applications",
 
-  "contact-details-title": "Dane kontaktowe",
+  "contact-details-title": "Contact data",
   "contact-details-facebook": "Wiktor Rudzki",
   "contact-details-email": "wiktor1rudzki@gmail.com",
   "contact-details-github": "wiktorrudzki",
-  "contact-details-linkedin": "Wiktor Rudzki"
+  "contact-details-linkedin": "Wiktor Rudzki",
+
+  "form-header": "Contact formula",
+  "form-name": "Name",
+  "form-surrname": "Surrname",
+  "form-email": "Email adress",
+  "form-number": "Phone number",
+  "form-title": "Message title",
+  "form-message": "Message"
 }

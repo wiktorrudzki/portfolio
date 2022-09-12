@@ -4,7 +4,7 @@ import reducer from '@contexts/language/reducer';
 
 const LanguageProvider = ({ children }) => {
   const [languageState, languageDispatch] = useReducer(reducer, {
-    lang: 'pl',
+    lang: `${localStorage.getItem("lang") ? localStorage.getItem("lang") : "pl"}`,
   });
 
   return (

@@ -1,44 +1,93 @@
 .layout-contact {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin-top: 95.38px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 80%;
+  margin: auto;
+  margin-top: calc(95.38px + 3em);
 }
 
+/* CONTACT DETAILS */
+
 .section-contact-details {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1.4em;
-    padding: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.4em;
+  padding: 2em;
 }
 
 .ul-contact-details {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    list-style: none;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: flex-start;
+  list-style: none;
+  gap: 1.4em;
+  padding: 0;
+  width: 100%;
 }
 
 .li-contact-details {
-    font-size: 18px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+  font-size: 18px;
+  display: flex;
+  gap: 1.6em;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .img-contact-details {
-    width: 10%;
+  width: 2em;
+}
+
+.link-contact-details {
+  text-decoration: none;
+}
+
+.link-contact-details:active:visited {
+  text-decoration: none;
+  color: inherit;
 }
 
 @media (max-width: 1024px) {
-    .layout-contact {
-        margin-top: 88.98px;
-    }
+  .layout-contact {
+    margin-top: 88.98px;
+  }
 }
 
 @media (max-width: 768px) {
-    .layout-contact {
-        margin-top: 67.19px;
-    }
+  .layout-contact {
+    margin-top: 67.19px;
+  }
+}
+
+/* CONTACT FORM */
+
+.section-contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.4em;
+  padding: 2em;
+}
+
+.form-contact-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1.4em;
+  width: 100%;
+}
+
+.label-contact-form {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1em;
+}
+
+.text-contact-form {
+    margin: 0;
+    text-align: left;
 }

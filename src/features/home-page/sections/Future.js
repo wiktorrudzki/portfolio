@@ -32,8 +32,6 @@ const Future = () => {
 
   const logos = pageQuery.allFile.edges;
 
-  console.log(futureStyles[`${themeState.theme}`].divH2);
-
   return (
     <section className={futureStyles[`${themeState.theme}`].section}>
       <div className={futureStyles[`${themeState.theme}`].div1}>

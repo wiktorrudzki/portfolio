@@ -35,5 +35,13 @@
   "contact-details-facebook": "Wiktor Rudzki",
   "contact-details-email": "wiktor1rudzki@gmail.com",
   "contact-details-github": "wiktorrudzki",
-  "contact-details-linkedin": "Wiktor Rudzki"
+  "contact-details-linkedin": "Wiktor Rudzki",
+
+  "form-header": "Formularz kontaktowy",
+  "form-name": "Imię",
+  "form-surrname": "Nazwisko",
+  "form-email": "Adres email",
+  "form-number": "Numer telefonu",
+  "form-title": "Tytuł wiadomości",
+  "form-message": "Treść wiadomości"
 }

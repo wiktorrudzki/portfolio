@@ -6,7 +6,7 @@ const DetailsItem = ({ styles, icon, content, alt, url }) => {
     <li className={styles.li}>
       <img className={styles.img} src={icon} alt={alt}></img>
       {url ? (
-        <Link to={url}>{content}</Link>
+        <Link className={styles.link} to={url}>{content}</Link>
       ) : (
         <p>{content}</p>
       )}
