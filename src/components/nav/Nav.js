@@ -1,32 +1,32 @@
-import React from "react";
+import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
+import { navStyles } from "@components-styles/nav";
 import { faBars, faX } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useLanguage } from "@hooks/useLanguage";
 import { useTheme } from "@hooks/useTheme";
 import { Link } from "gatsby";
 
-import { navStyles } from "./styles/nav";
+import Header from "./Header";
+import LanguageSelector from "./LanguageSelector";
+import ThemeSelector from "./ThemeSelector";
 
-import "../styles/dark-mode-styles/switch-mode.css";
 import {
   link,
   navBarsActivated,
   navUl,
   navUlLink,
-} from "./styles/nav/nav.module.css";
+} from "@components-styles/nav/nav.module.css";
 import {
   darkestbeigeBackground,
   whitebeigeBorder,
 } from "@dark-mode/dark-mode.module.css";
 
 const Nav = () => {
-  const [hideMenu, setHideMenu] = React.useState(true);
+  const [hideMenu, setHideMenu] = useState(true);
 
   const { t } = useTranslation();
 
-  const { themeState, themeDispatch } = useTheme();
-  const { languageState, languageDispatch } = useLanguage();
+  const { themeState } = useTheme();
 
   const url = window.location.href;
 
@@ -45,14 +45,7 @@ const Nav = () => {
   return (
     <nav className={navStyles[`${themeState.theme}`].nav}>
       <Link to="/" className={link}>
-        <header className={navStyles[`${themeState.theme}`].header}>
-          <h4 className={navStyles[`${themeState.theme}`].h4}>
-            {t("WIKTOR RUDZKI")}
-          </h4>
-          <h4 className={navStyles[`${themeState.theme}`].h4}>
-            {t("FRONTEND DEVELOPER")}
-          </h4>
-        </header>
+        <Header />
       </Link>
       <FontAwesomeIcon
         icon={hideMenu ? faBars : faX}
@@ -103,42 +96,8 @@ const Nav = () => {
             {t("CV")}
           </li>
         </Link>
-        <label class="switch">
-          <input
-            type="checkbox"
-            checked={themeState.theme === "light" ? false : true}
-          />
-          <span
-            className="slider round"
-            onClick={() => {
-              themeDispatch({
-                type: "CHANGE_THEME",
-                theme: themeState.theme === "light" ? "dark" : "light",
-              });
-            }}
-          ></span>
-        </label>
-        <select
-          onChange={(e) => {
-            languageDispatch({
-              type: "CHANGE_LANG",
-              lang: e.target[e.target.selectedIndex].value,
-            });
-          }}
-        >
-          <option
-            value="pl"
-            selected={localStorage.getItem("lang") === "pl" ? true : false}
-          >
-            Polski
-          </option>
-          <option
-            value="en"
-            selected={localStorage.getItem("lang") === "en" ? true : false}
-          >
-            English
-          </option>
-        </select>
+        <ThemeSelector />
+        <LanguageSelector />
       </ul>
     </nav>
   );

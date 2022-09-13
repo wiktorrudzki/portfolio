@@ -1,11 +1,10 @@
 import React from "react";
 import { IconLink } from "@components/link";
+import { footerStyles } from "@components-styles/footer";
 import { useTheme } from "@hooks/useTheme";
 import facebookIcon from "@images/icons/facebook.svg";
 import githubIcon from "@images/icons/github.svg";
 import linkedInIcon from "@images/icons/linkedin.svg";
-
-import { footerStyles } from "./styles/footer";
 
 const Footer = () => {
   const { themeState } = useTheme();

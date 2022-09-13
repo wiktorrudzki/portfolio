@@ -1,5 +1,5 @@
 import React from "react";
-import Layout from "@components/Layout";
+import { Layout } from "@components/layout";
 import HomePage from "@featurs/home-page";
 
 import "../i18n";

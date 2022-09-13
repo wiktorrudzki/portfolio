@@ -1,7 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 
-import { SiteMetadata } from "./queries"
+import { SiteMetadata } from "../queries"
 
 const Seo = (props) => {
   const data = SiteMetadata();

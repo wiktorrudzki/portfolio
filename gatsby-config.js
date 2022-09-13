@@ -68,7 +68,8 @@ module.exports = {
           "@hooks": "src/hooks",
           "@dark-mode": "src/styles/dark-mode-styles",
           "@featurs": "src/features",
-          "@locales": "src/assets/locales"
+          "@locales": "src/assets/locales",
+          "@components-styles": "src/components/styles",
         },
         extensions: ["js", "css"],
       },

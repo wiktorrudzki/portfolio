@@ -2,9 +2,10 @@ import React from "react";
 import { LanguageProvider } from "@contexts/language";
 import { ThemeProvider } from "@contexts/theme";
 
-import Footer from "./Footer";
-import Nav from "./Nav";
-import Seo from "./Seo";
+import { Nav } from "../nav";
+
+import { Footer } from "./index";
+import { Seo } from "./index";
 
 const Layout = ({
   children,

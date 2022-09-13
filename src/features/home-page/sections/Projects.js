@@ -1,6 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import Demo from "@components/Demo";
+import { Demo } from "@components/demo";
 import { useTheme } from "@hooks/useTheme";
 
 import ImageSliderGraphical from "../components/ImageSliderGraphical";

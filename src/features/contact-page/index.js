@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useLanguage } from "@hooks/useLanguage";
 import { useTheme } from "@hooks/useTheme";
 
@@ -13,13 +13,13 @@ const Contact = () => {
   const { themeState } = useTheme();
   const { languageState } = useLanguage();
 
-  React.useEffect(() => {
+  useEffect(() => {
     document.body.style.backgroundColor =
       themeState.theme === "dark" ? "var(--lessblack)" : "white";
     localStorage.setItem("theme", themeState.theme);
   }, [themeState]);
 
-  React.useEffect(() => {
+  useEffect(() => {
     i18next.changeLanguage(languageState.lang);
     localStorage.setItem("lang", languageState.lang);
   }, [languageState]);

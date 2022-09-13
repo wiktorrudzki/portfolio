@@ -1,11 +1,11 @@
 import React from "react";
-import Title from "@components/typography/Title";
+import { Title } from "@components/typography";
 
 import {
   demoContainerPSectionTop,
   demoContainerSectionTop,
   demoSectionTop,
-} from "../features/home-page/styles/section-top/section-top.module.css";
+} from "@components-styles/demo/demo.module.css";
 
 const Demo = ({
   children,
