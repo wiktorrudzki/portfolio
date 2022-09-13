@@ -1,18 +1,17 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { ThemeContext } from "@contexts/theme/ThemeContext";
+import { Title } from "@components/typography";
 import { useTheme } from "@hooks/useTheme";
 import { graphql, useStaticQuery } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
-import Title from "../../../components/typography/Title";
 import getRandomIconCSS from "../components/GetRandomIconsCSS";
 import { projectsTitleStyles } from "../styles/projects-title";
 
 const ProjectsTitle = () => {
   const { t } = useTranslation();
 
-  const { themeState } = useTheme(ThemeContext);
+  const { themeState } = useTheme();
 
   const pageQuery = useStaticQuery(graphql`
     query {

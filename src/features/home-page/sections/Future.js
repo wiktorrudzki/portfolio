@@ -1,7 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import Title from "@components/typography/Title";
-import { ThemeContext } from "@contexts/theme/ThemeContext";
+import { Title } from "@components/typography";
 import { useTheme } from "@hooks/useTheme";
 import { graphql, useStaticQuery } from "gatsby";
 import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image";
@@ -12,7 +11,7 @@ import { futureStyles } from "../styles/future";
 const Future = () => {
   const { t } = useTranslation();
 
-  const { themeState } = useTheme(ThemeContext);
+  const { themeState } = useTheme();
 
   const pageQuery = useStaticQuery(graphql`
     query {

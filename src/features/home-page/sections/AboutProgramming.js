@@ -1,7 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import Demo from "@components/Demo";
-import { ThemeContext } from "@contexts/theme/ThemeContext";
 import { useTheme } from "@hooks/useTheme";
 import { StaticImage } from "gatsby-plugin-image";
 
@@ -10,7 +9,7 @@ import { aboutProgrammingStyles } from "../styles/about-programming";
 const AboutProgramming = () => {
   const { t } = useTranslation();
 
-  const { themeState } = useTheme(ThemeContext);
+  const { themeState } = useTheme();
 
   return (
     <section className={aboutProgrammingStyles[`${themeState.theme}`].section}>

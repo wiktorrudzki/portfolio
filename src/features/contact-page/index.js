@@ -1,6 +1,4 @@
 import React from "react";
-import { LanguageContext } from "@contexts/language/LanguageContext";
-import { ThemeContext } from "@contexts/theme/ThemeContext";
 import { useLanguage } from "@hooks/useLanguage";
 import { useTheme } from "@hooks/useTheme";
 
@@ -12,8 +10,8 @@ import ContactForm from "./sections/ContactForm";
 import { layoutContact } from "./styles/contact.module.css";
 
 const Contact = () => {
-  const { themeState } = useTheme(ThemeContext);
-  const { languageState } = useLanguage(LanguageContext);
+  const { themeState } = useTheme();
+  const { languageState } = useLanguage();
 
   React.useEffect(() => {
     document.body.style.backgroundColor =

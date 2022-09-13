@@ -1,7 +1,5 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { LanguageContext } from "@contexts/language/LanguageContext";
-import { ThemeContext } from "@contexts/theme/ThemeContext";
 import { faBars, faX } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useLanguage } from "@hooks/useLanguage";
@@ -27,8 +25,8 @@ const Nav = () => {
 
   const { t } = useTranslation();
 
-  const { themeState, themeDispatch } = useTheme(ThemeContext);
-  const { languageState, languageDispatch } = useLanguage(LanguageContext);
+  const { themeState, themeDispatch } = useTheme();
+  const { languageState, languageDispatch } = useLanguage();
 
   const url = window.location.href;
 

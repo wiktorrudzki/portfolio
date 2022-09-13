@@ -1,11 +1,10 @@
 import React from "react";
-import { ThemeContext } from "@contexts/theme/ThemeContext";
 import { useTheme } from "@hooks/useTheme";
 
 import { contactFormStyles } from "../styles/ContactFormStyles";
 
 const FormLabel = ({ children, text }) => {
-  const { themeState } = useTheme(ThemeContext);
+  const { themeState } = useTheme();
 
   return (
     <label className={contactFormStyles[`${themeState.theme}`].label}>

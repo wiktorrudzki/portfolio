@@ -1,7 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import Title from "@components/typography/Title";
-import { ThemeContext } from "@contexts/theme/ThemeContext";
+import { Title } from "@components/typography";
 import { useTheme } from "@hooks/useTheme";
 import emailIcon from "@images/icons/email.svg";
 import facebookIcon from "@images/icons/facebook.svg";
@@ -14,7 +13,7 @@ import { contactDetailsStyles } from "../styles/ContactDetailsStyles";
 const ContactDetails = () => {
   const { t } = useTranslation();
 
-  const { themeState } = useTheme(ThemeContext);
+  const { themeState } = useTheme();
 
   return (
     <section className={contactDetailsStyles[`${themeState.theme}`].section}>

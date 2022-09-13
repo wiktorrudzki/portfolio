@@ -1,7 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import Title from "@components/typography/Title";
-import { ThemeContext } from "@contexts/theme/ThemeContext";
+import { Title } from "@components/typography";
 import { useTheme } from "@hooks/useTheme";
 
 import FormLabel from "../components/FormLabel";
@@ -10,7 +9,7 @@ import { contactFormStyles } from "../styles/ContactFormStyles";
 const ContactForm = () => {
   const { t } = useTranslation();
 
-  const { themeState } = useTheme(ThemeContext);
+  const { themeState } = useTheme();
 
   return (
     <section className={contactFormStyles[`${themeState.theme}`].section}>

@@ -1,6 +1,4 @@
 import React from "react";
-import { LanguageContext } from "@contexts/language/LanguageContext";
-import { ThemeContext } from "@contexts/theme/ThemeContext";
 import { useLanguage } from "@hooks/useLanguage";
 import { useTheme } from "@hooks/useTheme";
 
@@ -15,8 +13,8 @@ import SectionTop from "./sections/SectionTop";
 import "@styles/global.css";
 
 const HomePage = () => {
-  const { themeState } = useTheme(ThemeContext);
-  const { languageState } = useLanguage(LanguageContext);
+  const { themeState } = useTheme();
+  const { languageState } = useLanguage();
 
   React.useEffect(() => {
     document.body.style.backgroundColor =

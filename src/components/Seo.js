@@ -1,20 +1,10 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-import { graphql,useStaticQuery } from "gatsby";
+
+import { SiteMetadata } from "./queries"
 
 const Seo = (props) => {
-  const data = useStaticQuery(graphql`
-    query GetSiteMetadata {
-      site {
-        siteMetadata {
-          description
-          image
-          siteUrl
-          title
-        }
-      }
-    }
-  `);
+  const data = SiteMetadata();
 
   const defaults = data.site.siteMetadata;
 

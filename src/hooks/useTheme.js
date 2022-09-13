@@ -1,18 +1,5 @@
-import React, { useContext, useReducer } from 'react';
-import reducer from '@contexts/theme/reducer';
-import { ThemeContext } from '@contexts/theme/ThemeContext';
-
-const ThemeProvider = ({ children }) => {
-  const [themeState, themeDispatch] = useReducer(reducer, {
-    theme: `${localStorage.getItem("theme") ? localStorage.getItem("theme") : "light"}`,
-  });
-
-  return (
-    <ThemeContext.Provider value={{ themeState, themeDispatch }}>
-      {children}
-    </ThemeContext.Provider>
-  );
-};
+import { useContext } from 'react';
+import { ThemeContext } from '@contexts/theme';
 
 const useTheme = () => {
   const context = useContext(ThemeContext);
@@ -24,4 +11,4 @@ const useTheme = () => {
   return context;
 };
 
-export { ThemeProvider, useTheme };
+export { useTheme };

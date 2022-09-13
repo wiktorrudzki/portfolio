@@ -1,20 +1,7 @@
-import React, { useContext, useReducer } from 'react';
-import { LanguageContext } from '@contexts/language/LanguageContext';
-import reducer from '@contexts/language/reducer';
+import { useContext } from 'react';
+import { LanguageContext } from '@contexts/language';
 
-const LanguageProvider = ({ children }) => {
-  const [languageState, languageDispatch] = useReducer(reducer, {
-    lang: `${localStorage.getItem("lang") ? localStorage.getItem("lang") : "pl"}`,
-  });
-
-  return (
-    <LanguageContext.Provider value={{ languageState, languageDispatch }}>
-      {children}
-    </LanguageContext.Provider>
-  );
-};
-
-const useLanguage = () => {
+export const useLanguage = () => {
   const context = useContext(LanguageContext);
 
   if (context === undefined) {
@@ -23,5 +10,3 @@ const useLanguage = () => {
 
   return context;
 };
-
-export { LanguageProvider, useLanguage };
