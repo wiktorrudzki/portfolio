@@ -2,6 +2,7 @@ import React from "react";
 import { IconLink } from "@components/link";
 import { footerStyles } from "@components-styles/footer";
 import { useTheme } from "@hooks/useTheme";
+import favicon from "@images/favicon.png"
 import facebookIcon from "@images/icons/facebook.svg";
 import githubIcon from "@images/icons/github.svg";
 import linkedInIcon from "@images/icons/linkedin.svg";
@@ -15,7 +16,7 @@ const Footer = () => {
         @2022 Wiktor Rudzki
       </h4>
       <div className={footerStyles[`${themeState.theme}`].paddingMarginZero}>
-        LOGO
+        <img src={favicon} width="75%" alt="logo" />
       </div>
       <ul className={footerStyles[`${themeState.theme}`].icons}>
         <IconLink

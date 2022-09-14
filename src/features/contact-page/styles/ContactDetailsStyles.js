@@ -3,18 +3,25 @@ import {
   liContactDetails,
   linkContactDetails,
   sectionContactDetails,
+  title,
   ulContactDetails,
 } from "./contact.module.css";
+import {
+  whitebeigeColor,
+  whiteColor,
+} from "@dark-mode/dark-mode.module.css";
 
 export const contactDetailsStyles = {
   dark: {
+    title: `${title} ${whiteColor}`,
     section: sectionContactDetails,
     ul: ulContactDetails,
-    li: liContactDetails,
+    li: `${liContactDetails} ${whitebeigeColor}`,
     img: imgContactDetails,
-    link: linkContactDetails,
+    link: `${linkContactDetails} ${whitebeigeColor}`,
   },
   light: {
+    title: title,
     section: sectionContactDetails,
     ul: ulContactDetails,
     li: liContactDetails,

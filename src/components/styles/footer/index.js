@@ -4,17 +4,17 @@ import {
   icons,
   paddingMarginZero,
 } from "./footer.module.css";
-import { moredarkbeigeBackground } from "@styles/dark-mode-styles/dark-mode.module.css";
+import { darkestbeigeBackground, whitebeigeColor } from "@styles/dark-mode-styles/dark-mode.module.css";
 
 export const footerStyles = {
   dark: {
-    footer: footer,
+    footer: `${footer} ${darkestbeigeBackground} ${whitebeigeColor}`,
     icon: icon,
     icons: icons,
     paddingMarginZero: paddingMarginZero,
   },
   light: {
-    footer: `${footer} ${moredarkbeigeBackground}`,
+    footer: footer,
     icon: icon,
     icons: icons,
     paddingMarginZero: paddingMarginZero,

@@ -8,6 +8,14 @@ module.exports = {
   plugins: [
     "gatsby-plugin-sharp",
     {
+      resolve: `gatsby-plugin-recaptcha`,
+      options: {
+        async: false,
+        defer: false,
+        args: `?onload=onloadCallback&render=explicit`,
+      },
+    },
+    {
       resolve: "gatsby-plugin-manifest",
       options: {
         icon: "src/assets/images/favicon.png",

@@ -1,7 +1,7 @@
 .demo-section-top {
   background-color: var(--cornslik);
   height: 50%;
-  color: var(--beige);
+  color: var(--saddlebrown);
   position: absolute;
   right: 0;
   transform: translateX(50%);
@@ -14,7 +14,7 @@
 }
 
 .demo-container-section-top {
-  color: var(--morebeige);
+  color: var(--black);
   display: flex;
   flex-direction: column;
   gap: 0.5em;

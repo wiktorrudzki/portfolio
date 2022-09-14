@@ -6,6 +6,15 @@
   margin-top: calc(95.38px + 3em);
 }
 
+.title {
+    font-size: 2.2em;
+    letter-spacing: 2px;
+    font-weight: 500;
+    padding: 0;
+    margin: 0;
+    color: var(--lessblack);
+}
+
 /* CONTACT DETAILS */
 
 .section-contact-details {
@@ -33,6 +42,7 @@
   gap: 1.6em;
   justify-content: space-around;
   align-items: center;
+  color: var(--morebeige);
 }
 
 .img-contact-details {
@@ -41,23 +51,16 @@
 
 .link-contact-details {
   text-decoration: none;
+  color: var(--morebeige);
+}
+
+.link-contact-details:hover {
+  color: var(--morebeige);
+  opacity: 0.8;
 }
 
 .link-contact-details:active:visited {
   text-decoration: none;
-  color: inherit;
-}
-
-@media (max-width: 1024px) {
-  .layout-contact {
-    margin-top: 88.98px;
-  }
-}
-
-@media (max-width: 768px) {
-  .layout-contact {
-    margin-top: 67.19px;
-  }
 }
 
 /* CONTACT FORM */
@@ -80,14 +83,58 @@
 }
 
 .label-contact-form {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1em;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5em;
 }
 
 .text-contact-form {
-    margin: 0;
-    text-align: left;
+  margin: 0;
+  text-align: left;
+}
+
+.input-contact-form {
+  border: none;
+  border-bottom: 1px solid var(--beige);
+  border-radius: 10%;
+  background: transparent;
+  width: 100%;
+  font-size: 20px;
+}
+
+.button-contact-form {
+  border: none;
+  padding: 1em;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: var(--creamybeige);
+  color: var(--black);
+  border-radius: 10px;
+  width: 24%;
+  transition: .3s ease-in all;
+  cursor: pointer;
+}
+
+.button-contact-form:hover {
+  background-image: linear-gradient(rgba(0,0,0,0.12), rgba(0,0,0,0.12));
+}
+
+@media (max-width: 1024px) {
+  .layout-contact {
+    margin-top: 88.98px;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+  }
+  .button-contact-form {
+    width: 34%;
+  }
+}
+
+@media (max-width: 768px) {
+  .layout-contact {
+    margin-top: 67.19px;
+  }
 }

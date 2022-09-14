@@ -43,6 +43,12 @@
     padding: calc(1em - 2px) 0!important;
 }
 
+@media (max-width: 768px) {
+    .whitebeige-border-active {
+        border-top: none!important;
+    }
+}
+
 .saddlebrown-color {
     color: var(--saddlebrown);
 }
