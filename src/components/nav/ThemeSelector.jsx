@@ -1,5 +1,5 @@
 import React from "react";
-import "@styles/dark-mode-styles/switch-mode.css";
+import "@components-styles/nav/switch-mode.css";
 import { useTheme } from "@hooks/useTheme";
 
 const ThemeSelector = () => {

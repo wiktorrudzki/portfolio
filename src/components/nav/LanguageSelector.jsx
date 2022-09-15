@@ -12,16 +12,15 @@ const LanguageSelector = () => {
               lang: e.target[e.target.selectedIndex].value,
             });
           }}
+          defaultValue={languageState.lang}
         >
           <option
             value="pl"
-            selected={languageState.lang === "pl" ? true : false}
           >
             Polski
           </option>
           <option
             value="en"
-            selected={languageState.lang === "en" ? true : false}
           >
             English
           </option>

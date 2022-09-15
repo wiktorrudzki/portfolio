@@ -17,7 +17,7 @@ const SectionTop = () => {
         <div className={sectionTopStyles[`${themeState.theme}`].divContainer}>
           <StaticImage
             className={sectionTopStyles[`${themeState.theme}`].image}
-            src="../../../assets/images/ja7.jpg"
+            src="../../../assets/images/me/ja7.jpg"
           />
           <Demo
             demo={sectionTopStyles[`${themeState.theme}`].demo}

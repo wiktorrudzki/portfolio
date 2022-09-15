@@ -19,7 +19,7 @@ const AboutProgramming = () => {
         >
           <StaticImage
             class={aboutProgrammingStyles[`${themeState.theme}`].image}
-            src="../../../assets/images/ja3.jpg"
+            src="../../../assets/images/me/ja3.jpg"
           />
           <Demo
             demo={aboutProgrammingStyles[`${themeState.theme}`].demo}

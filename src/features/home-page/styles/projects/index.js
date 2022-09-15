@@ -11,7 +11,6 @@ import {
   projectsWrapper,
 } from "./projects.module.css";
 import {
-  blackBorder,
   darkestbeigeBackground,
   lessblackBackground,
   moredarkbeigeBackground,

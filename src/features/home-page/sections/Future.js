@@ -36,7 +36,7 @@ const Future = () => {
       <div className={futureStyles[`${themeState.theme}`].div1}>
         <StaticImage
           class={futureStyles[`${themeState.theme}`].div1Image}
-          src="../../../assets/images/ja8.jpg"
+          src="../../../assets/images/me/ja8.jpg"
         />
       </div>
       <div className={futureStyles[`${themeState.theme}`].div2}>
