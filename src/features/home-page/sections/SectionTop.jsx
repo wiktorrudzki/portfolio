@@ -12,28 +12,28 @@ const SectionTop = () => {
   const { themeState } = useTheme();
 
   return (
-    <section className={sectionTopStyles[`${themeState.theme}`].section}>
-      <div className={sectionTopStyles[`${themeState.theme}`].divWrapper}>
-        <div className={sectionTopStyles[`${themeState.theme}`].divContainer}>
+    <section className={sectionTopStyles[themeState.theme].section}>
+      <div className={sectionTopStyles[themeState.theme].divWrapper}>
+        <div className={sectionTopStyles[themeState.theme].divContainer}>
           <StaticImage
-            className={sectionTopStyles[`${themeState.theme}`].image}
+            className={sectionTopStyles[themeState.theme].image}
             src="../../../assets/images/me/ja7.jpg"
           />
           <Demo
-            demo={sectionTopStyles[`${themeState.theme}`].demo}
+            demo={sectionTopStyles[themeState.theme].demo}
             demoContainer={
-              sectionTopStyles[`${themeState.theme}`].demoContainer
+              sectionTopStyles[themeState.theme].demoContainer
             }
             demoContainerHeader={
-              sectionTopStyles[`${themeState.theme}`].demoContainerHeader
+              sectionTopStyles[themeState.theme].demoContainerHeader
             }
             demoContainerP={
-              sectionTopStyles[`${themeState.theme}`].demoContainerP
+              sectionTopStyles[themeState.theme].demoContainerP
             }
             title={t("Wiktor Rudzki")}
             subtitle={t("A few words about me")}
           >
-            <p className={sectionTopStyles[`${themeState.theme}`].p}>
+            <p className={sectionTopStyles[themeState.theme].p}>
               {t("Currently, I am second year Student of computer science on Cracow University of Technology. I have been interested in programming in the broadest sense for a long time and for the last few months I've been strictly passionated about \"frontend\" using React technology")}
             </p>
           </Demo>

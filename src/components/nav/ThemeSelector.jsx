@@ -1,6 +1,8 @@
 import React from "react";
-import "@components-styles/nav/switch-mode.css";
 import { useTheme } from "@hooks/useTheme";
+
+import "@components-styles/nav/switch-mode.css";
+
 
 const ThemeSelector = () => {
     const { themeState, themeDispatch } = useTheme();

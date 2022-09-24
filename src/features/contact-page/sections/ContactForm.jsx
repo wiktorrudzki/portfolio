@@ -43,12 +43,12 @@ const ContactForm = () => {
   };
 
   return (
-    <section className={contactFormStyles[`${themeState.theme}`].section}>
-      <Title styling={contactFormStyles[`${themeState.theme}`].title}>
+    <section className={contactFormStyles[themeState.theme].section}>
+      <Title styling={contactFormStyles[themeState.theme].title}>
         {t("Contact form")}
       </Title>
       <form
-        className={contactFormStyles[`${themeState.theme}`].form}
+        className={contactFormStyles[themeState.theme].form}
         onSubmit={verifed ? (e) => sendEmail(e) : console.error("Brak recaptcha")}
       >
         <FormLabel text={t("Name")}>
@@ -56,7 +56,7 @@ const ContactForm = () => {
             type="text"
             name="name"
             required
-            className={contactFormStyles[`${themeState.theme}`].input}
+            className={contactFormStyles[themeState.theme].input}
           />
         </FormLabel>
         <FormLabel text={t("Surrname")}>
@@ -64,7 +64,7 @@ const ContactForm = () => {
             type="text"
             name="surrname"
             required
-            className={contactFormStyles[`${themeState.theme}`].input}
+            className={contactFormStyles[themeState.theme].input}
           />
         </FormLabel>
         <FormLabel text={t("Email adress")}>
@@ -72,14 +72,14 @@ const ContactForm = () => {
             type="email"
             name="email"
             required
-            className={contactFormStyles[`${themeState.theme}`].input}
+            className={contactFormStyles[themeState.theme].input}
           />
         </FormLabel>
         <FormLabel text={t("Phone number")}>
           <input
             type="number"
             name="phone-number"
-            className={contactFormStyles[`${themeState.theme}`].input}
+            className={contactFormStyles[themeState.theme].input}
           />
         </FormLabel>
         <FormLabel text={t("Message title")}>
@@ -87,13 +87,13 @@ const ContactForm = () => {
             type="text"
             name="subject"
             required
-            className={contactFormStyles[`${themeState.theme}`].input}
+            className={contactFormStyles[themeState.theme].input}
           />
         </FormLabel>
         <FormLabel text={t("Message")}>
           <textarea
             name="message"
-            className={contactFormStyles[`${themeState.theme}`].input}
+            className={contactFormStyles[themeState.theme].input}
           />
         </FormLabel>
         <Recaptcha
@@ -103,7 +103,7 @@ const ContactForm = () => {
         />
         <button
           type="submit"
-          className={contactFormStyles[`${themeState.theme}`].button}
+          className={contactFormStyles[themeState.theme].button}
         >
           {t("Send")}
         </button>

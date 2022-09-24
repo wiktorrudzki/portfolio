@@ -46,17 +46,3 @@ export const projectsStyles = {
     demoContainerP: saddlebrownColor,
   },
 };
-
-export const lightStylesProjects = {
-  section: projects,
-  divWrapper: projectsWrapper,
-  divContainer: projectsContainer,
-  firstImage: projectsFirstImage,
-  secondImage: projectsSecondImage,
-  demo1: demo1Projects,
-  demo2: demo2Projects,
-  demo1Container: demo1ContainerProjects,
-  demo2Container: demo2ContainerProjects,
-  demoContainerHeader: `${demoContainerHeaderProjects} ${saddlebrownColor}`,
-  demoContainerP: saddlebrownColor,
-};

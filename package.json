@@ -13,8 +13,8 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "format": "prettier --write \"src/**/*.js\"",
-    "lint": "eslint \"src/**/*.js\" --quiet"
+    "format": "prettier --write \"src/**/*.{js,jsx}\"",
+    "lint": "eslint \"src/**/*.{js,jsx}\" --quiet"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
@@ -24,6 +24,7 @@
     "emailjs-com": "^3.2.0",
     "eslint-plugin-simple-import-sort": "^8.0.0",
     "gatsby": "^4.21.1",
+    "gatsby-image": "^3.11.0",
     "gatsby-plugin-alias-imports": "^1.0.5",
     "gatsby-plugin-fontawesome-css": "^1.2.0",
     "gatsby-plugin-google-fonts": "^1.0.1",
@@ -38,7 +39,8 @@
     "react-dom": "^18.1.0",
     "react-helmet": "^6.1.0",
     "react-i18next": "^11.18.5",
-    "react-recaptcha": "^2.3.10"
+    "react-recaptcha": "^2.3.10",
+    "react-slideshow-image": "^4.0.5"
   },
   "devDependencies": {
     "eslint": "^7.32.0",

@@ -1,0 +1,16 @@
+.selector {
+    border: 2px solid var(--morebeige);
+    border-radius: 10px;
+    color: var(--morebeige);
+    cursor: pointer;
+    background-color: var(--cornsilk);
+}
+
+.selector:focus {
+    outline: none;
+}
+
+.option {
+    color: var(--morebeige);
+    background-color: var(--cornsilk);
+}

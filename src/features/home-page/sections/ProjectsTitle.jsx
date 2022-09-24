@@ -32,12 +32,12 @@ const ProjectsTitle = () => {
   const logos = pageQuery.allFile.edges;
 
   return (
-    <section className={projectsTitleStyles[`${themeState.theme}`].section}>
-      <div className={projectsTitleStyles[`${themeState.theme}`].div}>
-        <Title styling={projectsTitleStyles[`${themeState.theme}`].h1}>
+    <section className={projectsTitleStyles[themeState.theme].section}>
+      <div className={projectsTitleStyles[themeState.theme].div}>
+        <Title styling={projectsTitleStyles[themeState.theme].h1}>
           {t("Projects")}
         </Title>
-        <p className={projectsTitleStyles[`${themeState.theme}`].p}>
+        <p className={projectsTitleStyles[themeState.theme].p}>
           {t("My projects so far, were mostly about acquiring some new skills from various scopes of JavaScript and React learning more and more about their potential while writing simple web games, applications and alorithms")}
         </p>
       </div>

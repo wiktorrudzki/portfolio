@@ -12,24 +12,24 @@ const AboutProgramming = () => {
   const { themeState } = useTheme();
 
   return (
-    <section className={aboutProgrammingStyles[`${themeState.theme}`].section}>
-      <div className={aboutProgrammingStyles[`${themeState.theme}`].divWrapper}>
+    <section className={aboutProgrammingStyles[themeState.theme].section}>
+      <div className={aboutProgrammingStyles[themeState.theme].divWrapper}>
         <div
-          className={aboutProgrammingStyles[`${themeState.theme}`].divContainer}
+          className={aboutProgrammingStyles[themeState.theme].divContainer}
         >
           <StaticImage
-            class={aboutProgrammingStyles[`${themeState.theme}`].image}
+            class={aboutProgrammingStyles[themeState.theme].image}
             src="../../../assets/images/me/ja3.jpg"
           />
           <Demo
-            demo={aboutProgrammingStyles[`${themeState.theme}`].demo}
+            demo={aboutProgrammingStyles[themeState.theme].demo}
             demoContainer={
-              aboutProgrammingStyles[`${themeState.theme}`].demoContainer
+              aboutProgrammingStyles[themeState.theme].demoContainer
             }
             title={t("My Technologies")}
             subtitle={t("Technologies and languages that I had a contact with")}
           >
-            <ul className={aboutProgrammingStyles[`${themeState.theme}`].ul}>
+            <ul className={aboutProgrammingStyles[themeState.theme].ul}>
               <li>{t("React")}</li>
               <li>{t("Gatsby")}</li>
               <li>{t("JavaScript ES6")}</li>

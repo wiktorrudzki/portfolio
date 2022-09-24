@@ -7,8 +7,8 @@ const FormLabel = ({ children, text }) => {
   const { themeState } = useTheme();
 
   return (
-    <label className={contactFormStyles[`${themeState.theme}`].label}>
-      <p className={contactFormStyles[`${themeState.theme}`].text}>
+    <label className={contactFormStyles[themeState.theme].label}>
+      <p className={contactFormStyles[themeState.theme].text}>
         {text}
       </p>
       {children}

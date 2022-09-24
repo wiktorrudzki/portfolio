@@ -1,8 +1,12 @@
 import React from "react";
 import { useLanguage } from "@hooks/useLanguage";
+import { useTheme } from "@hooks/useTheme";
+
+import { languageSelectorStyles } from "./styles";
 
 const LanguageSelector = () => {
     const { languageState, languageDispatch } = useLanguage();
+    const { themeState } = useTheme();
 
     return (
         <select
@@ -13,14 +17,17 @@ const LanguageSelector = () => {
             });
           }}
           defaultValue={languageState.lang}
+          className={languageSelectorStyles[themeState.theme].selector}
         >
           <option
             value="pl"
+            className={languageSelectorStyles[themeState.theme].option}
           >
             Polski
           </option>
           <option
             value="en"
+            className={languageSelectorStyles[themeState.theme].option}
           >
             English
           </option>

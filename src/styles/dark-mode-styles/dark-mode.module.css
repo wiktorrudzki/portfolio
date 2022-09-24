@@ -2,6 +2,10 @@
     background-color: var(--black)!important;
 }
 
+.darkerbeige-background {
+    background-color: var(--darkerbeige) !important;
+}
+
 .lessblack-background {
     background-color: var(--lessblack)!important;
 }
@@ -28,6 +32,10 @@
 
 .whitebeige-color {
     color: var(--whitebeige)!important;
+}
+
+.whitebeige-border2px {
+    border: var(--whitebeige) 2px solid!important;
 }
 
 .whitebeige-border {

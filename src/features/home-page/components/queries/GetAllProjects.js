@@ -1,10 +1,10 @@
 import { graphql, useStaticQuery } from "gatsby";
 
-const GraphicalImageData = () => {
+const AllProejcts = () => {
   const images = useStaticQuery(
     graphql`
       query {
-        allFile(filter: { sourceInstanceName: { eq: "graphical" } }) {
+        allFile(filter: { sourceInstanceName: { eq: "all" } }) {
           edges {
             node {
               id
@@ -25,4 +25,4 @@ const GraphicalImageData = () => {
   return images;
 };
 
-export default GraphicalImageData;
+export default AllProejcts;

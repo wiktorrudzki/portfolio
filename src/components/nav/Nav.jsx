@@ -10,19 +10,14 @@ import Header from "./Header";
 import LanguageSelector from "./LanguageSelector";
 import ThemeSelector from "./ThemeSelector";
 
-import {
-  link,
-  navBarsActivated,
-  navUl,
-  navUlLink,
-} from "@components-styles/nav/nav.module.css";
+import { link, navBarsActivated, navUl, navUlLink } from "./styles/nav.module.css";
 import {
   darkestbeigeBackground,
   whitebeigeBorder,
 } from "@dark-mode/dark-mode.module.css";
 
 const Nav = () => {
-  const [hideMenu, setHideMenu] = useState(true);
+  const [menu, setMenu] = useState(true);
 
   const { t } = useTranslation();
 
@@ -32,69 +27,63 @@ const Nav = () => {
 
   //NAVIGATION STYLES
 
-  navStyles.dark.ul = hideMenu
+  navStyles.dark.ul = menu
     ? `${navUl} ${darkestbeigeBackground}`
     : `${navUl} ${navBarsActivated} ${darkestbeigeBackground}`;
 
-  navStyles.dark.ulLink = hideMenu
+  navStyles.dark.ulLink = menu
     ? `${navUlLink} ${whitebeigeBorder}`
     : navUlLink;
 
-  navStyles.light.ul = hideMenu ? navUl : `${navUl} ${navBarsActivated}`;
+  navStyles.light.ul = menu ? navUl : `${navUl} ${navBarsActivated}`;
 
   return (
-    <nav className={navStyles[`${themeState.theme}`].nav}>
+    <nav className={navStyles[themeState.theme].nav}>
       <Link to="/" className={link}>
         <Header />
       </Link>
       <FontAwesomeIcon
-        icon={hideMenu ? faBars : faX}
+        icon={menu ? faBars : faX}
         size="1.5x"
-        className={navStyles[`${themeState.theme}`].bars}
-        onClick={() => setHideMenu((prev) => !prev)}
+        className={navStyles[themeState.theme].bars}
+        onClick={() => setMenu((prev) => !prev)}
       />
-      <ul className={navStyles[`${themeState.theme}`].ul}>
+      <ul className={navStyles[themeState.theme].ul}>
         <Link
           className={
             url.includes("about")
-              ? `${navStyles[`${themeState.theme}`].ulLink} ${link} ${
-                  navStyles[`${themeState.theme}`].linkActive
+              ? `${navStyles[themeState.theme].ulLink} ${link} ${
+                  navStyles[themeState.theme].linkActive
                 }`
-              : `${navStyles[`${themeState.theme}`].ulLink} ${link}`
+              : `${navStyles[themeState.theme].ulLink} ${link}`
           }
           to="/about"
         >
-          <li className={navStyles[`${themeState.theme}`].li}>
-            {t("About")}
-          </li>
+          <li className={navStyles[themeState.theme].li}>{t("About")}</li>
         </Link>
         <Link
           className={
             url.includes("contact")
-              ? `${navStyles[`${themeState.theme}`].ulLink} ${link} ${
-                  navStyles[`${themeState.theme}`].linkActive
+              ? `${navStyles[themeState.theme].ulLink} ${link} ${
+                  navStyles[themeState.theme].linkActive
                 }`
-              : `${navStyles[`${themeState.theme}`].ulLink} ${link}`
+              : `${navStyles[themeState.theme].ulLink} ${link}`
           }
           to="/contact"
         >
-          <li className={navStyles[`${themeState.theme}`].li}>
-            {t("Contact")}
-          </li>
+          <li className={navStyles[themeState.theme].li}>{t("Contact")}</li>
         </Link>
         <Link
           className={
             url.includes("CV")
-              ? `${navStyles[`${themeState.theme}`].ulLink} ${link} ${
-                  navStyles[`${themeState.theme}`].linkActive
+              ? `${navStyles[themeState.theme].ulLink} ${link} ${
+                  navStyles[themeState.theme].linkActive
                 }`
-              : `${navStyles[`${themeState.theme}`].ulLink} ${link}`
+              : `${navStyles[themeState.theme].ulLink} ${link}`
           }
           to="/CV"
         >
-          <li className={navStyles[`${themeState.theme}`].li}>
-            {t("CV")}
-          </li>
+          <li className={navStyles[themeState.theme].li}>{t("CV")}</li>
         </Link>
         <ThemeSelector />
         <LanguageSelector />

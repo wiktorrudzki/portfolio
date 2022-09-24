@@ -24,13 +24,6 @@ module.exports = {
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        name: "programming",
-        path: `${__dirname}/src/assets/images/my-projects/programming`,
-      },
-    },
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
         name: "logo",
         path: `${__dirname}/src/assets/images/logo`,
       },
@@ -45,8 +38,8 @@ module.exports = {
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        name: "graphical",
-        path: `${__dirname}/src/assets/images/my-projects/graphical`,
+        name: "all",
+        path: `${__dirname}/src/assets/images/my-projects/all`,
       },
     },
     "gatsby-plugin-react-helmet",
@@ -79,7 +72,7 @@ module.exports = {
           "@locales": "src/assets/locales",
           "@components-styles": "src/components/styles",
         },
-        extensions: ["js", "css"],
+        extensions: ["jsx", "js", "css"],
       },
     },
     "gatsby-plugin-image",

@@ -1,0 +1,34 @@
+.slide-show-slider {
+  white-space: nowrap;
+  transition: ease 1000ms;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.slide-show {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.slide-img {
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}

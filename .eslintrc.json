@@ -28,7 +28,7 @@
   "overrides": [
     // override "simple-import-sort" config
     {
-      "files": ["*.js"],
+      "files": ["*.jsx"],
       "rules": {
         "simple-import-sort/imports": [
           "error",

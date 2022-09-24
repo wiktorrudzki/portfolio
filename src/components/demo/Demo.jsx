@@ -5,7 +5,7 @@ import {
   demoContainerPSectionTop,
   demoContainerSectionTop,
   demoSectionTop,
-} from "@components-styles/demo/demo.module.css";
+} from "./styles.module.css";
 
 const Demo = ({
   children,
@@ -18,7 +18,7 @@ const Demo = ({
 }) => (
   <div className={demo || demoSectionTop}>
     <container className={demoContainer || demoContainerSectionTop}>
-      <Title styling={demoContainerHeader || undefined}>{title}</Title>
+      <Title styling={demoContainerHeader}>{title}</Title>
       <p className={demoContainerP || demoContainerPSectionTop}>{subtitle}</p>
     </container>
     {children}

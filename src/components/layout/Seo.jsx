@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet";
 
 import { SiteMetadata } from "../queries"
 
-const Seo = (props) => {
+const Seo = ({ title, description, path }, ...props) => {
   const data = SiteMetadata();
 
   const defaults = data.site.siteMetadata;
@@ -12,9 +12,9 @@ const Seo = (props) => {
 
   return (
     <Helmet>
-      <title>{props.title || defaults.title}</title>
-      <meta name="description" content={props.description || defaults.description} />
-      <link rel="canonical" href={new URL(props.path || '/', defaults.siteUrl)} />
+      <title>{title || defaults.title}</title>
+      <meta name="description" content={description || defaults.description} />
+      <link rel="canonical" href={new URL(path || '/', defaults.siteUrl)} />
       {image && <meta name="image" content={image} />}
       <script src="https://www.google.com/recaptcha/api.js" async defer></script> 
     </Helmet>
