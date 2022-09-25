@@ -67,7 +67,7 @@
 
 .nav-ul-link:hover {
   border-top: 3px var(--morebeige) solid;
-  padding: calc(1em - 2px) 0;
+  padding: calc(1em - 2px) 0 1em;
 }
 
 @media (max-width: 1168px) {

@@ -1,16 +1,17 @@
 import React from "react";
+import { AllProjects } from "@features/home-page/queries";
+import { useSlider } from "@hooks/useSlider";
 import { useTheme } from "@hooks/useTheme";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
-import { imageSliderStyles } from "./styles/image-slider";
-import { AllProejcts } from "./queries";
-
-let firstRender = true;
+import { imageSliderStyles } from "./styles";
 
 const ImageSlider = () => {
   const { themeState } = useTheme();
 
-  const pageQuery = AllProejcts();
+  const { firstRender, setFirstRender } = useSlider();
+
+  const pageQuery = AllProjects();
 
   const [index, setIndex] = React.useState(0);
 
@@ -24,7 +25,7 @@ const ImageSlider = () => {
         ),
       delay
     );
-    firstRender = false;
+    setFirstRender(false);
   }
 
   return (
@@ -35,7 +36,13 @@ const ImageSlider = () => {
       >
         {pageQuery.allFile.edges.map((element) => {
           return (
-            <GatsbyImage imgClassName={imageSliderStyles[themeState.theme].slideImg} objectFit="contain" objectPosition="50% 50%" image={getImage(element.node)} className={imageSliderStyles[themeState.theme].slide} />
+            <GatsbyImage
+              imgClassName={imageSliderStyles[themeState.theme].slideImg}
+              objectFit="contain"
+              objectPosition="50% 50%"
+              image={getImage(element.node)}
+              className={imageSliderStyles[themeState.theme].slide}
+            />
           );
         })}
       </div>

@@ -1,6 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { navStyles } from "@components-styles/nav";
+import { navStyles } from "@components/nav/styles";
 import { useTheme } from "@hooks/useTheme";
 
 const Header = () => {

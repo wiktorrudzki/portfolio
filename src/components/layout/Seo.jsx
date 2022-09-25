@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet";
 
 import { SiteMetadata } from "../queries"
 
-const Seo = ({ title, description, path }, ...props) => {
+const Seo = ({ title, description, path, ...props }) => {
   const data = SiteMetadata();
 
   const defaults = data.site.siteMetadata;

@@ -12,9 +12,6 @@ const ContactForm = () => {
   const { t } = useTranslation();
 
   const { themeState } = useTheme();
-
-  let verifed = false;
-
   function sendEmail(e) {
     e.preventDefault();
 
@@ -37,9 +34,8 @@ const ContactForm = () => {
     e.target.reset();
   }
 
-  const verifyCallback = function (response) {
-    console.log(response);
-    verifed = true;
+  const verifyCallback = function () {
+    document.getElementById("submitBtn").removeAttribute("disabled")
   };
 
   return (
@@ -49,7 +45,7 @@ const ContactForm = () => {
       </Title>
       <form
         className={contactFormStyles[themeState.theme].form}
-        onSubmit={verifed ? (e) => sendEmail(e) : console.error("Brak recaptcha")}
+        onSubmit={(e) => sendEmail(e)}
       >
         <FormLabel text={t("Name")}>
           <input
@@ -96,14 +92,19 @@ const ContactForm = () => {
             className={contactFormStyles[themeState.theme].input}
           />
         </FormLabel>
-        <Recaptcha
-          sitekey="6LdEJPwhAAAAAIwokcxZsfgHUnwCCy2NpIW0TFay"
-          render="explicit"
-          verifyCallback={verifyCallback}
-        />
+        <FormLabel>
+          <Recaptcha
+            sitekey="6LdEJPwhAAAAAIwokcxZsfgHUnwCCy2NpIW0TFay"
+            render="explicit"
+            verifyCallback={verifyCallback}
+            required
+          />
+        </FormLabel>
         <button
           type="submit"
           className={contactFormStyles[themeState.theme].button}
+          disabled
+          id="submitBtn"
         >
           {t("Send")}
         </button>

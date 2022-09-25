@@ -1,20 +1,18 @@
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { navStyles } from "@components-styles/nav";
+import Header from "@components/nav/components/Header";
+import LanguageSelector from "@components/nav/components/LanguageSelector";
+import ThemeSelector from "@components/nav/components/ThemeSelector";
+import { navStyles } from "@components/nav/styles";
 import { faBars, faX } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useTheme } from "@hooks/useTheme";
 import { Link } from "gatsby";
 
-import Header from "./Header";
-import LanguageSelector from "./LanguageSelector";
-import ThemeSelector from "./ThemeSelector";
+import { useActiveBorder } from "./hooks";
+import { useStyles } from "./hooks";
 
-import { link, navBarsActivated, navUl, navUlLink } from "./styles/nav.module.css";
-import {
-  darkestbeigeBackground,
-  whitebeigeBorder,
-} from "@dark-mode/dark-mode.module.css";
+import { link } from "./styles/nav.module.css";
 
 const Nav = () => {
   const [menu, setMenu] = useState(true);
@@ -23,19 +21,14 @@ const Nav = () => {
 
   const { themeState } = useTheme();
 
-  const url = window.location.href;
+  const { navStylesDarkUl, navStylesDarkUlLink, navStylesLightUl } =
+    useStyles(menu);
 
   //NAVIGATION STYLES
 
-  navStyles.dark.ul = menu
-    ? `${navUl} ${darkestbeigeBackground}`
-    : `${navUl} ${navBarsActivated} ${darkestbeigeBackground}`;
-
-  navStyles.dark.ulLink = menu
-    ? `${navUlLink} ${whitebeigeBorder}`
-    : navUlLink;
-
-  navStyles.light.ul = menu ? navUl : `${navUl} ${navBarsActivated}`;
+  navStyles.dark.ul = navStylesDarkUl;
+  navStyles.dark.ulLink = navStylesDarkUlLink;
+  navStyles.light.ul = navStylesLightUl;
 
   return (
     <nav className={navStyles[themeState.theme].nav}>
@@ -49,40 +42,10 @@ const Nav = () => {
         onClick={() => setMenu((prev) => !prev)}
       />
       <ul className={navStyles[themeState.theme].ul}>
-        <Link
-          className={
-            url.includes("about")
-              ? `${navStyles[themeState.theme].ulLink} ${link} ${
-                  navStyles[themeState.theme].linkActive
-                }`
-              : `${navStyles[themeState.theme].ulLink} ${link}`
-          }
-          to="/about"
-        >
-          <li className={navStyles[themeState.theme].li}>{t("About")}</li>
-        </Link>
-        <Link
-          className={
-            url.includes("contact")
-              ? `${navStyles[themeState.theme].ulLink} ${link} ${
-                  navStyles[themeState.theme].linkActive
-                }`
-              : `${navStyles[themeState.theme].ulLink} ${link}`
-          }
-          to="/contact"
-        >
+        <Link className={useActiveBorder("contact")} to="/contact">
           <li className={navStyles[themeState.theme].li}>{t("Contact")}</li>
         </Link>
-        <Link
-          className={
-            url.includes("CV")
-              ? `${navStyles[themeState.theme].ulLink} ${link} ${
-                  navStyles[themeState.theme].linkActive
-                }`
-              : `${navStyles[themeState.theme].ulLink} ${link}`
-          }
-          to="/CV"
-        >
+        <Link className={useActiveBorder("CV")} to="/CV">
           <li className={navStyles[themeState.theme].li}>{t("CV")}</li>
         </Link>
         <ThemeSelector />

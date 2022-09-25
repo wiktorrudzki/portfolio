@@ -4,6 +4,12 @@
     color: var(--morebeige);
     cursor: pointer;
     background-color: var(--cornsilk);
+    transition: 0.3s ease all;
+    font-weight: bold;
+}
+
+.selector:hover {
+    background-image: linear-gradient(rgba(0,0,0,0.05), rgba(0,0,0,0.05));
 }
 
 .selector:focus {

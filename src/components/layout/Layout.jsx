@@ -1,11 +1,11 @@
 import React from "react";
+import { Nav } from "@components/nav";
 import { LanguageProvider } from "@contexts/language";
+import { SliderProvider } from "@contexts/slider";
 import { ThemeProvider } from "@contexts/theme";
 
-import { Nav } from "../nav";
-
-import { Footer } from "./index";
-import { Seo } from "./index";
+import Footer from "./Footer";
+import Seo from "./Seo";
 
 const Layout = ({
   children,
@@ -16,10 +16,17 @@ const Layout = ({
 }) => (
   <LanguageProvider>
     <ThemeProvider>
-      <Seo title={title} description={description} image={image} path={path} />
-      <Nav />
-      <main>{children}</main>
-      <Footer />
+      <SliderProvider>
+        <Seo
+          title={title}
+          description={description}
+          image={image}
+          path={path}
+        />
+        <Nav />
+        <main>{children}</main>
+        <Footer />
+      </SliderProvider>
     </ThemeProvider>
   </LanguageProvider>
 );

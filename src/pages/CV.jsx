@@ -1,11 +1,11 @@
 import React from "react";
+import Cv from "@features/cv-page";
 
 import { Layout } from "../components/layout";
-import Pdf from "../features/cv-page/sections/pdf";
 
 const CV = () => (
   <Layout>
-    <Pdf />
+    <Cv />
   </Layout>
 );
 

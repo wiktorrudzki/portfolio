@@ -1,8 +1,7 @@
 import React from "react";
+import { languageSelectorStyles } from "@components/nav/styles";
 import { useLanguage } from "@hooks/useLanguage";
 import { useTheme } from "@hooks/useTheme";
-
-import { languageSelectorStyles } from "./styles";
 
 const LanguageSelector = () => {
     const { languageState, languageDispatch } = useLanguage();
