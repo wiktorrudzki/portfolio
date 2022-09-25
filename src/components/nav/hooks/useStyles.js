@@ -6,7 +6,7 @@ import {
 } from "@components/nav/styles/nav.module.css";
 import {
   darkestbeigeBackground,
-  whitebeigeBorder,
+  whitebeigeBorderTop,
 } from "@dark-mode/dark-mode.module.css";
 
 const useStyles = (menu) => {
@@ -14,7 +14,7 @@ const useStyles = (menu) => {
     ? `${navUl} ${darkestbeigeBackground}`
     : `${navUl} ${navBarsActivated} ${darkestbeigeBackground}`;
 
-  navStyles.dark.ulLink = menu ? `${navUlLink} ${whitebeigeBorder}` : navUlLink;
+  navStyles.dark.ulLink = menu ? `${navUlLink} ${whitebeigeBorderTop}` : navUlLink;
 
   navStyles.light.ul = menu ? navUl : `${navUl} ${navBarsActivated}`;
 

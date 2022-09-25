@@ -1,7 +1,7 @@
 import { selector, option } from "./language-selector.module.css";
 
 import {
-  whitebeigeBorder2px,
+  whitebeigeBorder,
   whitebeigeBorderActive,
   whitebeigeColor,
   darkestbeigeBackground,
@@ -39,7 +39,7 @@ export const navStyles = {
 
 export const languageSelectorStyles = {
   dark: {
-    selector: `${selector} ${whitebeigeColor} ${whitebeigeBorder2px} ${darkestbeigeBackground}`,
+    selector: `${selector} ${whitebeigeColor} ${whitebeigeBorder} ${darkestbeigeBackground}`,
     option: `${option} ${whitebeigeColor} ${darkestbeigeBackground}`,
   },
   light: {

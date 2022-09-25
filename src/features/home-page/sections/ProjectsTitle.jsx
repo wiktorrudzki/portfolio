@@ -1,11 +1,11 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { Title } from "@components/typography";
+import { logoClass } from "@features/home-page/components";
 import { LogoProjectsTitle } from "@features/home-page/queries";
 import { useTheme } from "@hooks/useTheme";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
-import getRandomIconCSS from "../components/GetRandomIconsCSS";
 import { projectsTitleStyles } from "../styles/projects-title";
 
 const ProjectsTitle = () => {
@@ -31,7 +31,7 @@ const ProjectsTitle = () => {
         <GatsbyImage
           title={node.base}
           key={node.base}
-          style={getRandomIconCSS("3%", "between")}
+          style={logoClass("3%", "between")}
           image={getImage(node)}
         />
       ))}

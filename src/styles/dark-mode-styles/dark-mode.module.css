@@ -34,15 +34,15 @@
     color: var(--whitebeige)!important;
 }
 
-.whitebeige-border2px {
+.whitebeige-border {
     border: var(--whitebeige) 2px solid!important;
 }
 
-.whitebeige-border {
+.whitebeige-border-top {
     border-top: var(--whitebeige) 1px solid!important;
 }
 
-.whitebeige-border:hover {
+.whitebeige-border-top:hover {
     border-top: 3px var(--whitebeige) solid!important;
 }
 

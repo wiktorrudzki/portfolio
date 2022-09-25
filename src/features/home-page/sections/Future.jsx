@@ -1,11 +1,12 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { Title } from "@components/typography";
+import { FutureListItem } from "@features/home-page/components";
+import { logoClass } from "@features/home-page/components";
 import { LogoFuture } from "@features/home-page/queries";
 import { useTheme } from "@hooks/useTheme";
 import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image";
 
-import getRandomIconCSS from "../components/GetRandomIconsCSS";
 import { futureStyles } from "../styles/future";
 
 const Future = () => {
@@ -38,7 +39,7 @@ const Future = () => {
               <GatsbyImage
                 title={logo.node.base}
                 key={logo.node.base}
-                style={getRandomIconCSS("8%")}
+                style={logoClass("8%")}
                 image={getImage(logo.node)}
               />
             );
@@ -50,27 +51,27 @@ const Future = () => {
           )}
         </p>
         <ul className={futureStyles[themeState.theme].div2Ul}>
-          <li className={futureStyles[themeState.theme].div2Li}>
+          <FutureListItem>
             <StaticImage
               className={futureStyles[themeState.theme].div2LiImage}
               src="../../../assets/images/futureIcons/globe-icon.svg"
             />
             {t("Websites")}
-          </li>
-          <li className={futureStyles[themeState.theme].div2Li}>
+          </FutureListItem>
+          <FutureListItem>
             <StaticImage
               className={futureStyles[themeState.theme].div2LiImage}
               src="../../../assets/images/futureIcons/mobile-icon.svg"
             />
             {t("Mobile applications")}
-          </li>
-          <li className={futureStyles[themeState.theme].div2Li}>
+          </FutureListItem>
+          <FutureListItem>
             <StaticImage
               className={futureStyles[themeState.theme].div2LiImage}
               src="../../../assets/images/futureIcons/desktop-icon.svg"
             />
             {t("Desktop applications")}
-          </li>
+          </FutureListItem>
         </ul>
       </div>
     </section>

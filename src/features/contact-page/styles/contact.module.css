@@ -104,6 +104,10 @@
   font-size: 20px;
 }
 
+textarea:focus, input:focus{
+  outline: none;
+}
+
 .button-contact-form {
   border: none;
   padding: 1em;
