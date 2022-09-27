@@ -37,6 +37,21 @@
   background-color: var(--white);
   margin-bottom: 5%;
   margin-top: 95.38px;
+  opacity: 0;
+}
+
+.section-top-animation {
+  animation: section-top-animation 1.6s ease-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes section-top-animation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
 }
 
 .image-wrapper {

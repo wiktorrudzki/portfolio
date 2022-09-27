@@ -7,6 +7,7 @@ import {
   imageContainer,
   imageWrapper,
   sectionTop,
+  sectionTopAnimation,
   sectionTopP,
 } from "./section-top.module.css";
 import {
@@ -20,6 +21,7 @@ import {
 export const sectionTopStyles = {
   dark: {
     section: `${sectionTop} ${lessblackBackground}`,
+    sectionAnimation: sectionTopAnimation,
     divWrapper: `${imageWrapper} ${moredarkbeigeBackground}`,
     divContainer: imageContainer,
     image: image,
@@ -31,6 +33,7 @@ export const sectionTopStyles = {
   },
   light: {
     section: sectionTop,
+    sectionAnimation: sectionTopAnimation,
     divWrapper: imageWrapper,
     divContainer: imageContainer,
     image: image,
@@ -40,16 +43,4 @@ export const sectionTopStyles = {
     demoContainerP: demoContainerPSectionTop,
     p: sectionTopP,
   },
-};
-
-export const darkStylesSectionTop = {
-  section: `${sectionTop} ${lessblackBackground}`,
-  divWrapper: `${imageWrapper} ${moredarkbeigeBackground}`,
-  divContainer: imageContainer,
-  image: image,
-  demo: `${demoSectionTop} ${darkestbeigeBackground}`,
-  demoContainer: demoContainerSectionTop,
-  demoContainerHeader: `${demoContainerHeaderSectionTop} ${whiteColor}`,
-  demoContainerP: `${demoContainerPSectionTop} ${whiteColor}`,
-  p: `${sectionTopP} ${whitebeigeColor}`,
 };

@@ -37,6 +37,7 @@ const ImageSlider = () => {
         {pageQuery.allFile.edges.map((element) => {
           return (
             <GatsbyImage
+              key={element}
               imgClassName={imageSliderStyles[themeState.theme].slideImg}
               objectFit="contain"
               objectPosition="50% 50%"

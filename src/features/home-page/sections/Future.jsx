@@ -1,5 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
+import { useInView } from "react-intersection-observer";
 import { Title } from "@components/typography";
 import { FutureListItem } from "@features/home-page/components";
 import { logoClass } from "@features/home-page/components";
@@ -16,15 +17,36 @@ const Future = () => {
 
   const logos = LogoFuture();
 
+  const { ref: div2ref, inView: isDiv2Visible } = useInView();
+  const { ref: div1ref, inView: isDiv1Visivle } = useInView();
+
   return (
     <section className={futureStyles[themeState.theme].section}>
-      <div className={futureStyles[themeState.theme].div1}>
+      <div
+        className={
+          isDiv1Visivle
+            ? `${futureStyles[themeState.theme].div1} ${
+                futureStyles[themeState.theme].div1Animation
+              }`
+            : futureStyles[themeState.theme].div1
+        }
+        ref={div1ref}
+      >
         <StaticImage
           class={futureStyles[themeState.theme].div1Image}
           src="../../../assets/images/me/ja-8.jpg"
         />
       </div>
-      <div className={futureStyles[themeState.theme].div2}>
+      <div
+        className={
+          isDiv2Visible
+            ? `${futureStyles[themeState.theme].div2} ${
+                futureStyles[themeState.theme].div2Animation
+              }`
+            : futureStyles[themeState.theme].div2
+        }
+        ref={div2ref}
+      >
         <Title styling={futureStyles[themeState.theme].div2H2}>
           {t("My Future Goals")}
         </Title>

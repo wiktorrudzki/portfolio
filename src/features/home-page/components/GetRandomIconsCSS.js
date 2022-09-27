@@ -16,7 +16,7 @@ function getRandomPercentTop() {
   return Math.floor(Math.random() * 75) + 5;
 }
 
-export default function logoClass(width = "3%", left="normal") {
+export default function logoClass(width = "3%", left="normal", delay) {
   return {
     width: `${width}`,
     maxWidth: "100%",
@@ -25,5 +25,6 @@ export default function logoClass(width = "3%", left="normal") {
     left: `${left === "between" ? getRandomPercentLeftBetween() : getRandomPercentLeft()}%`,
     top: `${getRandomPercentTop()}%`,
     transform: `rotate(${getRandomDegree()}deg)`,
+    animationDelay: `${delay}s`
   };
 }

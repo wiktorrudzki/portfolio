@@ -1,5 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
+import { useInView } from "react-intersection-observer";
 import { Title } from "@components/typography";
 import { logoClass } from "@features/home-page/components";
 import { LogoProjectsTitle } from "@features/home-page/queries";
@@ -15,6 +16,10 @@ const ProjectsTitle = () => {
 
   const logos = LogoProjectsTitle();
 
+  const { ref: logoRef, inView: isLogoVisible } = useInView();
+
+  let delay = 0;
+
   return (
     <section className={projectsTitleStyles[themeState.theme].section}>
       <div className={projectsTitleStyles[themeState.theme].div}>
@@ -27,14 +32,28 @@ const ProjectsTitle = () => {
           )}
         </p>
       </div>
-      {logos.map(({ node }) => (
-        <GatsbyImage
-          title={node.base}
-          key={node.base}
-          style={logoClass("3%", "between")}
-          image={getImage(node)}
-        />
-      ))}
+      {logos.map(({ node }) => {
+        delay += 0.35;
+        return (
+          <div
+            className={
+              isLogoVisible
+                ? `${projectsTitleStyles[themeState.theme].logoAnimation} ${
+                    projectsTitleStyles[themeState.theme].logo
+                  } `
+                : projectsTitleStyles[themeState.theme].logo
+            }
+            style={logoClass("3%", "between", delay)}
+            ref={logoRef}
+          >
+            <GatsbyImage
+              title={node.base}
+              key={node.base}
+              image={getImage(node)}
+            />
+          </div>
+        );
+      })}
     </section>
   );
 };

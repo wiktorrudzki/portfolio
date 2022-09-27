@@ -3,11 +3,20 @@ import PropTypes from "prop-types";
 
 import favicon from "./assets/images/favicon.png";
 
-
 export default function HTML(props) {
   return (
     <html {...props.htmlAttributes}>
       <head>
+        <script
+          async
+          custom-element="amp-position-observer"
+          src="https://cdn.ampproject.org/v0/amp-position-observer-0.1.js"
+        ></script>
+        <script
+          async
+          custom-element="amp-animation"
+          src="https://cdn.ampproject.org/v0/amp-animation-0.1.js"
+        ></script>
         <meta charSet="utf-8" />
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />
         <meta

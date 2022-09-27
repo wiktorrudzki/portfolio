@@ -35,6 +35,28 @@
   z-index: 100;
 }
 
+.logo-div {
+  cursor: grab;
+}
+
+.logo {
+  opacity: 0;
+}
+
+.logo-animation {
+  animation: opacity-animation 0.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes opacity-animation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 @media (max-width: 1024px) {
   .p-projects-title {
     font-size: 1.05em;

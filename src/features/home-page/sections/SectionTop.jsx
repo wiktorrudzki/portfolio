@@ -1,5 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
+import { useInView } from "react-intersection-observer";
 import { Demo } from "@components/demo";
 import { useTheme } from "@hooks/useTheme";
 import { StaticImage } from "gatsby-plugin-image";
@@ -11,8 +12,10 @@ const SectionTop = () => {
 
   const { themeState } = useTheme();
 
+  const { ref: sectionRef, inView: isSectionVisible } = useInView();
+
   return (
-    <section className={sectionTopStyles[themeState.theme].section}>
+    <section className={isSectionVisible ? `${sectionTopStyles[themeState.theme].section} ${sectionTopStyles[themeState.theme].sectionAnimation}` : sectionTopStyles[themeState.theme].section} ref={sectionRef}>
       <div className={sectionTopStyles[themeState.theme].divWrapper}>
         <div className={sectionTopStyles[themeState.theme].divContainer}>
           <StaticImage
@@ -21,20 +24,18 @@ const SectionTop = () => {
           />
           <Demo
             demo={sectionTopStyles[themeState.theme].demo}
-            demoContainer={
-              sectionTopStyles[themeState.theme].demoContainer
-            }
+            demoContainer={sectionTopStyles[themeState.theme].demoContainer}
             demoContainerHeader={
               sectionTopStyles[themeState.theme].demoContainerHeader
             }
-            demoContainerP={
-              sectionTopStyles[themeState.theme].demoContainerP
-            }
+            demoContainerP={sectionTopStyles[themeState.theme].demoContainerP}
             title={t("Wiktor Rudzki")}
             subtitle={t("A few words about me")}
           >
             <p className={sectionTopStyles[themeState.theme].p}>
-              {t("Currently, I am second year Student of computer science on Cracow University of Technology. I have been interested in programming in the broadest sense for a long time and for the last few months I've been strictly passionated about \"frontend\" using React technology")}
+              {t(
+                'Currently, I am second year Student of computer science on Cracow University of Technology. I have been interested in programming in the broadest sense for a long time and for the last few months I\'ve been strictly passionated about "frontend" using React technology'
+              )}
             </p>
           </Demo>
         </div>

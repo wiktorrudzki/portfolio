@@ -15,6 +15,9 @@
   width: 80%;
   display: flex;
 }
+.logo-div {
+  cursor: grab;
+}
 
 .image-wrapper-about-programming {
   background-color: transparent;
@@ -40,6 +43,15 @@
   line-height: 1.6em;
 }
 
+.about-programming-list-item {
+  opacity: 0;
+}
+
+.about-programming-list-item-animation {
+  animation: opacity-animation 0.8s;
+  animation-fill-mode: forwards;
+}
+
 .demo-about-programming {
   background-color: var(--creamybeige);
   height: 50%;
@@ -55,6 +67,15 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+}
+
+@keyframes opacity-animation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .demo-container-about-programming {
