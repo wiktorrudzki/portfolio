@@ -9,8 +9,6 @@ const FutureListItem = ({ children }) => {
 
   const { ref, inView: isVisible } = useInView();
 
-  console.log(isVisible)
-
   return <li ref={ref} className={isVisible ? `${futureStyles[themeState.theme].div2Li} ${futureStyles[themeState.theme].div2LiFutureAnimation}` : futureStyles[themeState.theme].div2Li}>{children}</li>;
 };
 

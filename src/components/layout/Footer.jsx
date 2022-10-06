@@ -1,3 +1,11 @@
+// import React, { useState } from "react";
+
+// const Footer = () => {
+//   return <div></div>
+// }
+
+// export default Footer;
+
 import React from "react";
 import { footerStyles } from "@components/layout/styles";
 import { IconLink } from "@components/link";

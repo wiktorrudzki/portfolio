@@ -21,7 +21,9 @@ const ContactDetails = () => {
 
   return (
     <section className={contactDetailsStyles[themeState.theme].section}>
-      <Title styling={contactDetailsStyles[themeState.theme].title}>{t("Contact data")}</Title>
+      <Title styling={contactDetailsStyles[themeState.theme].title}>
+        {t("Contact data")}
+      </Title>
       <ul className={contactDetailsStyles[themeState.theme].ul}>
         <DetailsItem
           styles={contactDetailsStyles[themeState.theme]}

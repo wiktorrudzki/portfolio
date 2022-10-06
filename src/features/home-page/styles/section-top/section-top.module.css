@@ -41,7 +41,7 @@
 }
 
 .section-top-animation {
-  animation: section-top-animation 1.6s ease-out;
+  animation: section-top-animation 1.2s ease-out;
   animation-fill-mode: forwards;
 }
 
@@ -71,6 +71,7 @@
 .image {
   z-index: 2;
   max-width: 100%;
+  background-color: var(--creamybeige);
 }
 
 .section-top-p {

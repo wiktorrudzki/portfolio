@@ -17,35 +17,33 @@ const Future = () => {
 
   const logos = LogoFuture();
 
-  const { ref: div2ref, inView: isDiv2Visible } = useInView();
-  const { ref: div1ref, inView: isDiv1Visivle } = useInView();
+  const { ref: sectionRef, inView: isSectionVisible } = useInView();
 
   return (
-    <section className={futureStyles[themeState.theme].section}>
+    <section ref={sectionRef} className={futureStyles[themeState.theme].section}>
       <div
         className={
-          isDiv1Visivle
+          isSectionVisible
             ? `${futureStyles[themeState.theme].div1} ${
                 futureStyles[themeState.theme].div1Animation
               }`
             : futureStyles[themeState.theme].div1
         }
-        ref={div1ref}
       >
         <StaticImage
           class={futureStyles[themeState.theme].div1Image}
           src="../../../assets/images/me/ja-8.jpg"
+          alt="me watching the view from hotel's balcony in Bulgaria"
         />
       </div>
       <div
         className={
-          isDiv2Visible
+          isSectionVisible
             ? `${futureStyles[themeState.theme].div2} ${
                 futureStyles[themeState.theme].div2Animation
               }`
             : futureStyles[themeState.theme].div2
         }
-        ref={div2ref}
       >
         <Title styling={futureStyles[themeState.theme].div2H2}>
           {t("My Future Goals")}
@@ -63,6 +61,7 @@ const Future = () => {
                 key={logo.node.base}
                 style={logoClass("8%")}
                 image={getImage(logo.node)}
+                alt="logo"
               />
             );
           })}
@@ -77,6 +76,7 @@ const Future = () => {
             <StaticImage
               className={futureStyles[themeState.theme].div2LiImage}
               src="../../../assets/images/futureIcons/globe-icon.svg"
+              alt="glob icon"
             />
             {t("Websites")}
           </FutureListItem>
@@ -84,6 +84,7 @@ const Future = () => {
             <StaticImage
               className={futureStyles[themeState.theme].div2LiImage}
               src="../../../assets/images/futureIcons/mobile-icon.svg"
+              alt="phone icon"
             />
             {t("Mobile applications")}
           </FutureListItem>
@@ -91,6 +92,7 @@ const Future = () => {
             <StaticImage
               className={futureStyles[themeState.theme].div2LiImage}
               src="../../../assets/images/futureIcons/desktop-icon.svg"
+              alt="desktop icon"
             />
             {t("Desktop applications")}
           </FutureListItem>

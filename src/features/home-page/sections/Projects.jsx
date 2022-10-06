@@ -1,5 +1,4 @@
 import React from "react";
-// import { useInView } from "react-intersection-observer";
 import { useTheme } from "@hooks/useTheme";
 
 import ImageSlider from "../components/ImageSlider";

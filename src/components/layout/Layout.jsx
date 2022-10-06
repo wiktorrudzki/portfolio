@@ -1,7 +1,7 @@
 import React from "react";
 import { Nav } from "@components/nav";
 import { LanguageProvider } from "@contexts/language";
-import { SliderProvider } from "@contexts/slider";
+import { RouteProvider } from "@contexts/route";
 import { ThemeProvider } from "@contexts/theme";
 
 import Footer from "./Footer";
@@ -16,7 +16,7 @@ const Layout = ({
 }) => (
   <LanguageProvider>
     <ThemeProvider>
-      <SliderProvider>
+      <RouteProvider>
         <Seo
           title={title}
           description={description}
@@ -26,7 +26,7 @@ const Layout = ({
         <Nav />
         <main>{children}</main>
         <Footer />
-      </SliderProvider>
+      </RouteProvider>
     </ThemeProvider>
   </LanguageProvider>
 );

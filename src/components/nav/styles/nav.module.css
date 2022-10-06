@@ -35,7 +35,7 @@
 }
 
 .nav-bars {
-  display: none;
+  display: none !important;
   z-index: 101;
 }
 
@@ -154,7 +154,7 @@
   }
   .nav-bars {
     cursor: pointer;
-    display: block;
+    display: block !important;
   }
   .nav-bars-activated {
     transform: translateX(0);

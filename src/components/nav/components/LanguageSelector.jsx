@@ -1,5 +1,6 @@
 import React from "react";
 import { languageSelectorStyles } from "@components/nav/styles";
+import { useCookie } from "@hooks/useCookies";
 import { useLanguage } from "@hooks/useLanguage";
 import { useTheme } from "@hooks/useTheme";
 
@@ -15,7 +16,7 @@ const LanguageSelector = () => {
               lang: e.target[e.target.selectedIndex].value,
             });
           }}
-          defaultValue={languageState.lang}
+          defaultValue={languageState}
           className={languageSelectorStyles[themeState.theme].selector}
         >
           <option

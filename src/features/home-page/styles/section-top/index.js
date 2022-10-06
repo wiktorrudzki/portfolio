@@ -24,7 +24,7 @@ export const sectionTopStyles = {
     sectionAnimation: sectionTopAnimation,
     divWrapper: `${imageWrapper} ${moredarkbeigeBackground}`,
     divContainer: imageContainer,
-    image: image,
+    image: `${image} ${moredarkbeigeBackground}`,
     demo: `${demoSectionTop} ${darkestbeigeBackground}`,
     demoContainer: demoContainerSectionTop,
     demoContainerHeader: `${demoContainerHeaderSectionTop} ${whiteColor}`,

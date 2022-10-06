@@ -14,13 +14,25 @@ const SectionTop = () => {
 
   const { ref: sectionRef, inView: isSectionVisible } = useInView();
 
+  console.log(themeState.theme)
+
   return (
-    <section className={isSectionVisible ? `${sectionTopStyles[themeState.theme].section} ${sectionTopStyles[themeState.theme].sectionAnimation}` : sectionTopStyles[themeState.theme].section} ref={sectionRef}>
+    <section
+      className={
+        isSectionVisible
+          ? `${sectionTopStyles[themeState.theme].section} ${
+              sectionTopStyles[themeState.theme].sectionAnimation
+            }`
+          : sectionTopStyles[themeState.theme].section
+      }
+      ref={sectionRef}
+    >
       <div className={sectionTopStyles[themeState.theme].divWrapper}>
         <div className={sectionTopStyles[themeState.theme].divContainer}>
           <StaticImage
             className={sectionTopStyles[themeState.theme].image}
             src="../../../assets/images/me/ja-7.jpg"
+            alt="me chilling on bench in the park"
           />
           <Demo
             demo={sectionTopStyles[themeState.theme].demo}

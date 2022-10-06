@@ -27,6 +27,7 @@ const AboutProgramming = () => {
           <StaticImage
             class={aboutProgrammingStyles[themeState.theme].image}
             src="../../../assets/images/me/ja-3.jpg"
+            alt="me watching lake with my friend"
           />
           <Demo
             demo={aboutProgrammingStyles[themeState.theme].demo}
@@ -37,22 +38,46 @@ const AboutProgramming = () => {
             subtitle={t("Technologies and languages that I had a contact with")}
           >
             <ul className={aboutProgrammingStyles[themeState.theme].ul}>
-              <li ref={listItemRef} className={classForListItemVisibility} style={{ animationDelay: "0.2s" }}>
+              <li
+                ref={listItemRef}
+                className={classForListItemVisibility}
+                style={{ animationDelay: "0.2s" }}
+              >
                 {t("React")}
               </li>
-              <li ref={listItemRef} className={classForListItemVisibility} style={{ animationDelay: "0.6s" }}>
+              <li
+                ref={listItemRef}
+                className={classForListItemVisibility}
+                style={{ animationDelay: "0.6s" }}
+              >
                 {t("Gatsby")}
               </li>
-              <li ref={listItemRef} className={classForListItemVisibility} style={{ animationDelay: "1s" }}>
+              <li
+                ref={listItemRef}
+                className={classForListItemVisibility}
+                style={{ animationDelay: "1s" }}
+              >
                 {t("JavaScript ES6")}
               </li>
-              <li ref={listItemRef} className={classForListItemVisibility} style={{ animationDelay: "1.4s" }}>
+              <li
+                ref={listItemRef}
+                className={classForListItemVisibility}
+                style={{ animationDelay: "1.4s" }}
+              >
                 {t("Node JS")}
               </li>
-              <li ref={listItemRef} className={classForListItemVisibility} style={{ animationDelay: "1.8s" }}>
+              <li
+                ref={listItemRef}
+                className={classForListItemVisibility}
+                style={{ animationDelay: "1.8s" }}
+              >
                 {t("Basics of c++, c#")}
               </li>
-              <li ref={listItemRef} className={classForListItemVisibility} style={{ animationDelay: "2.2s" }}>
+              <li
+                ref={listItemRef}
+                className={classForListItemVisibility}
+                style={{ animationDelay: "2.2s" }}
+              >
                 {t("Basics of python")}
               </li>
             </ul>

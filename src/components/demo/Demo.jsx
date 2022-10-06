@@ -17,10 +17,10 @@ const Demo = ({
   demoContainerP,
 }) => (
   <div className={demo || demoSectionTop}>
-    <container className={demoContainer || demoContainerSectionTop}>
+    <div className={demoContainer || demoContainerSectionTop}>
       <Title styling={demoContainerHeader}>{title}</Title>
       <p className={demoContainerP || demoContainerPSectionTop}>{subtitle}</p>
-    </container>
+    </div>
     {children}
   </div>
 );

@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import Pdf from "@features/cv-page/sections/pdf";
 import { useCookie } from "@hooks/useCookies";
 import { useLanguage } from "@hooks/useLanguage";
 import { useRoute } from "@hooks/useRoute";
@@ -6,21 +7,13 @@ import { useTheme } from "@hooks/useTheme";
 
 import i18next from "../../i18n";
 
-import AboutProgramming from "./sections/AboutProgramming";
-import Future from "./sections/Future";
-import Projects from "./sections/Projects";
-import ProjectsTitle from "./sections/ProjectsTitle";
-import SectionTop from "./sections/SectionTop";
-
-import "@styles/global.css";
-
-const HomePage = () => {
+const Cv = () => {
   const { themeState, themeDispatch } = useTheme();
   const { languageState } = useLanguage();
   //eslint-disable-next-line
   const { currentRoute, setCurrentRoute } = useRoute();
 
-  setCurrentRoute("/");
+  setCurrentRoute("CV");
 
   // eslint-disable-next-line
   const [langauge, updateLanguage] = useCookie("lang");
@@ -30,8 +23,7 @@ const HomePage = () => {
     document.body.style.backgroundColor =
       themeState.theme === "dark" ? "var(--lessblack)" : "white";
 
-    console.log(themeState.theme);
-
+    // eslint-disable-next-line
   }, [themeState]);
 
   useEffect(() => {
@@ -40,15 +32,7 @@ const HomePage = () => {
     updateLanguage(languageState.lang);
   }, [languageState]);
 
-  return (
-    <>
-      <SectionTop />
-      <AboutProgramming />
-      <ProjectsTitle />
-      <Projects />
-      <Future />
-    </>
-  );
+  return <Pdf />;
 };
 
-export default HomePage;
+export default Cv;
