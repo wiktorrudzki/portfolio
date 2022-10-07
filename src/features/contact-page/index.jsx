@@ -16,12 +16,9 @@ const Contact = () => {
   const { languageState } = useLanguage();
   //eslint-disable-next-line
   const { currentRoute, setCurrentRoute } = useRoute();
+  const [theme] = useCookie("theme", "light");
 
   setCurrentRoute("contact");
-
-  // eslint-disable-next-line
-  const [langauge, updateLanguage] = useCookie("lang");
-  // eslint-disable-next-line
 
   useEffect(() => {
     document.body.style.backgroundColor =
@@ -33,7 +30,6 @@ const Contact = () => {
   useEffect(() => {
     i18next.changeLanguage(languageState.lang);
 
-    updateLanguage(languageState.lang);
     // eslint-disable-next-line
   }, [languageState]);
 

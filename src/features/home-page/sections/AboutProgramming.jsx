@@ -30,10 +30,7 @@ const AboutProgramming = () => {
             alt="me watching lake with my friend"
           />
           <Demo
-            demo={aboutProgrammingStyles[themeState.theme].demo}
-            demoContainer={
-              aboutProgrammingStyles[themeState.theme].demoContainer
-            }
+            styles={aboutProgrammingStyles[themeState.theme]}
             title={t("My Technologies")}
             subtitle={t("Technologies and languages that I had a contact with")}
           >

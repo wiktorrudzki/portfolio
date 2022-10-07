@@ -11,15 +11,12 @@ const Demo = ({
   children,
   title,
   subtitle,
-  demo,
-  demoContainer,
-  demoContainerHeader,
-  demoContainerP,
+  styles
 }) => (
-  <div className={demo || demoSectionTop}>
-    <div className={demoContainer || demoContainerSectionTop}>
-      <Title styling={demoContainerHeader}>{title}</Title>
-      <p className={demoContainerP || demoContainerPSectionTop}>{subtitle}</p>
+  <div className={styles.demo || demoSectionTop}>
+    <div className={styles.demoContainer || demoContainerSectionTop}>
+      <Title styling={styles.demoContainerHeader}>{title}</Title>
+      <p className={styles.demoContainerP || demoContainerPSectionTop}>{subtitle}</p>
     </div>
     {children}
   </div>

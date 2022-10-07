@@ -1,6 +1,7 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { useInView } from "react-intersection-observer";
+import Recaptcha from "react-recaptcha";
 import { Title } from "@components/typography";
 import { logoClass } from "@features/home-page/components";
 import { LogoProjectsTitle } from "@features/home-page/queries";
@@ -33,11 +34,11 @@ const ProjectsTitle = () => {
             )}
           </p>
         </div>
-        {logos.map(({ node, index }) => {
+        {logos.map(({ node }) => {
           delay += 0.35;
           return (
             <div
-            key={node.base}
+              key={node.base}
               className={
                 isLogoVisible
                   ? `${projectsTitleStyles[themeState.theme].logoAnimation} ${
@@ -57,6 +58,14 @@ const ProjectsTitle = () => {
             </div>
           );
         })}
+        {/* make content refresh so cookies works properly */}
+        <div style={{ display: "none" }}>
+          <Recaptcha
+            sitekey="6LdEJPwhAAAAAIwokcxZsfgHUnwCCy2NpIW0TFay"
+            render="explicit"
+            required
+          />
+        </div>
       </section>
     </>
   );

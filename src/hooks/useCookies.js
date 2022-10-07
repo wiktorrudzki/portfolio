@@ -7,18 +7,22 @@ export const useCookie = (key, value) => {
     if (cookies.get(key)) {
       return cookies.get(key);
     }
-    cookies.set(key, value);
+    cookies.set(key, value, {path: '/', expires: new Date(9999, 1, 1)});
   });
 
   const updateCookie = (value) => {
     setCookie(value);
-    removeItem(key);
-    cookies.set(key, value);
+    removeItem(value);
+    cookies.set(key, value, {path: '/', expires: new Date(9999, 1, 1)});
   };
 
   const removeItem = (key) => {
     cookies.remove(key);
   };
 
-  return [cookie, updateCookie, removeItem];
+  const getCookie = (key) => {
+    return cookies.get(key)
+  }
+
+  return [cookie, updateCookie, getCookie, removeItem];
 };

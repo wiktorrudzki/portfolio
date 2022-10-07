@@ -19,25 +19,17 @@ const HomePage = () => {
   const { languageState } = useLanguage();
   //eslint-disable-next-line
   const { currentRoute, setCurrentRoute } = useRoute();
+  const [theme] = useCookie("theme", "light");
 
   setCurrentRoute("/");
-
-  // eslint-disable-next-line
-  const [langauge, updateLanguage] = useCookie("lang");
-  // eslint-disable-next-line
 
   useEffect(() => {
     document.body.style.backgroundColor =
       themeState.theme === "dark" ? "var(--lessblack)" : "white";
-
-    console.log(themeState.theme);
-
   }, [themeState]);
 
   useEffect(() => {
     i18next.changeLanguage(languageState.lang);
-
-    updateLanguage(languageState.lang);
   }, [languageState]);
 
   return (

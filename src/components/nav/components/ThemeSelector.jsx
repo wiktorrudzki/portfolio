@@ -6,16 +6,7 @@ import "@components/nav/styles/switch-mode.css";
 
 const ThemeSelector = () => {
   const { themeState, themeDispatch } = useTheme();
-
-  const [theme, updateTheme] = useCookie("theme");
-
-  function changeCookie() {
-    updateTheme(themeState.theme === "light" ? "dark" : "light");
-    themeDispatch({
-      type: "CHANGE_THEME",
-      theme: themeState.theme === "light" ? "dark" : "light",
-    });
-  }
+  const [theme, updateTheme] = useCookie("theme", "light");
 
   return (
     <label className="switch">
@@ -25,7 +16,13 @@ const ThemeSelector = () => {
       />
       <span
         className="slider round"
-        onClick={changeCookie}
+        onClick={() => {
+          updateTheme(themeState.theme === "light" ? "dark" : "light");
+          themeDispatch({
+            type: "CHANGE_THEME",
+            theme: themeState.theme === "light" ? "dark" : "light",
+          });
+        }}
       ></span>
     </label>
   );

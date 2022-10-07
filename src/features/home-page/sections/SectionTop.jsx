@@ -14,8 +14,6 @@ const SectionTop = () => {
 
   const { ref: sectionRef, inView: isSectionVisible } = useInView();
 
-  console.log(themeState.theme)
-
   return (
     <section
       className={
@@ -35,12 +33,7 @@ const SectionTop = () => {
             alt="me chilling on bench in the park"
           />
           <Demo
-            demo={sectionTopStyles[themeState.theme].demo}
-            demoContainer={sectionTopStyles[themeState.theme].demoContainer}
-            demoContainerHeader={
-              sectionTopStyles[themeState.theme].demoContainerHeader
-            }
-            demoContainerP={sectionTopStyles[themeState.theme].demoContainerP}
+            styles={sectionTopStyles[themeState.theme]}
             title={t("Wiktor Rudzki")}
             subtitle={t("A few words about me")}
           >

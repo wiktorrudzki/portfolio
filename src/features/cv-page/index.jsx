@@ -12,12 +12,9 @@ const Cv = () => {
   const { languageState } = useLanguage();
   //eslint-disable-next-line
   const { currentRoute, setCurrentRoute } = useRoute();
+  const [theme] = useCookie("theme", "light");
 
   setCurrentRoute("CV");
-
-  // eslint-disable-next-line
-  const [langauge, updateLanguage] = useCookie("lang");
-  // eslint-disable-next-line
 
   useEffect(() => {
     document.body.style.backgroundColor =
@@ -28,8 +25,7 @@ const Cv = () => {
 
   useEffect(() => {
     i18next.changeLanguage(languageState.lang);
-
-    updateLanguage(languageState.lang);
+    
   }, [languageState]);
 
   return <Pdf />;

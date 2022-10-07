@@ -6,7 +6,7 @@ export const LanguageProvider = ({ children }) => {
   const [language] = useCookie("lang", "pl");
 
   const [languageState, languageDispatch] = useReducer(reducer, {
-    lang: language,
+    lang: language ? language : "pl",
   });
 
   return (
