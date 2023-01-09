@@ -1,0 +1,18 @@
+.cv-style {
+  margin-top: 95.38px;
+  height: calc(100vh - 95.38px);
+}
+
+@media (max-width: 1024px) {
+  .cv-style {
+    margin-top: 88.98px;
+    height: calc(100vh - 88.98px);
+  }
+}
+
+@media (max-width: 768px) {
+  .cv-style {
+    margin-top: 67.19px;
+    height: calc(100vh - 67.19px);
+  }
+}

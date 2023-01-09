@@ -1,0 +1,39 @@
+.photo {
+  cursor: grab;
+  margin: 0;
+  overflow: hidden;
+  width: 149px;
+  height: 210px;
+  background-size: cover;
+  position: absolute;
+  opacity: 0;
+}
+
+.photo-animation {
+  animation: photo-animation 0.5s ease-in;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes photo-animation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 1368px) {
+  .photo {
+    width: 124px;
+    height: 175px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .photo {
+    width: 103px;
+    height: 145px;
+  }
+}

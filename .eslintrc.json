@@ -1,0 +1,55 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "react-app",
+    //prettier has to be last in the list, every conflict between pretttier and eslint will be resolved by prettier
+    "prettier"
+  ],
+  "plugins": ["simple-import-sort"],
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "modules": true,
+      "jsx": true
+    },
+    "rules": {
+      "keyword-spacing": 2,
+      // increase the severity of rules so they are auto-fixable
+      "simple-import-sort/imports": "error",
+      "simple-import-sort/exports": "error"
+    },
+    //environment
+    "env": {
+      "es6": true,
+      "browser": true,
+      "node": true
+    }
+  },
+  "overrides": [
+    // override "simple-import-sort" config
+    {
+      "files": ["*.jsx", "*.tsx"],
+      "rules": {
+        "simple-import-sort/imports": [
+          "error",
+          {
+            "groups": [
+              // Packages `react` related packages come first.
+              ["^react", "^@?\\w"],
+              // Internal packages.
+              ["^(@|components)(/.*|$)"],
+              // Side effect imports.
+              ["^\\u0000"],
+              // Parent imports. Put `..` last.
+              ["^\\.\\.(?!/?$)", "^\\.\\./?$"],
+              // Other relative imports. Put same-folder imports and `.` last.
+              ["^\\./(?=.*/)(?!/?$)", "^\\.(?!/?$)", "^\\./?$"],
+              // Style imports.
+              ["^.+\\.?(css)$"]
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}
