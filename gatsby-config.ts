@@ -70,6 +70,7 @@ module.exports = {
           "@dark-mode": "src/styles/dark-mode-styles",
           "@features": "src/features",
           "@locales": "src/assets/locales",
+          "@projects-info": "src/assets/projects-info",
           "@components-styles": "src/components/styles",
         },
         extensions: ["jsx", "js", "css", "tsx", "ts", "json"],

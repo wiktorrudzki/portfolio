@@ -10,7 +10,7 @@ import { aboutProgrammingStyles } from "../styles/about-programming";
 const AboutProgramming = () => {
   const { t } = useTranslation();
 
-  const [ themeState ] = useTheme();
+  const [themeState] = useTheme();
 
   const { ref: listItemRef, inView: isListItemVisible } = useInView();
 
@@ -47,7 +47,7 @@ const AboutProgramming = () => {
                 className={classForListItemVisibility}
                 style={{ animationDelay: "0.6s" }}
               >
-                {t("Gatsby")}
+                {t("Gatsby and Next.js")}
               </li>
               <li
                 ref={listItemRef}
@@ -61,21 +61,21 @@ const AboutProgramming = () => {
                 className={classForListItemVisibility}
                 style={{ animationDelay: "1.4s" }}
               >
-                {t("Node JS")}
+                {t("Node.js - Express.js")}
               </li>
               <li
                 ref={listItemRef}
                 className={classForListItemVisibility}
                 style={{ animationDelay: "1.8s" }}
               >
-                {t("Basics of c++, c#")}
+                {t("Sass (SCSS)")}
               </li>
               <li
                 ref={listItemRef}
                 className={classForListItemVisibility}
                 style={{ animationDelay: "2.2s" }}
               >
-                {t("Basics of python")}
+                {t("TypeScript")}
               </li>
             </ul>
           </Demo>

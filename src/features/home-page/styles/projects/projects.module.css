@@ -21,44 +21,26 @@
   position: relative;
   width: 80%;
   margin: auto;
-  height: 80%;
+  height: 85%;
   background-color: transparent;
-}
-
-.projects-first-image {
-  width: 50%;
-  max-width: 100%;
-  position: absolute;
-  right: -5%;
-  top: -6%;
-  -webkit-box-shadow: 0px 0px 24px 7px rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: 0px 0px 24px 7px rgba(0, 0, 0, 0.5);
-  box-shadow: 0px 0px 24px 7px rgba(0, 0, 0, 0.5);
-}
-
-.projects-second-image {
-  width: 50%;
-  max-width: 100%;
-  position: absolute;
-  left: -5%;
-  bottom: -6%;
-  -webkit-box-shadow: 0px 0px 24px 7px rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: 0px 0px 24px 7px rgba(0, 0, 0, 0.5);
-  box-shadow: 0px 0px 24px 7px rgba(0, 0, 0, 0.5);
 }
 
 @media (max-width: 1386px) {
   .projects {
-    height: 55vh;
+    height: 80vh;
   }
   .projects-wrapper {
-    width: 75%;
+    width: 100%;
+  }
+  .projects-container {
+    height: 100%;
+    padding: 1em;
   }
 }
 
 @media (max-width: 1024px) {
   .projects {
-    height: 45vh;
+    height: fit-content;
   }
   .projects-first-image {
     top: 15%;
@@ -71,12 +53,10 @@
     bottom: 15%;
   }
   .projects-wrapper {
-    width: 70%;
-    height: 90%;
+    width: 100%;
   }
   .projects-container {
-    width: 80%;
-    height: 75%;
+    width: 90%;
   }
   .demo2-projects {
     font-size: 22px;
@@ -138,10 +118,6 @@
 }
 
 @media (max-width: 768px) {
-  .projects {
-    height: 40vh;
-  }
-
   .projects-wrapper {
     height: 100%;
   }
@@ -150,6 +126,9 @@
     display: flex;
     flex-direction: column;
     gap: 2%;
+    padding: 1em;
+    margin: 0;
+    width: 100%;
   }
   .projects-first-image {
     position: relative;

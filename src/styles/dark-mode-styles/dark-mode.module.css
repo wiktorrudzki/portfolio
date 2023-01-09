@@ -1,79 +1,90 @@
 .black-background {
-    background-color: var(--black)!important;
+  background-color: var(--black) !important;
 }
 
 .darkerbeige-background {
-    background-color: var(--darkerbeige) !important;
+  background-color: var(--darkerbeige) !important;
 }
 
 .lessblack-background {
-    background-color: var(--lessblack)!important;
+  background-color: var(--lessblack) !important;
+}
+
+.white-background {
+  background-color: var(--white) !important;
 }
 
 .white-color {
-    color: var(--white)!important;
+  color: var(--white) !important;
+}
+
+.whiteBorder {
+  border-color: white !important;
 }
 
 .darkbeige-color {
-    color: var(--darkbeige)!important;
+  color: var(--darkbeige) !important;
 }
 
 .moredarkbeige-background {
-    background-color: var(--darkerbeige)!important;
+  background-color: var(--darkerbeige) !important;
 }
 
 .darkestbeige-background {
-    background-color: var(--darkestbeige)!important;
+  background-color: var(--darkestbeige) !important;
 }
 
 .beige-color {
-    color: var(--beige)!important;
+  color: var(--beige) !important;
 }
 
 .whitebeige-color {
-    color: var(--whitebeige)!important;
+  color: var(--whitebeige) !important;
 }
 
 .whitebeige-border {
-    border: var(--whitebeige) 2px solid!important;
+  border: var(--whitebeige) 2px solid !important;
 }
 
 .whitebeige-border-top {
-    border-top: var(--whitebeige) 1px solid!important;
+  border-top: var(--whitebeige) 1px solid !important;
 }
 
 .whitebeige-border-top:hover {
-    border-top: 3px var(--whitebeige) solid!important;
+  border-top: 3px var(--whitebeige) solid !important;
 }
 
 .whitebeige-border-active {
-    border-top: 3px var(--whitebeige) solid!important;
-    padding: calc(1em - 2px) 0!important;
+  border-top: 3px var(--whitebeige) solid !important;
+  padding: calc(1em - 2px) 0 !important;
 }
 
 @media (max-width: 768px) {
-    .whitebeige-border-active {
-        border-top: none!important;
-    }
+  .whitebeige-border-active {
+    border-top: none !important;
+  }
 }
 
 .saddlebrown-color {
-    color: var(--saddlebrown);
+  color: var(--saddlebrown);
 }
 
 .black-border {
-    border: 2px var(--black) solid!important;
+  border: 2px var(--black) solid !important;
 }
 
 .darkbeige-background {
-    background-color: var(--darkbeige)!important;
+  background-color: var(--darkbeige) !important;
 }
 
 .black-border-top-bottom {
-    border-top: 2px var(--black) solid!important;
-    border-bottom: 2px var(--black) solid!important;
+  border-top: 2px var(--black) solid !important;
+  border-bottom: 2px var(--black) solid !important;
 }
 
 .darken-background {
-    background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35))!important;
+  background-image: linear-gradient(
+    rgba(0, 0, 0, 0.35),
+    rgba(0, 0, 0, 0.35)
+  ) !important;
 }

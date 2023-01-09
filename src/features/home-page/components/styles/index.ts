@@ -3,22 +3,38 @@ import {
   slideImg,
   slideShow,
   slideShowSlider,
+  switchSlideBtn,
+  switchSlideList,
+  slideInfo,
+  leftArrow,
+  rightArrow,
+  currentBtn,
 } from "./imageSlider.module.css";
-import {
-  darkerbeigeBackground
-} from "@dark-mode/dark-mode.module.css";
+import { whiteBackground, whiteBorder } from "@dark-mode/dark-mode.module.css";
 
 export const imageSliderStyles = {
   dark: {
-    slide: slide,
-    slideImg: slideImg,
-    slideShow: slideShow,
-    slideShowSlider: slideShowSlider,
+    slide,
+    slideImg,
+    slideShow,
+    slideShowSlider,
+    switchSlideBtn,
+    switchSlideList,
+    slideInfo,
+    leftArrow,
+    rightArrow,
+    currentBtn,
   },
   light: {
-    slide: slide,
-    slideImg: slideImg,
-    slideShow: slideShow,
-    slideShowSlider: slideShowSlider,
+    slide,
+    slideImg,
+    slideShow,
+    slideShowSlider,
+    switchSlideBtn: `${switchSlideBtn} ${whiteBorder}`,
+    switchSlideList,
+    slideInfo,
+    leftArrow,
+    rightArrow,
+    currentBtn: whiteBackground,
   },
 };
