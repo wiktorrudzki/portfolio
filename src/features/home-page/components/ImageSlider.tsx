@@ -15,7 +15,9 @@ const ImageSlider = () => {
   const [themeState] = useTheme();
   const { languageState } = useLanguage();
 
-  const pageQuery = AllProjects();
+  const pageQuery = AllProjects().sort((a, b) => {
+    return a.node.base < b.node.base ? -1 : 1;
+  });
 
   const [index, setIndex] = useState(0);
 
@@ -91,6 +93,7 @@ const ImageSlider = () => {
       <ul className={imageSliderStyles[themeState.theme].switchSlideList}>
         {pageQuery.map((element, i) => (
           <li
+            key={i}
             onClick={() => setIndex(i)}
             className={`${imageSliderStyles[themeState.theme].switchSlideBtn} ${
               index === i ? imageSliderStyles[themeState.theme].currentBtn : ""
