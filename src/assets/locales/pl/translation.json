@@ -1,0 +1,46 @@
+{
+  "WIKTOR RUDZKI": "WIKTOR RUDZKI",
+  "FRONTEND DEVELOPER": "FRONTEND DEVELOPER",
+  "About": "O mnie",
+  "Contact": "Kontakt",
+  "CV": "CV",
+
+  "Wiktor Rudzki": "Wiktor Rudzki",
+  "A few words about me": "Kilka słów o mnie",
+  "Currently, I am second year Student of computer science on Cracow University of Technology. I have been interested in programming in the broadest sense for a long time and for the last few months I've been strictly passionated about \"frontend\" using React technology": "Aktualnie jestem studentem 2 roku informatyki stosowanej na Politechnice Krakowskiej. Od dłuższego czasu interesuje się szeroko pojętym programowaniem, a od kilku miesięcy stricte \"frontedem\" przy użyciu technologii jaką jest React",
+
+  "My Technologies": "Moje Technologie",
+  "Technologies and languages that I had a contact with": "Technologie oraz języki, z którymi miałem styczność",
+  "React": "React",
+  "Gatsby and Next.js": "Gatsby oraz Next.js",
+  "JavaScript ES6": "JavaScript ES6",
+  "Node.js - Express.js": "Node JS - Express.js",
+  "Sass (SCSS)": "Sass (SCSS)",
+  "TypeScript": "TypeScript",
+
+  "Projects": "Projekty",
+  "My projects so far, were mostly about acquiring some new skills from various scopes of JavaScript and React learning more and more about their potential while writing simple web games, applications and alorithms": "Moje projekty dotychczas głównie polegały na szkoleniu umiejętności z różnych zakresów JavaScripta oraz Reacta poznając coraz to nowe ich możliwości podczas pisania prostych gier webowych, aplikacji oraz algorytmów",
+
+  "Graphical Projects": "Projekty Graficzne",
+  "Coded Projects": "Projekty Kodowane",
+
+  "My Future Goals": "Moje Przyszłe Cele",
+  "I am open to new technologies and I am experiencing them with a lot of pleasure in order to broaden my mind. Over time, I am defenitely discover many of the following": "Jestem otwarty na nowe technoologie i z chęcią je poznaję w celu nieustannego poszerzania swoich horyzontów. Z czasem na pewno będę poznawał wiele z poniższych",
+  "Those technologies and libraries are definitely going to be really helpful while developing:": "Owe technologie oraz biblioteki z pewnością przydadzą się przy rozwijaniu umiejętności z zakresu tworzenia:",
+  "Websites": "Stron internetowych",
+  "Mobile applications": "Aplikacji mobilnych",
+  "Desktop applications": "Aplikacji desktopowych",
+
+  "Contact data": "Dane kontaktowe",
+  "wiktor1rudzki@gmail.com": "wiktor1rudzki@gmail.com",
+  "wiktorrudzki": "wiktorrudzki",
+
+  "Contact form": "Formularz kontaktowy",
+  "Name": "Imię",
+  "Surrname": "Nazwisko",
+  "Email adress": "Adres email",
+  "Phone number": "Numer telefonu",
+  "Message title": "Tytuł wiadomości",
+  "Message": "Treść wiadomości",
+  "Send": "Wyślij"
+}

@@ -1,0 +1,131 @@
+.about-programming {
+  position: relative;
+  margin-bottom: 5%;
+  background-color: var(--cornslik);
+  padding: 2% 0;
+}
+
+.image-about-programming {
+  z-index: 2;
+  max-width: 100%;
+  width: 78%;
+}
+
+.image-container-about-programming {
+  width: 80%;
+  display: flex;
+}
+
+.logo-div {
+  cursor: grab;
+}
+
+.image-wrapper-about-programming {
+  background-color: transparent;
+  position: relative;
+  width: 52%;
+  padding: 0;
+  top: 0;
+  left: 50%;
+}
+
+.about-programming-p {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: fit-content;
+  text-align: right;
+  margin: 0;
+  transform: translate(-10%, 100%);
+  padding: 1em;
+  color: var(--saddlebrown);
+  list-style: none;
+  font-size: 18px;
+  line-height: 1.6em;
+}
+
+.about-programming-list-item {
+  opacity: 0;
+  /* width: fit-content; */
+}
+
+.about-programming-list-item-animation {
+  animation: opacity-animation 0.8s;
+  animation-fill-mode: forwards;
+}
+
+.demo-about-programming {
+  background-color: var(--creamybeige);
+  height: 50%;
+  position: absolute;
+  left: 0;
+  top: 10%;
+  z-index: 102;
+  transform: translateX(-100%);
+  padding: 6% 5%;
+  width: 65%;
+  text-align: center;
+  color: var(--black);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+@keyframes opacity-animation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.demo-container-about-programming {
+  color: var(--black);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  position: relative;
+}
+
+@media (max-width: 1024px) {
+  .about-programming-p {
+    font-size: 0.8em;
+    line-height: 1.5em;
+  }
+  .demo-about-programming {
+    padding: 4% 5%;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-programming {
+    display: flex;
+    justify-content: center;
+  }
+  .image-wrapper-about-programming {
+    padding: 5% 10%;
+    width: 100%;
+    left: 0;
+  }
+  .image-container-about-programming {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+  .about-programming-p {
+    border-top: 2px solid var(--cornslik);
+    margin-top: 1.5em;
+    transform: none;
+    position: relative;
+    bottom: 0;
+    text-align: center;
+    font-size: 1em;
+    width: 100%;
+    color: var(--cornslik);
+  }
+  .demo-about-programming {
+    position: relative;
+    transform: none;
+  }
+}

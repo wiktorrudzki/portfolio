@@ -1,0 +1,22 @@
+.selector {
+    border: 2px solid var(--morebeige);
+    border-radius: 10px;
+    color: var(--morebeige);
+    cursor: pointer;
+    background-color: var(--cornsilk);
+    transition: 0.3s ease all;
+    font-weight: bold;
+}
+
+.selector:hover {
+    background-image: linear-gradient(rgba(0,0,0,0.05), rgba(0,0,0,0.05));
+}
+
+.selector:focus {
+    outline: none;
+}
+
+.option {
+    color: var(--morebeige);
+    background-color: var(--cornsilk);
+}

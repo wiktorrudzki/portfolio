@@ -1,0 +1,38 @@
+:root {
+  /* LIGHT MODE */
+  --black: #000;
+  --saddlebrown: #8b4513;
+  --bulrywood: #deb887;
+  --cornslik: #fcf0c3;
+  --peru: #cd853f;
+  --beige: #cc9767;
+  --lessbeige: #c7ad8f;
+  --morebeige: #a57a5a;
+  --white: #ffffff;
+  --creamybeige: #ba9a69;
+
+  /* DARK MODE */
+  --darkerbeige: #6d6052;
+  --darkestbeige: #645240;
+  --darkbeige: #9f8c76;
+  --whitebeige: #f8f2de;
+  --lessblack: #30271f;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  color: var(--morebeige);
+  font-family: Josefin Sans, Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  line-height: 1.2;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
